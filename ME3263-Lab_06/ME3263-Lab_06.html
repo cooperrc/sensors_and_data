@@ -1,0 +1,697 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ME 3263 Introduction to Sensors and Data Analysis &#8212; Introduction to Sensors and Data</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Sensors and Data</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   Introduction to Sensors and Data Analysis
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ME3263-Lab_00/README.html">
+   Lab 0 - Statistics and the Student t-test
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ME3263-Lab_01/README.html">
+   ME3263_Lab-01
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ME3263-Lab_02/README.html">
+   ME 3263 Introduction to Sensors and Data Analysis (Fall 2018)
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ME3263-Lab_03/README.html">
+   ME 3263 Introduction to Sensors and Data Analysis (Fall 2018)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ME3263-Lab_03/ME3263-Lab_03.html">
+     ME 3263 Introduction to Sensors and Data Analysis
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ME3263-Lab_04/README.html">
+   ME3263 Introduction to Sensors and Data Analysis (Fall 2018)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ME3263-Lab_04/ME3263-Lab_04.html">
+     ME 3263 Introduction to Sensors and Data Analysis (Fall 2018)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ME3263-Lab_05/README.html">
+   ME3263-Lab-05
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ME3263-Lab_05/ME3263-Lab_05.html">
+     ME 3263 - Sensors and Data Analysis
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/ME3263-Lab_06/ME3263-Lab_06.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/cooperrc/sensors_and_data"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/cooperrc/sensors_and_data/issues/new?title=Issue%20on%20page%20%2FME3263-Lab_06/ME3263-Lab_06.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/cooperrc/sensors_and_data/master?urlpath=tree/ME3263-Lab_06/ME3263-Lab_06.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   ME 3263 Introduction to Sensors and Data Analysis
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lab-6-temperature-measurements-in-a-first-order-thermal-system">
+   Lab #6 Temperature Measurements in a First Order Thermal System
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#temperature-sensing">
+     Temperature Sensing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problem-1">
+   Problem 1
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#experimental-details">
+   Experimental details
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#determine-temperature-of-cooling-mass">
+   Determine Temperature of cooling mass
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">curve_fit</span>
+<span class="kn">import</span> <span class="nn">check_lab06</span> <span class="k">as</span> <span class="nn">p</span>
+
+<span class="kn">import</span> <span class="nn">pretty_plots</span> <span class="c1"># script to set up LaTex and increase line-width and font size</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pretty_plots</span><span class="o">.</span><span class="n">setdefaults</span><span class="p">()</span>
+<span class="n">pi</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/matplotlib/__init__.py</span> in <span class="ni">__setitem__</span><span class="nt">(self, key, val)</span>
+<span class="g g-Whitespace">    </span><span class="mi">594</span>             <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">595</span>                 <span class="n">cval</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">validate</span><span class="p">[</span><span class="n">key</span><span class="p">](</span><span class="n">val</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">596</span>             <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">ve</span><span class="p">:</span>
+
+<span class="ne">KeyError</span>: &#39;text.latex.unicode&#39;
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1793</span><span class="o">/</span><span class="mf">1109053810.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">pretty_plots</span><span class="o">.</span><span class="n">setdefaults</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">pi</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+
+<span class="nn">~/work/sensors_and_data/sensors_and_data/ME3263-Lab_06/pretty_plots.py</span> in <span class="ni">setdefaults</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>   <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;lines.linewidth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>   <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;text.usetex&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="ne">----&gt; </span><span class="mi">6</span>   <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;text.latex.unicode&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span>   <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;text.latex.preamble&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>          <span class="sa">r</span><span class="s1">&#39;\usepackage</span><span class="si">{siunitx}</span><span class="s1">&#39;</span><span class="p">,</span>   <span class="c1"># I need upright \micro symbols, but you need...</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/matplotlib/__init__.py</span> in <span class="ni">__setitem__</span><span class="nt">(self, key, val)</span>
+<span class="g g-Whitespace">    </span><span class="mi">598</span>             <span class="nb">dict</span><span class="o">.</span><span class="fm">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">cval</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">599</span>         <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">600</span>             <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">601</span>                 <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2"> is not a valid rc parameter (see rcParams.keys() for &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">602</span>                 <span class="sa">f</span><span class="s2">&quot;a list of valid parameters)&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
+
+<span class="ne">KeyError</span>: &#39;text.latex.unicode is not a valid rc parameter (see rcParams.keys() for a list of valid parameters)&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="me-3263-introduction-to-sensors-and-data-analysis">
+<h1>ME 3263 Introduction to Sensors and Data Analysis<a class="headerlink" href="#me-3263-introduction-to-sensors-and-data-analysis" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="lab-6-temperature-measurements-in-a-first-order-thermal-system">
+<h1>Lab #6 Temperature Measurements in a First Order Thermal System<a class="headerlink" href="#lab-6-temperature-measurements-in-a-first-order-thermal-system" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="temperature-sensing">
+<h2>Temperature Sensing<a class="headerlink" href="#temperature-sensing" title="Permalink to this headline">¶</a></h2>
+<p>Temperature is one of the most common measurements in engineering
+applications. The metrological definition of temperature depends upon 14 phase transitions in different materials and five different temperature measurement devices <span class="xref myst">[1]</span>. Thermocouples are a common method to measure temperature in engineering systems <span class="xref myst">[2]</span>. Thermocouples use the Seebeck effect to produce a voltage in a conductor. Two wires
+such as iron and constantan, shown in Figure 1, are used to create an electromotive force proportional to the temperature gradient from the hot end to the cold
+end (cold junction) of the wires. Knowing the temperature
+at the cold junction allows you to find the temperature at the
+measurement site.</p>
+<p><img alt="Figure 1: A schematic of a thermocouple with cold temperaturecompensation. The second image shows the scale of a thermocouple,relative to a penny." src="../_images/figure_012.png" /></p>
+<p><strong>Figure 1: A schematic of a thermocouple with cold temperature
+compensation. The second image shows the scale of a thermocouple,
+relative to a penny.</strong></p>
+<p>In this lab we will measure the temperature of water after a hot mass has been introduced. The lab set-up is shown
+schematically in Figure 2. The temperature of the water due to convection from a hot point mass results in the first order differential equation as such</p>
+<p><span class="math notranslate nohighlight">\(\frac{dT_{f}}{dt}+\lambda T_{f} = F\)</span> (1)</p>
+<p>where <span class="math notranslate nohighlight">\(T_f\)</span> is the  fluid temperature and <span class="math notranslate nohighlight">\(\lambda\)</span> and <span class="math notranslate nohighlight">\(F\)</span> are constants based upon physical properties of
+the system and initial internal energy. We can solve for the solution of <span class="math notranslate nohighlight">\(T_f(t)\)</span> with inital conditions of the system. The solution to a first order differential equation is shown as the following python function, a representative curve is shown for an intial temperature of 0 rising to a final temperature of 1. The solution is an exponential decay with time constant, <span class="math notranslate nohighlight">\(\tau\)</span>. The solution approaches the final temperature, after <span class="math notranslate nohighlight">\(\tau\)</span> steps, T=0.63, after <span class="math notranslate nohighlight">\(3\tau\)</span>, T=0.95, after <span class="math notranslate nohighlight">\(6\tau\)</span>, T=0.99.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">T_order1</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">F</span><span class="p">,</span><span class="n">T0</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;solution to first order system dT/dt+L*T=F, </span>
+<span class="sd">    where L and F are based upon physical constants </span>
+<span class="sd">    and T0 is the initial condition at time=0.&#39;&#39;&#39;</span>
+    <span class="n">A</span><span class="o">=</span><span class="n">T0</span><span class="o">-</span><span class="n">F</span><span class="o">/</span><span class="n">L</span>
+    <span class="n">T</span><span class="o">=</span><span class="n">A</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">L</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">+</span><span class="n">F</span><span class="o">/</span><span class="n">L</span>
+    <span class="k">return</span> <span class="n">T</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">T_fluid</span><span class="o">=</span><span class="n">T_order1</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">T_fluid</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\tau$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$T$&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;$T$&#39;)
+</pre></div>
+</div>
+<img alt="../_images/ME3263-Lab_06_6_1.png" src="../_images/ME3263-Lab_06_6_1.png" />
+</div>
+</div>
+<p><img alt="Figure 2: A schematic of the experimental system." src="../_images/figure_021.png" /></p>
+<p><strong>Figure 2: A schematic of the experimental system.</strong></p>
+<p>For an adiabatic system, any increase in temperature of the water is due to a decrease in temperature from the point mass. We can relate the two temperatures based upon the initial conditions of the system as such</p>
+<p><span class="math notranslate nohighlight">\(U_{solid}(0)+U_{water}(0)=U_{solid}(t)+U_{water}(t)\)</span> (2a)</p>
+<p><span class="math notranslate nohighlight">\(m_{solid} C_{solid} T_{solid}(0) + m_{water} C_{water} T_{water}(0)=
+m_{solid} C_{solid} T_{solid}(t) + m_{water} C_{water} T_{water}(t)\)</span> (2b)</p>
+<p><span class="math notranslate nohighlight">\(-\frac{dU_{solid}}{dt}=\frac{dU_{water}}{dt}\)</span> (2c)</p>
+<p><span class="math notranslate nohighlight">\(-m_{solid} C_{solid}\frac{dT_{solid}}{dt}=m_{water} C_{water}\frac{dT_{water}}{dt}\)</span> (2d)</p>
+<p>where <span class="math notranslate nohighlight">\(U\)</span> is the internal energy, <span class="math notranslate nohighlight">\(m_{solid}\)</span> and <span class="math notranslate nohighlight">\(m_{water}\)</span> are the masses of the solid and water, respectively, <span class="math notranslate nohighlight">\(C\)</span> is the specific heat, <span class="math notranslate nohighlight">\(T(0)\)</span> are the initial temperatures, and <span class="math notranslate nohighlight">\(T(t)\)</span> are the temperatures at any point in time. The rate of energy transferred is governed by natural convection. The rate of energy transferred from the solid to the water, <span class="math notranslate nohighlight">\(\dot{Q}\)</span>, is as such</p>
+<p><span class="math notranslate nohighlight">\(\dot{Q}=h A(T_{water}-T_{solid})\)</span> (3)</p>
+<p>where <span class="math notranslate nohighlight">\(h\)</span> is the convective heat transfer coefficient and <span class="math notranslate nohighlight">\(A\)</span> is the surface area of the solid in contact with the water. Plugging the conservation of energy equations in 2b and 2d into the heat transfer equation in 4 there results</p>
+<p><span class="math notranslate nohighlight">\(\frac{T_{water}}{dt}+\left(\frac{hA}{m_{solid}C_{solid}}+\frac{hA}{m_{water}C_{water}}\right)T_{water}
+=hA\left(\frac{T_{solid}(0)}{m_{water}C_{water}}+\frac{T_{water}(0)}{m_{solid}C_{solid}}\right)\)</span>. (4)</p>
+<p>In the following example, 2 kg of water at 20<span class="math notranslate nohighlight">\(^o\)</span>C has an aluminum cylinder (diameter=25 cm, height=25 cm) mass initially at 90<span class="math notranslate nohighlight">\(^{o}\)</span>C dropped into it. The specific heat of water is taken as 4186 J/kg-K, the specific heat of aluminum is taken as 900 J/kg-K, and the surface area is solved as the surface area of the cylinder.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fluid_temp</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">mf</span><span class="p">,</span><span class="n">Cf</span><span class="p">,</span><span class="n">ms</span><span class="p">,</span><span class="n">Cs</span><span class="p">,</span><span class="n">As</span><span class="p">,</span><span class="n">T0f</span><span class="p">,</span><span class="n">T0s</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;solution of first order thermal system fluid temperature</span>
+<span class="sd">    inputs are time, t</span>
+<span class="sd">    convection coefficient, h </span>
+<span class="sd">    mass of fluid, mf</span>
+<span class="sd">    specific heat of fluid, Cf</span>
+<span class="sd">    mass of solid, ms</span>
+<span class="sd">    specific heat of solid, Cs</span>
+<span class="sd">    area of contact between solid-fluid</span>
+<span class="sd">    initial fluid temperature, T0f</span>
+<span class="sd">    initial solid temperature, T0s&#39;&#39;&#39;</span>
+    <span class="c1">#L=h*As*(1/mf/Cf+1/ms/Cs)</span>
+    <span class="n">L</span><span class="o">=</span><span class="n">h</span><span class="o">*</span><span class="n">As</span><span class="o">*</span><span class="p">(</span><span class="n">mf</span><span class="o">*</span><span class="n">Cf</span><span class="o">+</span><span class="n">ms</span><span class="o">*</span><span class="n">Cs</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">ms</span><span class="o">*</span><span class="n">mf</span><span class="o">*</span><span class="n">Cs</span><span class="o">*</span><span class="n">Cf</span><span class="p">)</span>
+    <span class="n">F</span><span class="o">=</span><span class="n">h</span><span class="o">*</span><span class="n">As</span><span class="o">*</span><span class="n">T0s</span><span class="o">/</span><span class="n">mf</span><span class="o">/</span><span class="n">Cf</span><span class="o">+</span><span class="n">h</span><span class="o">*</span><span class="n">As</span><span class="o">*</span><span class="n">T0f</span><span class="o">/</span><span class="n">ms</span><span class="o">/</span><span class="n">Cs</span>
+    <span class="n">A</span><span class="o">=</span><span class="n">T0f</span><span class="o">-</span><span class="n">F</span><span class="o">/</span><span class="n">L</span>
+    <span class="n">Tf</span><span class="o">=</span><span class="n">A</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">L</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">+</span><span class="n">F</span><span class="o">/</span><span class="n">L</span>
+    <span class="n">Ts</span><span class="o">=</span><span class="n">T0s</span><span class="o">+</span><span class="n">mf</span><span class="o">*</span><span class="n">Cf</span><span class="o">/</span><span class="n">ms</span><span class="o">/</span><span class="n">Cs</span><span class="o">*</span><span class="p">(</span><span class="n">T0f</span><span class="o">-</span><span class="n">Tf</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Tf</span><span class="p">,</span><span class="n">Ts</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span><span class="o">=</span><span class="mf">0.025</span>
+<span class="n">t</span><span class="o">=</span><span class="mf">0.050</span>
+<span class="n">V</span><span class="o">=</span><span class="n">pi</span><span class="o">*</span><span class="n">r</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">t</span>
+<span class="n">ms</span><span class="o">=</span><span class="mi">2700</span><span class="o">*</span><span class="n">V</span>
+<span class="n">As</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">r</span><span class="o">*</span><span class="p">(</span><span class="n">r</span><span class="o">+</span><span class="n">t</span><span class="p">)</span>
+
+<span class="n">t</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="mi">3600</span><span class="p">)</span>
+<span class="n">Tf</span><span class="p">,</span><span class="n">Ts</span><span class="o">=</span><span class="n">fluid_temp</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4186</span><span class="p">,</span><span class="n">ms</span><span class="p">,</span><span class="mi">900</span><span class="p">,</span><span class="n">As</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="o">/</span><span class="mi">3600</span><span class="p">,</span><span class="n">Tf</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;time (hr)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;water temp (C)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Water temperature rise due to 90$^</span><span class="si">{o}</span><span class="s1">$C Al mass&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Water temperature rise due to 90$^{o}$C Al mass&#39;)
+</pre></div>
+</div>
+<img alt="../_images/ME3263-Lab_06_10_1.png" src="../_images/ME3263-Lab_06_10_1.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="problem-1">
+<h1>Problem 1<a class="headerlink" href="#problem-1" title="Permalink to this headline">¶</a></h1>
+<p>Use the following experimental data to determine the convection coefficient <span class="math notranslate nohighlight">\(h\)</span> by fitting the data to the <code class="docutils literal notranslate"><span class="pre">fluid_temp</span></code> function.</p>
+<p>0.5 kg of water at 20<span class="math notranslate nohighlight">\(^o\)</span>C has an aluminum cylinder (diameter=25 cm, height=25 cm) mass initially at has an unknown initial temperature. The specific heat of water is taken as 4186 J/kg-K, the specific heat of aluminum is taken as 900 J/kg-K, and the surface area is solved as the surface area of the cylinder.</p>
+<p>find the convection coefficient <span class="math notranslate nohighlight">\(h\)</span> and intitial temperature of the solid, T0s.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>time (s)</p></th>
+<th class="head"><p>Temp (C)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0.0</p></td>
+<td><p>20.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>400.0</p></td>
+<td><p>22.30</p></td>
+</tr>
+<tr class="row-even"><td><p>800.0</p></td>
+<td><p>23.96</p></td>
+</tr>
+<tr class="row-odd"><td><p>1200.0</p></td>
+<td><p>25.14</p></td>
+</tr>
+<tr class="row-even"><td><p>1600.0</p></td>
+<td><p>26.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2000.0</p></td>
+<td><p>26.61</p></td>
+</tr>
+<tr class="row-even"><td><p>2400.0</p></td>
+<td><p>27.06</p></td>
+</tr>
+<tr class="row-odd"><td><p>2800.0</p></td>
+<td><p>27.37</p></td>
+</tr>
+<tr class="row-even"><td><p>3200.0</p></td>
+<td><p>27.60</p></td>
+</tr>
+<tr class="row-odd"><td><p>3600.0</p></td>
+<td><p>27.77</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># setting up problem 1</span>
+<span class="n">t</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">400</span><span class="p">,</span><span class="mi">800</span><span class="p">,</span><span class="mi">1200</span><span class="p">,</span><span class="mi">1600</span><span class="p">,</span><span class="mi">2000</span><span class="p">,</span><span class="mi">2400</span><span class="p">,</span><span class="mi">2800</span><span class="p">,</span><span class="mi">3200</span><span class="p">,</span><span class="mi">3600</span><span class="p">])</span>
+<span class="n">Tf</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">20</span><span class="p">,</span><span class="mf">22.19</span><span class="p">,</span><span class="mf">24.14</span><span class="p">,</span><span class="mf">25.08</span><span class="p">,</span><span class="mf">26.02</span><span class="p">,</span><span class="mf">26.42</span><span class="p">,</span><span class="mf">26.99</span><span class="p">,</span><span class="mf">27.52</span><span class="p">,</span><span class="mf">27.59</span><span class="p">,</span><span class="mf">27.78</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">func_01</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">T0s</span><span class="p">):</span>
+    <span class="n">r</span><span class="o">=</span><span class="mf">0.025</span>
+    <span class="n">w</span><span class="o">=</span><span class="mf">0.050</span>
+    <span class="n">V</span><span class="o">=</span><span class="n">pi</span><span class="o">*</span><span class="n">r</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">w</span>
+    <span class="n">ms</span><span class="o">=</span><span class="mi">2700</span><span class="o">*</span><span class="n">V</span>
+    <span class="n">As</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">r</span><span class="o">*</span><span class="p">(</span><span class="n">r</span><span class="o">+</span><span class="n">w</span><span class="p">)</span>
+    <span class="n">mf</span><span class="o">=</span><span class="mf">0.5</span>
+    <span class="n">Cf</span><span class="o">=</span><span class="mi">4186</span>
+    <span class="n">Cs</span><span class="o">=</span><span class="mi">900</span>
+    <span class="n">T0f</span><span class="o">=</span><span class="mf">19.98</span>
+    <span class="c1">#fluid_temp(t,15,0.5,4186,ms,900,As,20,100)</span>
+    <span class="n">Tf</span><span class="p">,</span><span class="n">Ts</span><span class="o">=</span><span class="n">fluid_temp</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">mf</span><span class="p">,</span><span class="n">Cf</span><span class="p">,</span><span class="n">ms</span><span class="p">,</span><span class="n">Cs</span><span class="p">,</span><span class="n">As</span><span class="p">,</span><span class="n">T0f</span><span class="p">,</span><span class="n">T0s</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Tf</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use the curve fit function to get h and T0s</span>
+<span class="c1"># replace the values of f, xdata, ydata, and bestguesses</span>
+<span class="c1">#popt,pcov =curve_fit(f, xdata, ydata, p0=[bestguessh,bestguessT0s])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">Tf</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">func_01</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">popt</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">popt</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+
+<span class="n">p</span><span class="o">.</span><span class="n">check_p01</span><span class="p">(</span><span class="n">func_01</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">popt</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="mf">0.1</span><span class="p">,</span><span class="n">popt</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mf">0.1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="experimental-details">
+<h1>Experimental details<a class="headerlink" href="#experimental-details" title="Permalink to this headline">¶</a></h1>
+<p>The time response of the system is characterized by the time constant <span class="math notranslate nohighlight">\(\tau=1/\lambda\)</span>;
+it is the natural time scale for this problem.
+Use a first order thermal system model to measure the time constant, <span class="math notranslate nohighlight">\(\tau\)</span>, and convection coefficient, <span class="math notranslate nohighlight">\(h\)</span>, based upon the
+measured temperature vs time.</p>
+<ul class="simple">
+<li><p>Calibrate the thermocouple with two phase transitions.
+Plunge your thermocouple into an ice bath and then boiled water.</p></li>
+<li><p>Weigh your styrofoam box on the scale. Fill your styrofoam box with
+cool tap water. Weigh the box + water. Record the mass of water and
+measure the initial water temperature (via the thermocouple).</p></li>
+<li><p>Drop the heated mass that has been heated up to a preset temperature into
+the water.</p></li>
+<li><p><strong>Record the temperature of the water as a function of time.</strong> Be
+sure to choose an appropriate sample rate.</p></li>
+<li><p>Record the
+mass, the material composition of the mass (e.g. aluminum, copper, etc.), and
+any necessary geometric features of the mass.</p></li>
+<li><p>From your data, determine the time constant, <span class="math notranslate nohighlight">\(\tau\)</span>, and the convection coefficient, <span class="math notranslate nohighlight">\(h\)</span>.</p></li>
+</ul>
+</div>
+<div class="section" id="determine-temperature-of-cooling-mass">
+<h1>Determine Temperature of cooling mass<a class="headerlink" href="#determine-temperature-of-cooling-mass" title="Permalink to this headline">¶</a></h1>
+<p>In the lumped heat transfer model derived in equation 4, we made the assumption that our mass is a uniform temperature. This is a valid assumption if conduction within the solid is much faster than convection between the solid and liquid. A common quantity used to verify this assumption is the Biot number <a class="reference external" href="https://ocw.mit.edu/courses/aeronautics-and-astronautics/16-050-thermal-energy-fall-2002/lecture-notes/10_part3.pdf">[3 (p.30)]</a></p>
+<p><span class="math notranslate nohighlight">\(Bi = \frac{hL}{k}\)</span> (5)</p>
+<p>where <span class="math notranslate nohighlight">\(h\)</span> is the convection coefficent, <span class="math notranslate nohighlight">\(L\)</span> is the representative length (often calculated as volume/area), and <span class="math notranslate nohighlight">\(k\)</span> is the conduction of the solid. When Bi&lt;&lt;1, conduction happens much faster than convection. When Bi&gt;&gt;1, conduction will dominate heat transfer.</p>
+<p>Use Ansys [<a class="reference external" href="https://ansyshelp.ansys.com/account/secured?returnurl=/Views/Secured/corp/main_page.html">4</a>, <a class="reference external" href="https://kaltura.uconn.edu/media/ansys-transient_heat-transfer+-+Quiz/1_nf1xqyh5">5</a>] to determine the temperature within the solid when it is placed in the cold water. Here, we will enter the temperature of the water based upon experimental results to account for changing <span class="math notranslate nohighlight">\(T_{\infty}\)</span> as seen in Figure 3. Model the solid as an axisymmetric cylinder. If your solid is rectangular, make sure the volume and surface area are the same as the experiment. The outer surfaces have convection boundary conditions and the solid initially has a temperature of your measured initial temperature. Use the the best-fit function for the temperature vs time to get 6-10 temperature values to enter into an Ansys transient heat transfer model.</p>
+<p><strong>Post-process</strong>:
+Compare the maximum and minimum temperatures in the solid over time. Compare the conduction-convection model to the lumped-mass prediction of the temperature of the mass.</p>
+<p><img alt="Schematic of two dimensional heat transfer model." src="../_images/figure_031.png" /></p>
+<p><strong>Figure 3: Schematic of two dimensional heat transfer model.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Experimentally determined convection coefficient, h</span>
+<span class="c1"># and initial temperature of solid T0s</span>
+<span class="c1">#Use as input for Ansys model</span>
+<span class="n">h</span><span class="o">=</span><span class="mi">10</span> <span class="c1"># W/m/m/K</span>
+<span class="n">T0s</span><span class="o">=</span><span class="mi">90</span> <span class="c1"># deg C</span>
+
+<span class="n">r</span><span class="o">=</span><span class="mf">0.025</span>
+<span class="n">t</span><span class="o">=</span><span class="mf">0.050</span>
+<span class="n">V</span><span class="o">=</span><span class="n">pi</span><span class="o">*</span><span class="n">r</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">t</span>
+<span class="n">ms</span><span class="o">=</span><span class="mi">2700</span><span class="o">*</span><span class="n">V</span>
+<span class="n">As</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">r</span><span class="o">*</span><span class="p">(</span><span class="n">r</span><span class="o">+</span><span class="n">t</span><span class="p">)</span>
+
+<span class="n">tmod</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="mi">3600</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">Tf</span><span class="p">,</span><span class="n">Ts</span><span class="o">=</span><span class="n">fluid_temp</span><span class="p">(</span><span class="n">tmod</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4186</span><span class="p">,</span><span class="n">ms</span><span class="p">,</span><span class="mi">900</span><span class="p">,</span><span class="n">As</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="n">T0s</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tmod</span><span class="p">,</span><span class="n">Tf</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;time,Temp (C)&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">T</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">Tf</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%1.0f</span><span class="s1">,</span><span class="si">%1.1f</span><span class="s1">&#39;</span><span class="o">%</span><span class="p">(</span><span class="n">tmod</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">T</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>time,Temp (C)
+0,20.0
+1440,21.0
+2880,21.5
+4320,21.7
+5760,21.8
+7200,21.9
+</pre></div>
+</div>
+<img alt="../_images/ME3263-Lab_06_18_1.png" src="../_images/ME3263-Lab_06_18_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="references">
+<h1>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h1>
+<ol class="simple">
+<li><p><span class="xref myst">Preston-Thomas, H. (1990). The international temperature scale of 1990 (ITS-90). metrologia, 27(1), 3.</span>.</p></li>
+<li><p><span class="xref myst">ASTM E220-13 Standard Test Method for Calibration of Thermocouples By Comparison Techniques, ASTM International, West Conshohocken, PA, 2013, https://doi.org/10.1520/E0220-13</span>.</p></li>
+<li><p><a class="reference external" href="https://ocw.mit.edu/courses/aeronautics-and-astronautics/16-050-thermal-energy-fall-2002/lecture-notes/10_part3.pdf">MIT Thermal Energy lecture notes (p.30)</a></p></li>
+<li><p><a class="reference external" href="https://ansyshelp.ansys.com/account/secured?returnurl=/Views/Secured/corp/main_page.html">Ansys help documentation.</a></p></li>
+<li><p><a class="reference external" href="https://kaltura.uconn.edu/media/ansys-transient_heat-transfer+-+Quiz/1_nf1xqyh5">Ansys transient thermal analysis tutorial</a></p></li>
+</ol>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./ME3263-Lab_06"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Ryan C. Cooper, Martin Huber, Shubhangi Bansude<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

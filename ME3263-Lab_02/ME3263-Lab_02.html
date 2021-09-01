@@ -1,0 +1,1073 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ME 3263 Introduction to Sensors and Data Analysis (Fall 2018) &#8212; Introduction to Sensors and Data</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ME 3263 Introduction to Sensors and Data Analysis (Fall 2018)" href="../ME3263-Lab_03/README.html" />
+    <link rel="prev" title="ME 3263 Introduction to Sensors and Data Analysis (Fall 2018)" href="README.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Sensors and Data</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   Introduction to Sensors and Data Analysis
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ME3263-Lab_00/README.html">
+   Lab 0 - Statistics and the Student t-test
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ME3263-Lab_01/README.html">
+   ME3263_Lab-01
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="README.html">
+   ME 3263 Introduction to Sensors and Data Analysis (Fall 2018)
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ME3263-Lab_03/README.html">
+   ME 3263 Introduction to Sensors and Data Analysis (Fall 2018)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ME3263-Lab_03/ME3263-Lab_03.html">
+     ME 3263 Introduction to Sensors and Data Analysis
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ME3263-Lab_04/README.html">
+   ME3263 Introduction to Sensors and Data Analysis (Fall 2018)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ME3263-Lab_04/ME3263-Lab_04.html">
+     ME 3263 Introduction to Sensors and Data Analysis (Fall 2018)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ME3263-Lab_05/README.html">
+   ME3263-Lab-05
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ME3263-Lab_05/ME3263-Lab_05.html">
+     ME 3263 - Sensors and Data Analysis
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/ME3263-Lab_02/ME3263-Lab_02.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/cooperrc/sensors_and_data"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/cooperrc/sensors_and_data/issues/new?title=Issue%20on%20page%20%2FME3263-Lab_02/ME3263-Lab_02.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/cooperrc/sensors_and_data/master?urlpath=tree/ME3263-Lab_02/ME3263-Lab_02.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   ME 3263 Introduction to Sensors and Data Analysis (Fall 2018)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lab-2-static-beam-deflections-with-strain-gage">
+   Lab #2 - Static beam deflections with strain gage
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-a-strain-gage">
+   What is a Strain Gage?
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#validate-static-strain-gage-measurements">
+   Validate static strain gage measurements
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problem-1">
+   Problem 1
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problem-2">
+   Problem 2
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#measure-constitutive-properties">
+   Measure constitutive properties
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#constitutive-model">
+     Constitutive Model
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fitting-your-data-to-your-model">
+     Fitting your data to your model
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problem-3">
+   Problem 3
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#your-report">
+     Your Report
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#references">
+     References
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span><span class="p">,</span> <span class="n">t</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;font.size&#39;</span><span class="p">:</span> <span class="mi">22</span><span class="p">})</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;lines.linewidth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="kn">import</span> <span class="nn">check_lab02</span> <span class="k">as</span> <span class="nn">p</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="me-3263-introduction-to-sensors-and-data-analysis-fall-2018">
+<h1>ME 3263 Introduction to Sensors and Data Analysis (Fall 2018)<a class="headerlink" href="#me-3263-introduction-to-sensors-and-data-analysis-fall-2018" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="lab-2-static-beam-deflections-with-strain-gage">
+<h1>Lab #2 - Static beam deflections with strain gage<a class="headerlink" href="#lab-2-static-beam-deflections-with-strain-gage" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="what-is-a-strain-gage">
+<h1>What is a Strain Gage?<a class="headerlink" href="#what-is-a-strain-gage" title="Permalink to this headline">¶</a></h1>
+<p>A strain gage consists of a looped wire that is embedded in a thin backing. Two
+copper coated tabs serve as solder points for the leads. See Figure 1a. The
+strain gage is mounted to the structure, whose deformation is to be measured. As
+the structure deforms, the wire stretches (increasing its net length ) and its
+electrical resistance changes: <span class="math notranslate nohighlight">\(R=\rho L/A\)</span>, where <span class="math notranslate nohighlight">\(\rho\)</span> is the material
+resistivity, <span class="math notranslate nohighlight">\(L\)</span> is the total length of the wire, and <span class="math notranslate nohighlight">\(A\)</span> is the cross sectional
+area of the wire.  Note that as <span class="math notranslate nohighlight">\(L\)</span> increases, the cross sectional area changes as
+well due to the Poisson contraction; the resistivity also changes.</p>
+<p><img alt="Figure 1: a) A typical strain gage. b) One common setup: the gage ismounted to measure the x-direction strain on the top surface. It'sengaged in a quarter bridge configuration of the Wheatstone bridgecircuit." src="../_images/figure_01.png" /></p>
+<p><em>Figure 1: a) A typical strain gage. b) One common setup: the gage is
+mounted to measure the x-direction strain on the top surface. It’s
+engaged in a quarter bridge configuration of the Wheatstone bridge
+circuit.</em></p>
+</div>
+<div class="section" id="validate-static-strain-gage-measurements">
+<h1>Validate static strain gage measurements<a class="headerlink" href="#validate-static-strain-gage-measurements" title="Permalink to this headline">¶</a></h1>
+<p>In this lab we will calibrate strain measurements using Euler-Bernouli beam theory
+kinematics [1]. The axial strain in a beam is directly proportional to the distance
+from the neutral axis and curvature as such</p>
+<p><span class="math notranslate nohighlight">\(\epsilon_x=-\kappa z\)</span>. (1)</p>
+<p>The curvature of the beam is approximated as such</p>
+<p><span class="math notranslate nohighlight">\(\kappa=\frac{d^2 w}{dx^2}\)</span>. (2)</p>
+<p>Equations 1 and 2 relate beam deflection to axial strain. These are called
+kinematic equations because they define the geometry of the beam deflection.</p>
+<p>The Euler-Bernouli beam theory uses Newton’s second law (kinetics) and Hooke’s
+law (constitutive) to derive the linear equations of motion for one dimensional
+deformable objects [1,4]. The relation between a static applied force q(x) and static
+deflection w(x) is as such</p>
+<p><span class="math notranslate nohighlight">\(\frac{\partial^2}{\partial x^2}\left(EI\frac{\partial^2 w}{\partial
+x^2}\right)=q(x)\)</span> (3)</p>
+<p>where <span class="math notranslate nohighlight">\(E\)</span> is the Young’s modulus, <span class="math notranslate nohighlight">\(x\)</span> is the distance along the neutral axis,
+and <span class="math notranslate nohighlight">\(I\)</span> is the second moment of area of the beam’s cross-section. For a
+rectangular cross-section <span class="math notranslate nohighlight">\(b \times t\)</span>, width by thickness the second moment of
+area is</p>
+<p><span class="math notranslate nohighlight">\(I=\frac{bt^3}{12}\)</span>. (4)</p>
+<p>We will design our strain gage validation such that <span class="math notranslate nohighlight">\(E\)</span> and <span class="math notranslate nohighlight">\(I\)</span> are not necessary. The boundary conditions for a clamped beam that is
+deflected by a distance <span class="math notranslate nohighlight">\(\delta\)</span> are <span class="math notranslate nohighlight">\(w(0)=0\)</span>, <span class="math notranslate nohighlight">\(w'(0)=0\)</span>, <span class="math notranslate nohighlight">\(w(L)=\delta\)</span>, and
+<span class="math notranslate nohighlight">\(w''(L)=0\)</span>. Therefore, the functions <span class="math notranslate nohighlight">\(w(x)\)</span> and <span class="math notranslate nohighlight">\(w''(x)\)</span> can be determined by
+integrating equation 3 four times and using the four boundary conditions as such</p>
+<p><span class="math notranslate nohighlight">\(w(x)=-\frac{1}{2}\left(\frac{\delta}{L^3}x^3-3\frac{\delta}{L^2}x^2\right)\)</span> (5a)</p>
+<p>and the curvature</p>
+<p><span class="math notranslate nohighlight">\(w''(x)=-\left(3\frac{\delta}{L^3}x-3\frac{\delta}{L^2}\right)\)</span> (5b)</p>
+<p>Using equations 5a-b, the only quantities needed to determine strain at a given
+location on a linear, homogeneous beam are <span class="math notranslate nohighlight">\(z\)</span>, <span class="math notranslate nohighlight">\(\delta\)</span>, <span class="math notranslate nohighlight">\(w(L)\)</span>, and <span class="math notranslate nohighlight">\(L\)</span>.</p>
+<p><img alt="Figure 2: Diagram of the validation process. The strain gage is placed at a distance  from the cantilever support. A linear-elastic beam of length  is deflected by distance, ." src="../_images/figure_02.png" /></p>
+<p><em>Figure 2: Diagram of the validation process. The strain gage is placed at a distance <span class="math notranslate nohighlight">\(x_{SG}\)</span> from the cantilever support. A linear-elastic beam of length <span class="math notranslate nohighlight">\(L\)</span> is deflected by distance, <span class="math notranslate nohighlight">\(\delta\)</span>.</em></p>
+<ul class="simple">
+<li><p>Apply a known tip displacement  as seen in Figure 2.  Measure and record the strain at your strain
+gage location, the displacement, <span class="math notranslate nohighlight">\(\delta\)</span> and length where load was applied,
+<span class="math notranslate nohighlight">\(L\)</span>.</p></li>
+<li><p>Calculate the strain at the location of the strain gage using equations 1,2,
+and 5a-b.</p></li>
+</ul>
+<p>Below are two functions that calculate displacement and curvature given a bar of length <code class="docutils literal notranslate"><span class="pre">L</span></code>, that is deflected by a distance, <code class="docutils literal notranslate"><span class="pre">delta</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">disp_at_x</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">L</span><span class="p">,</span><span class="n">delta</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;returns the displacement w(x) given the position, x, </span>
+<span class="sd">    length of bar, L, and displacement at L, delta&#39;&#39;&#39;</span>
+    <span class="n">wx</span><span class="o">=-</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">delta</span><span class="o">/</span><span class="n">L</span><span class="o">**</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">delta</span><span class="o">/</span><span class="n">L</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">wx</span>
+
+<span class="k">def</span> <span class="nf">k_at_x</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">L</span><span class="p">,</span><span class="n">delta</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;returns the curvature w&#39;&#39;(x) given the position, x, </span>
+<span class="sd">    length of bar, L, and displacement at L, delta&#39;&#39;&#39;</span>
+    <span class="n">wx</span><span class="o">=-</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">delta</span><span class="o">/</span><span class="n">L</span><span class="o">**</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">delta</span><span class="o">/</span><span class="n">L</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">wx</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w20mm</span><span class="o">=</span><span class="n">disp_at_x</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">400</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">k20mm</span><span class="o">=</span><span class="n">k_at_x</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">400</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;displacement of 400 mm bar deflected 10 mm, 20 mm from support =</span><span class="si">%1.3f</span><span class="s1"> mm&#39;</span><span class="o">%</span><span class="k">w20mm</span>)
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;   curvature of 400 mm bar deflected 10 mm, 20 mm from support =</span><span class="si">%1.3f</span><span class="s1"> 1/m&#39;</span><span class="o">%</span><span class="p">(</span><span class="n">k20mm</span><span class="o">*</span><span class="mi">1000</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>displacement of 400 mm bar deflected 10 mm, 20 mm from support =0.037 mm
+   curvature of 400 mm bar deflected 10 mm, 20 mm from support =0.178 1/m
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="problem-1">
+<h1>Problem 1<a class="headerlink" href="#problem-1" title="Permalink to this headline">¶</a></h1>
+<p>If your beam is 400 mm long by 10 mm thick and it deflects 15 mm at the tip, determine the following:</p>
+<p>a. displacement <code class="docutils literal notranslate"><span class="pre">w400</span></code> of the beam 20 mm from the base</p>
+<p>b. the curvature <code class="docutils literal notranslate"><span class="pre">k400</span></code> of the beam 20 mm from the base</p>
+<p>c. the strain <code class="docutils literal notranslate"><span class="pre">e400</span></code> of the beam 20 mm pixels from the base</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your work here</span>
+
+<span class="n">p</span><span class="o">.</span><span class="n">check_p01</span><span class="p">(</span><span class="n">w400</span><span class="p">,</span><span class="n">k400</span><span class="p">,</span><span class="n">e400</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1708</span><span class="o">/</span><span class="mf">3577948261.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># your work here</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">p</span><span class="o">.</span><span class="n">check_p01</span><span class="p">(</span><span class="n">w400</span><span class="p">,</span><span class="n">k400</span><span class="p">,</span><span class="n">e400</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;w400&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">400</span><span class="p">)</span>
+<span class="n">wx</span><span class="o">=</span><span class="n">disp_at_x</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">400</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">wx</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;position along beam (mm)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;deflection of neutral </span><span class="se">\n</span><span class="s1">axis w(x) (mm)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Shape of deflected cantilever beam&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Shape of deflected cantilever beam&#39;)
+</pre></div>
+</div>
+<img alt="../_images/ME3263-Lab_02_11_1.png" src="../_images/ME3263-Lab_02_11_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">400</span><span class="p">)</span>
+<span class="n">kx</span><span class="o">=</span><span class="n">k_at_x</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">400</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">kx</span><span class="o">*</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;position along beam (mm)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;curvature of neutral </span><span class="se">\n</span><span class="s1">axis </span><span class="se">\\</span><span class="s1">w(x) (1/m)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Curvature of deflected cantilever beam&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Curvature of deflected cantilever beam&#39;)
+</pre></div>
+</div>
+<img alt="../_images/ME3263-Lab_02_12_1.png" src="../_images/ME3263-Lab_02_12_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="problem-2">
+<h1>Problem 2<a class="headerlink" href="#problem-2" title="Permalink to this headline">¶</a></h1>
+<p>If your beam is 400 mm long by 10 mm thick and it deflects 15 mm at the tip, determine the position along the beam for the following:</p>
+<p>a. Where is the maximum deflection in the beam? save as <code class="docutils literal notranslate"><span class="pre">x_max_defl</span></code></p>
+<p>b. Where is the maximum curvature in the beam? save as <code class="docutils literal notranslate"><span class="pre">x_max_curv</span></code></p>
+<p>c. Where is the maximum strain in the beam? save as <code class="docutils literal notranslate"><span class="pre">x_max_strain</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">check_lab02</span> <span class="k">as</span> <span class="nn">p</span>
+
+<span class="n">p</span><span class="o">.</span><span class="n">check_p02</span><span class="p">(</span><span class="n">x_max_defl</span><span class="p">,</span><span class="n">x_max_curv</span><span class="p">,</span><span class="n">x_max_strain</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="measure-constitutive-properties">
+<h1>Measure constitutive properties<a class="headerlink" href="#measure-constitutive-properties" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="constitutive-model">
+<h2>Constitutive Model<a class="headerlink" href="#constitutive-model" title="Permalink to this headline">¶</a></h2>
+<p>Now the strain gage should be calibrated. We need to determine the Young’s modulus, <span class="math notranslate nohighlight">\(E\)</span> and second moment of area, <span class="math notranslate nohighlight">\(I\)</span>. This measurement requires three components: kinematic (which we solved in the validation), kinetic (<span class="math notranslate nohighlight">\(\sum{F}=0\)</span>), and a constitutive model (Hooke’s Law). The constitutive equation for a linear-elastic beam subject to a moment is as such</p>
+<p><span class="math notranslate nohighlight">\(M=EI\kappa\)</span>. (6)</p>
+<p>In equation 6, <span class="math notranslate nohighlight">\(M\)</span> is the applied moment, <span class="math notranslate nohighlight">\(E\)</span> is the Young’s modulus, <span class="math notranslate nohighlight">\(I\)</span> is the second moment of inertia of the area of the beam, and <span class="math notranslate nohighlight">\(\kappa\)</span> is the curvature of the beam. The constant <span class="math notranslate nohighlight">\(I\)</span> is based upon the geometry from equation 4. The material constant <span class="math notranslate nohighlight">\(E\)</span> is unknown.</p>
+<p>Use the weights to apply forces at different distances, <span class="math notranslate nohighlight">\(r\)</span>, from the support as seen in Figure 3. Increasing the weight or the distance the weight is applied will increase the applied moment. Use Table 1 to record the trial no., strain, force, distance, and moment. Use at least two trials per measurement.</p>
+<p><img alt="Figure 3: A linear-elastic beam of length  has a force applied at distance, .The strain gage is placed at a distance  from the cantilever support." src="../_images/figure_03.png" /></p>
+<p><em>Figure 3: A linear-elastic beam of length <span class="math notranslate nohighlight">\(L\)</span> has a force applied at distance, <span class="math notranslate nohighlight">\(r\)</span>.
+The strain gage is placed at a distance <span class="math notranslate nohighlight">\(x\)</span> from the cantilever support.</em></p>
+</div>
+<div class="section" id="fitting-your-data-to-your-model">
+<h2>Fitting your data to your model<a class="headerlink" href="#fitting-your-data-to-your-model" title="Permalink to this headline">¶</a></h2>
+<p>Once you have filled in a number of data points for <span class="math notranslate nohighlight">\(\kappa\)</span> and <span class="math notranslate nohighlight">\(M\)</span>, you can use a linear regression to determine the slope of the data. The constitutive model in equation (6) predicts that the moment and curvature will be related by a proportional constant, <span class="math notranslate nohighlight">\(EI\)</span>. If we know <span class="math notranslate nohighlight">\(EI\)</span>, the total squared error is as such</p>
+<p><span class="math notranslate nohighlight">\(SSE=\sum_i^N{(M_i-EI\kappa_i)^2}\)</span> (7)</p>
+<p>where SSE is the sum of squares error between the predicted moment and measured moment for the <span class="math notranslate nohighlight">\(i^{th}\)</span> measurement with <span class="math notranslate nohighlight">\(N\)</span> total measurements <a class="reference external" href="https://www.amazon.com/Numerical-Methods-Engineers-Steven-Chapra/dp/0073401064">[2]</a>. We can choose a of <span class="math notranslate nohighlight">\(EI\)</span> that minimizes <span class="math notranslate nohighlight">\(SSE\)</span>, but it will never be zero. Below is an example calculation for a linear least squares regression in python for a beam with cross-section <span class="math notranslate nohighlight">\(12\times3\)</span> mm.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">6.95685737e-07</span><span class="p">,</span> <span class="mf">9.93992373e-06</span><span class="p">,</span> <span class="mf">3.25200211e-05</span><span class="p">,</span> <span class="mf">3.55750721e-05</span><span class="p">,</span>
+       <span class="mf">5.32023782e-05</span><span class="p">,</span> <span class="mf">7.48128585e-05</span><span class="p">,</span> <span class="mf">7.61625461e-05</span><span class="p">,</span> <span class="mf">8.54476229e-05</span><span class="p">,</span>
+       <span class="mf">1.02089509e-04</span><span class="p">,</span> <span class="mf">1.02841452e-04</span><span class="p">,</span> <span class="mf">1.32351731e-04</span><span class="p">,</span> <span class="mf">1.43996022e-04</span><span class="p">,</span>
+       <span class="mf">1.45204793e-04</span><span class="p">,</span> <span class="mf">1.56867759e-04</span><span class="p">,</span> <span class="mf">1.73435915e-04</span><span class="p">,</span> <span class="mf">1.95625232e-04</span><span class="p">,</span>
+       <span class="mf">2.00670618e-04</span><span class="p">,</span> <span class="mf">2.12900332e-04</span><span class="p">,</span> <span class="mf">2.24582886e-04</span><span class="p">,</span> <span class="mf">2.41141396e-04</span><span class="p">,</span>
+       <span class="mf">2.45991618e-04</span><span class="p">,</span> <span class="mf">2.55608426e-04</span><span class="p">,</span> <span class="mf">2.76117673e-04</span><span class="p">,</span> <span class="mf">2.96128593e-04</span><span class="p">,</span>
+       <span class="mf">3.07157389e-04</span><span class="p">,</span> <span class="mf">3.20509718e-04</span><span class="p">,</span> <span class="mf">3.20363196e-04</span><span class="p">,</span> <span class="mf">3.35535814e-04</span><span class="p">,</span>
+       <span class="mf">3.53706984e-04</span><span class="p">,</span> <span class="mf">3.64130433e-04</span><span class="p">])</span>
+<span class="n">M</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span> <span class="mf">0.</span>        <span class="p">,</span>  <span class="mf">23.82866379</span><span class="p">,</span>  <span class="mf">47.65732759</span><span class="p">,</span>  <span class="mf">71.48599138</span><span class="p">,</span>
+        <span class="mf">95.31465517</span><span class="p">,</span> <span class="mf">119.14331897</span><span class="p">,</span> <span class="mf">142.97198276</span><span class="p">,</span> <span class="mf">166.80064655</span><span class="p">,</span>
+       <span class="mf">190.62931034</span><span class="p">,</span> <span class="mf">214.45797414</span><span class="p">,</span> <span class="mf">238.28663793</span><span class="p">,</span> <span class="mf">262.11530172</span><span class="p">,</span>
+       <span class="mf">285.94396552</span><span class="p">,</span> <span class="mf">309.77262931</span><span class="p">,</span> <span class="mf">333.6012931</span> <span class="p">,</span> <span class="mf">357.4299569</span> <span class="p">,</span>
+       <span class="mf">381.25862069</span><span class="p">,</span> <span class="mf">405.08728448</span><span class="p">,</span> <span class="mf">428.91594828</span><span class="p">,</span> <span class="mf">452.74461207</span><span class="p">,</span>
+       <span class="mf">476.57327586</span><span class="p">,</span> <span class="mf">500.40193966</span><span class="p">,</span> <span class="mf">524.23060345</span><span class="p">,</span> <span class="mf">548.05926724</span><span class="p">,</span>
+       <span class="mf">571.88793103</span><span class="p">,</span> <span class="mf">595.71659483</span><span class="p">,</span> <span class="mf">619.54525862</span><span class="p">,</span> <span class="mf">643.37392241</span><span class="p">,</span>
+       <span class="mf">667.20258621</span><span class="p">,</span> <span class="mf">691.03125</span>   <span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">curve_fit</span>
+
+<span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">EI</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">EI</span><span class="o">*</span><span class="n">x</span>
+
+<span class="n">EI</span><span class="p">,</span><span class="n">pcov</span><span class="o">=</span><span class="n">curve_fit</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">M</span><span class="p">)</span>
+<span class="n">EI_error</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">pcov</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">I</span><span class="o">=</span><span class="mi">12</span><span class="o">*</span><span class="mi">3</span><span class="o">**</span><span class="mi">3</span><span class="o">/</span><span class="mf">12.0</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Best fit for Young&#39;s Modulus is </span><span class="si">%1.1f</span><span class="s2"> +/- </span><span class="si">%1.1f</span><span class="s2"> GPa&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">EI</span><span class="o">/</span><span class="n">I</span><span class="o">*</span><span class="mf">1e-3</span><span class="p">,</span><span class="n">EI_error</span><span class="o">/</span><span class="n">I</span><span class="o">*</span><span class="mf">1e-3</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="mf">1e3</span><span class="p">,</span><span class="n">M</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;experiment&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="mf">1e3</span><span class="p">,</span><span class="n">func</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">EI</span><span class="p">),</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;model&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;curvature (1/m)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Moment (N-mm)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Best fit for Young&#39;s Modulus is 70.2 +/- 0.3 GPa
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Moment (N-mm)&#39;)
+</pre></div>
+</div>
+<img alt="../_images/ME3263-Lab_02_18_2.png" src="../_images/ME3263-Lab_02_18_2.png" />
+</div>
+</div>
+<p><em>Note:</em></p>
+<p>The least-squares method used above can be used to fit any function to a data set. You would just need to update the <code class="docutils literal notranslate"><span class="pre">func</span></code> definition to return the desired function based upon your unkown fitting constants.</p>
+<p>The outout <code class="docutils literal notranslate"><span class="pre">popt</span></code> is the covariance matrix <span class="xref myst">[3]</span>. In practice, we can use the square root of the diagonal terms to estimate the error in our least-squares fit. We make a few assumptions when performing this best-fit:</p>
+<ol class="simple">
+<li><p>There is a random error in the measured  dependent variable (here the moment <span class="math notranslate nohighlight">\(M\)</span>).</p></li>
+<li><p>There is no error in the reported independent variable (here the curvature <span class="math notranslate nohighlight">\(\kappa\)</span>).</p></li>
+<li><p>The measured dependent variables are uncorrelated with the measured error</p></li>
+<li><p>The random error has a mean of zero</p></li>
+</ol>
+<p>We can test assumption 4 by plotting the “residuals” of the fit i.e. the error. The plot below demonstrates that our data has a mean error of 0 and is uncorrelated with the random error.</p>
+<p>Our best-fit model has removed <em>systematic uncertainty</em>, but it cannot account for <em>random uncertainty.</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="mf">1e3</span><span class="p">,</span><span class="n">M</span><span class="o">-</span><span class="n">func</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">EI</span><span class="p">),</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;curvature (1/m)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Error=$M-EI\kappa$&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0,0.5,&#39;Error=$M-EI\\kappa$&#39;)
+</pre></div>
+</div>
+<img alt="../_images/ME3263-Lab_02_20_1.png" src="../_images/ME3263-Lab_02_20_1.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="problem-3">
+<h1>Problem 3<a class="headerlink" href="#problem-3" title="Permalink to this headline">¶</a></h1>
+<p>If the thickness of the beam is not measured properly, you can have large systematic errors in your results. In the example above, the width of the beam was 12 mm and the thickness of the beam was 3 mm. On the line,</p>
+<p><code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">=</span> <span class="pre">12*3**3/12.0</span></code></p>
+<p>Change the thickness to 3.1 mm and calculate <code class="docutils literal notranslate"><span class="pre">E31</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">check_lab02.py</span> <span class="k">as</span> <span class="nn">p</span>
+
+<span class="n">p</span><span class="o">.</span><span class="n">check_p03</span><span class="p">(</span><span class="n">E31</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><em>Table 1: Fill in the measured and calculated values.</em></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>trial</p></th>
+<th class="head"><p>distance, <span class="math notranslate nohighlight">\(r\)</span></p></th>
+<th class="head"><p>force= <span class="math notranslate nohighlight">\(mg\)</span></p></th>
+<th class="head"><p>strain (mm/mm)</p></th>
+<th class="head"><p>curvature (1/mm)</p></th>
+<th class="head"><p>Moment=<span class="math notranslate nohighlight">\(r\times F\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="your-report">
+<h2>Your Report<a class="headerlink" href="#your-report" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Introduction</p></li>
+<li><p>Procedure</p></li>
+<li><p>Results and Discussion</p></li>
+<li><p>Conclusion</p></li>
+</ol>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p>References</p>
+<ol class="simple">
+<li><p>Sutton, M. A., Orteu, J. J., &amp; Schreier, H. (2009). Image correlation for shape, motion and deformation measurements: basic concepts, theory and applications. Springer Science &amp; Business Media.</p></li>
+<li><p>F.P. Beer and E.R. Johnson, Mechanics of Materials, 2nd Edition,
+McGraw-Hill, 1992.</p></li>
+<li><p>S. Chapra, Numerical Methods for Engineers, ch. 14-15, 6th Edition, McGraw-Hill, 2009.</p></li>
+<li><p><span class="xref myst">C. Salter, Error Analysis Using the Variance–Covariance Matrix, J. of Chem. Ed., 2000.</span></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Euler%E2%80%93Bernoulli_beam_theory">Euler-Bernoulli Beam Theory - Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://courses.washington.edu/phys431/uncertainty_notes.pdf">Uncertainty
+Notes courses.washington.edu</a></p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./ME3263-Lab_02"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="README.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">ME 3263 Introduction to Sensors and Data Analysis (Fall 2018)</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../ME3263-Lab_03/README.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">ME 3263 Introduction to Sensors and Data Analysis (Fall 2018)</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Ryan C. Cooper, Martin Huber, Shubhangi Bansude<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
