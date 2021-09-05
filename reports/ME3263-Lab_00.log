@@ -29,7 +29,7 @@ p.check_p02(avg,conf_interval)
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mNameError[0m                                 Traceback (most recent call last)
-[0;32m/tmp/ipykernel_1618/1355488797.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_1649/1355488797.py[0m in [0;36m<module>[0;34m[0m
 [1;32m      2[0m [0mdata[0m [0;31m# =... enter your work here[0m[0;34m[0m[0;34m[0m[0m
 [1;32m      3[0m [0mtstat[0m[0;31m# =... enter your work here[0m[0;34m[0m[0;34m[0m[0m
 [0;32m----> 4[0;31m [0mavg[0m [0;31m#  =... enter your work here[0m[0;34m[0m[0;34m[0m[0m
