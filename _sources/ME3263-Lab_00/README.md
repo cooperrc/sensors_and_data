@@ -1,7 +1,5 @@
 # Lab 0 - Statistics and the Student t-test
 
-[https://ugmelab.uconn.edu](https://ugmelab.uconn.edu)
-
 We use statistics to draw conclusions from limited data. No measurement is exact. Every
 measurement you make has two types of uncertainties, *systematic* and *random*.
 *Systematic* uncertainties come from faults in your assumptions or equipment.  *Random*
