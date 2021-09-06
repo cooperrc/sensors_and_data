@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lab 0 - Statistics and the Student t-test &#8212; Introduction to Sensors and Data</title>
+    <title>Lab 0 - Statistics and Student’s t-test &#8212; Introduction to Sensors and Data</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -88,10 +88,22 @@
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
+ <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
-   Lab 0 - Statistics and the Student t-test
+   Lab 0 - Statistics and Student’s t-test
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ME3263-Lab_00.html">
+     ME 3263 - Laboratory # 0
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -175,24 +187,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Lab 0 - Statistics and the Student t-test
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#getting-to-the-lab-resources">
-   Getting to the Lab resources
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -201,25 +195,16 @@
         
               <div>
                 
-  <div class="section" id="lab-0-statistics-and-the-student-t-test">
-<h1>Lab 0 - Statistics and the Student t-test<a class="headerlink" href="#lab-0-statistics-and-the-student-t-test" title="Permalink to this headline">¶</a></h1>
-<p>We use statistics to draw conclusions from limited data. No measurement is exact. Every
-measurement you make has two types of uncertainties, <em>systematic</em> and <em>random</em>.
-<em>Systematic</em> uncertainties come from faults in your assumptions or equipment.  <em>Random</em>
-uncertainties are associated with unpredictable (or unforeseen at the time) experimental
-conditions. These can also be due to simplifications of your model. Here are some examples
-for caliper measurements:</p>
-<p>In theory, all uncertainies could be accounted for by factoring in all physics
-in your readings. In reality, there is a diminishing return on investment
-for this practice. So we use some statistical insights to draw conclusions.</p>
-</div>
-<div class="section" id="getting-to-the-lab-resources">
-<h1>Getting to the Lab resources<a class="headerlink" href="#getting-to-the-lab-resources" title="Permalink to this headline">¶</a></h1>
-<p>When you first click the link for <a class="reference external" href="https://ugmelab.uconn.edu">https://ugmelab.uconn.edu</a>
-you’ll be asked to sign in via Github. Use your netid <abc12345> and password and there
-will be a server created for you. In the server, is a folder called <code class="docutils literal notranslate"><span class="pre">work</span></code>. Click the
-folder to find the <code class="docutils literal notranslate"><span class="pre">Lab_00</span></code> content. From there, open the <code class="docutils literal notranslate"><span class="pre">ME3263-lab-00.ipynb</span></code> notebook
-and complete the exercises and analyze the <strong>Marble Madness</strong> data.</p>
+  <div class="section" id="lab-0-statistics-and-student-s-t-test">
+<h1>Lab 0 - Statistics and Student’s t-test<a class="headerlink" href="#lab-0-statistics-and-student-s-t-test" title="Permalink to this headline">¶</a></h1>
+<p>All experimental measurements are subject to random variation. No two measurements will be exactly the same. This variation can, for example, be caused by:</p>
+<ol class="simple">
+<li><p>Natural variation in a population</p></li>
+<li><p>Unpredictable fluctuations in experimental conditions</p></li>
+<li><p>Uncertainties inherent to the measurement device or system</p></li>
+</ol>
+<p>In practice, this means that we will always be working with uncertain data. Due to cost or practicallity concerns, we will often be working with <em>limited samples</em> of uncertain data. In these situations, we can use Student’s t-test to test hypotheses about our data sets, and we can use t-values to establish confidence intervals for the true mean of our measurements.</p>
+<p>In this lab, we will use the two-sample t-test to check for a possible manufacturing error in samples of glass marbles.</p>
 <div class="toctree-wrapper compound">
 </div>
 </div>

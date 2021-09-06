@@ -1,20 +1,13 @@
-# Lab 0 - Statistics and the Student t-test
+# Lab 0 - Statistics and Student's t-test
 
-We use statistics to draw conclusions from limited data. No measurement is exact. Every
-measurement you make has two types of uncertainties, *systematic* and *random*.
-*Systematic* uncertainties come from faults in your assumptions or equipment.  *Random*
-uncertainties are associated with unpredictable (or unforeseen at the time) experimental
-conditions. These can also be due to simplifications of your model. Here are some examples
-for caliper measurements:
+All experimental measurements are subject to random variation. No two measurements will be exactly the same. This variation can, for example, be caused by:
 
-In theory, all uncertainies could be accounted for by factoring in all physics
-in your readings. In reality, there is a diminishing return on investment
-for this practice. So we use some statistical insights to draw conclusions. 
+1. Natural variation in a population
+1. Unpredictable fluctuations in experimental conditions
+1. Uncertainties inherent to the measurement device or system
 
-# Getting to the Lab resources
+In practice, this means that we will always be working with uncertain data. Due to cost or practicallity concerns, we will often be working with _limited samples_ of uncertain data. In these situations, we can use Student's t-test to test hypotheses about our data sets, and we can use t-values to establish confidence intervals for the true mean of our measurements.
 
-When you first click the link for [https://ugmelab.uconn.edu](https://ugmelab.uconn.edu)
-you'll be asked to sign in via Github. Use your netid <abc12345> and password and there
-will be a server created for you. In the server, is a folder called `work`. Click the
-folder to find the `Lab_00` content. From there, open the `ME3263-lab-00.ipynb` notebook
-and complete the exercises and analyze the __Marble Madness__ data. 
+In this lab, we will use the two-sample t-test to check for a possible manufacturing error in samples of glass marbles.
+
+
