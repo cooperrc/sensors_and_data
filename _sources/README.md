@@ -14,7 +14,7 @@ The lab procedures are then presented, as well as any necessary data, followed b
 There are two ways to interact with these notebooks:
 
 1. __In your browser:__ When viewing a notebook, click the rocket-ship in the top menu to open the notebook using Binder. It will take a minute or two to build. You will be able to write and run python code in the fields provided. You will not be able to save your code, so you will want to document your work with screenshots and copy/paste.
-1. __In the computer lab:__ Jupyter Notebook is available in the computer lab. To download the notebooks and access them from a lab PC, use the following instructions: [Accessing Jupyter](./Access Jupyter in Engineering Labs.pdf)
+1. __In the computer lab:__ Jupyter Notebook is available in the computer lab. To download the notebooks and access them from a lab PC, use the following instructions: [Accessing Jupyter](./"Access Jupyter in Engineering Labs.pdf")
 
 ## Submitting Lab Reports
 
