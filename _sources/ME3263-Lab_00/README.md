@@ -14,4 +14,4 @@ In this lab, we will use the two-sample t-test to check for a possible manufactu
 
 ## Deliverables
 
-For this assignment, you will submit a .pdf of your report to your HuskyCT section by Wednesday, Sept. 13th. You are limited to __3 pages__ and __2 figures__. Additional data, figures, and information can be put in an appendix. It will not be graded, but you may refer to it to explain data, methods, or other relevant information.
+For this assignment, you will submit a .pdf of your report to your HuskyCT section by Wednesday, Sept. 15th. You are limited to __3 pages__ and __2 figures__. Additional data, figures, and information can be put in an appendix. It will not be graded, but you may refer to it to explain data, methods, or other relevant information.
