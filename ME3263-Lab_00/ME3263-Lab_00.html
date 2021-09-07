@@ -211,8 +211,8 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction-to-the-student-t-test">
-   Introduction to the Student t-test
+  <a class="reference internal nav-link" href="#introduction-to-student-s-t-test">
+   Introduction to Student’s t-test
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -224,44 +224,46 @@
   <a class="reference internal nav-link" href="#the-problem">
    The problem
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-problem-1">
+     Example Problem #1
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#problem-1">
-   Problem #1
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-solution-the-student-t-test">
-   The solution - the Student t-test
+  <a class="reference internal nav-link" href="#the-solution-student-s-t-test">
+   The solution - Student’s t-test
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#confidence-intervals">
-     1 - Confidence intervals
+     Confidence intervals
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-problem-2">
+     Example Problem #2
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#problem-2">
-   Problem #2
+  <a class="reference internal nav-link" href="#the-difference-between-two-means">
+   The Difference Between Two Means
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#difference-between-means">
-     2 - Difference between means
+    <a class="reference internal nav-link" href="#example-problem-3">
+     Example Problem #3
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#problem-3">
-   Problem 3
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-to-analyze-marble-madness-design-problem">
-   Data to analyze - Marble Madness Design Problem
+   Data to Analyze - Marble Madness Design Problem
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -296,54 +298,54 @@
 </div>
 <div class="section" id="me-3263-laboratory-0">
 <h1>ME 3263 - Laboratory # 0<a class="headerlink" href="#me-3263-laboratory-0" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction-to-the-student-t-test">
-<h2>Introduction to the Student t-test<a class="headerlink" href="#introduction-to-the-student-t-test" title="Permalink to this headline">¶</a></h2>
-<p>We use statistics to draw conclusions from limited data. No measurement is exact. Every measurement you make has two types of uncertainties, <em>systematic</em> and <em>random</em>. <em>Systematic</em> uncertainties come from faults in your assumptions or equipment.
-<em>Random</em> uncertainties are associated with unpredictable (or unforeseen at the
-time) experimental conditions. These can also be due to simplifications of your
-model. Here are some examples for caliper measurements:</p>
-<p>In theory, all uncertainies could be accounted for by factoring in all physics
-in your readings. In reality, there is a diminishing return on investment
-for this practice. So we use some statistical insights to draw conclusions.</p>
+<div class="section" id="introduction-to-student-s-t-test">
+<h2>Introduction to Student’s t-test<a class="headerlink" href="#introduction-to-student-s-t-test" title="Permalink to this headline">¶</a></h2>
+<p>All experimental measurements are subject to random variation. No two measurements will be exactly the same. This variation can, for example, be caused by:</p>
+<ol class="simple">
+<li><p>Natural differences in a population</p></li>
+<li><p>Unpredictable fluctuations in experimental conditions</p></li>
+<li><p>Uncertainties inherent to the measurement device or system</p></li>
+</ol>
+<p>In practice, this means that we will always be working with uncertain data. Due to cost or practicallity concerns, we will often be working with <em>limited samples</em> of uncertain data. In these situations, we can use Student’s t-test to test hypotheses about our data sets, and we can use t-values to establish confidence intervals for the true mean of our measured value.</p>
 </div>
 <div class="section" id="mean-and-standard-deviation">
 <h2>Mean and standard deviation<a class="headerlink" href="#mean-and-standard-deviation" title="Permalink to this headline">¶</a></h2>
-<p>If the same measurement is taken multiple times, then there should be some average value, the mean, <span class="math notranslate nohighlight">\(\mu\)</span>. If there is an average value, then that means there is also a measure of deviation from the average value, standard deviation, <span class="math notranslate nohighlight">\(\sigma\)</span>. The definitions for mean and standard deviation are as such</p>
-<p><span class="math notranslate nohighlight">\(\mu = \sum_{i=1}^{N}\frac{x_{i}}{N}\)</span></p>
+<p>When the same measurement is taken multiple times, the measurements will tend to cluster about a central value: the mean, <span class="math notranslate nohighlight">\(\bar{x}\)</span>. If we’re able to determine an average value, then we’re also able to describe how much our measurements deviate from that average value: the standard deviation, <span class="math notranslate nohighlight">\(S_x\)</span>. The expressions for mean and standard deviation are:</p>
+<p><span class="math notranslate nohighlight">\(\bar{x} = \sum_{i=1}^{N}\frac{x_{i}}{N}\)</span></p>
 <p>and</p>
-<p><span class="math notranslate nohighlight">\(\sigma^2 = \frac{\sum_{i=1}^{N}(x_{i}-\mu)^2}{N}\)</span>,</p>
+<p><span class="math notranslate nohighlight">\(S_x^2 = \frac{\sum_{i=1}^{N}(x_{i}-\bar{x})^2}{N}\)</span>,</p>
 <p>where <span class="math notranslate nohighlight">\(x_i\)</span> is the <span class="math notranslate nohighlight">\(i^{th}\)</span> measurement in a dataset called <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(N\)</span> is the number of data points.</p>
-<p>If you know the mean and standard deviation of a normally distributed data set, then you can predict the probability a given measurement will occur. The <a class="reference external" href="https://en.wikipedia.org/wiki/Probability_density_function">probability density function</a> for the difference between measurement <span class="math notranslate nohighlight">\(x_{i}\)</span> and <span class="math notranslate nohighlight">\(\mu\)</span> is shown below for <span class="math notranslate nohighlight">\(\sigma=1\)</span>.</p>
+<p>If we know the mean <span class="math notranslate nohighlight">\(\mu\)</span> and standard deviation <span class="math notranslate nohighlight">\(\sigma\)</span> of a <em>normally distributed</em> data set, then we can predict the relative probability a given measurement will occur. The <a class="reference external" href="https://en.wikipedia.org/wiki/Probability_density_function">probability density function</a> (PDF) for the difference between measurement <span class="math notranslate nohighlight">\(x_{i}\)</span> and mean <span class="math notranslate nohighlight">\(\mu\)</span> is shown below for <span class="math notranslate nohighlight">\(\sigma=1\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">y</span><span class="o">=</span><span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span> <span class="c1"># convert fraction to percent</span>
+<span class="n">y</span><span class="o">=</span><span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Measurement=$x_i-\mu$&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Probability of</span><span class="se">\\</span><span class="s1"> Measurement (\%)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Relative Probability&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Probability of\\\\ Measurement (\\%)&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Relative Probability&#39;)
 </pre></div>
 </div>
 <img alt="../_images/ME3263-Lab_00_4_1.png" src="../_images/ME3263-Lab_00_4_1.png" />
 </div>
 </div>
-<p>Half of the measured values are above the mean, <span class="math notranslate nohighlight">\(\mu\)</span>, and half below. To determine the number of times any given range of values would be measured, you can integrate the probability density function between two measurements, for example <span class="math notranslate nohighlight">\(\mu\pm\sigma\)</span> the mean plus or minus the standard deviation. This distribution is the <a class="reference external" href="https://en.wikipedia.org/wiki/Cumulative_distribution_function">cumulative distribution function</a> shown below.</p>
+<p>Half of the measured values are above the mean, <span class="math notranslate nohighlight">\(\mu\)</span>, and half below. To determine the actual probability for any given range of values to be observed, we can integrate the probability density function between two values (the lower and upper boundaries of the range of interest). For example, we could integrate the PDF from -<span class="math notranslate nohighlight">\(\infty\)</span> to <span class="math notranslate nohighlight">\(x\)</span> to find the probability of measuring a value <span class="math notranslate nohighlight">\(\le x\)</span>. This distribution (shown below) is called the <a class="reference external" href="https://en.wikipedia.org/wiki/Cumulative_distribution_function">cumulative distribution function</a> (CDF).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">y</span><span class="o">=</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span> <span class="c1"># convert fraction to percent</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Measurement=$x_i-\mu$&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Probability </span><span class="se">\\</span><span class="s1"> Measurement $&lt;x_i$ (\%)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Cumulative Probability (%)&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Probability \\\\ Measurement $&lt;x_i$ (\\%)&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Cumulative Probability (%)&#39;)
 </pre></div>
 </div>
 <img alt="../_images/ME3263-Lab_00_6_1.png" src="../_images/ME3263-Lab_00_6_1.png" />
@@ -352,7 +354,7 @@ for this practice. So we use some statistical insights to draw conclusions.</p>
 </div>
 <div class="section" id="the-problem">
 <h2>The problem<a class="headerlink" href="#the-problem" title="Permalink to this headline">¶</a></h2>
-<p>If we take anything less than an infinite number of measurements, then the mean and standard deviation, <span class="math notranslate nohighlight">\(\mu\)</span> and <span class="math notranslate nohighlight">\(\sigma\)</span>, are subject to random noise. Take the following five data sets of 20 normally distributed random numbers with <span class="math notranslate nohighlight">\(\mu=10\)</span> and <span class="math notranslate nohighlight">\(\sigma=1\)</span>.</p>
+<p>If we take anything less than an infinite number of measurements, then the mean and standard deviation, <span class="math notranslate nohighlight">\(\mu\)</span> and <span class="math notranslate nohighlight">\(\sigma\)</span>, are subject to random variation, and we <em>cannot know them exactly</em>. Take the following five data sets of 20 random numbers, each taken from a normal distribution with <span class="math notranslate nohighlight">\(\mu=10\)</span> and <span class="math notranslate nohighlight">\(\sigma=1\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
@@ -364,19 +366,18 @@ for this practice. So we use some statistical insights to draw conclusions.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data mean=10.040, standard deviation=1.012
-data mean=9.942, standard deviation=1.029
-data mean=10.065, standard deviation=0.799
-data mean=10.155, standard deviation=0.937
-data mean=10.046, standard deviation=1.211
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data mean=9.783, standard deviation=0.895
+data mean=9.862, standard deviation=1.036
+data mean=10.038, standard deviation=1.029
+data mean=9.858, standard deviation=0.643
+data mean=9.791, standard deviation=0.845
 </pre></div>
 </div>
 </div>
 </div>
-<p>Each average and standard deviation is subject to random noise (here the noise is artificially created by python).</p>
-</div>
-<div class="section" id="problem-1">
-<h2>Problem #1<a class="headerlink" href="#problem-1" title="Permalink to this headline">¶</a></h2>
+<p>Each average and standard deviation is subject to random variation. Here the variation is artificially created by Python, but the real-world effect is the same: to know the <em>population parameters</em>, we must infer them from a limited sample.</p>
+<div class="section" id="example-problem-1">
+<h3>Example Problem #1<a class="headerlink" href="#example-problem-1" title="Permalink to this headline">¶</a></h3>
 <p>Try creating 100 normally disributed random numbers with an average of 10 and standard deviation of 1. How close is the average to 10? How close is the standard deviation to 1?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -392,88 +393,90 @@ data mean=10.046, standard deviation=1.211
 </div>
 </div>
 </div>
-<div class="section" id="the-solution-the-student-t-test">
-<h2>The solution - the Student t-test<a class="headerlink" href="#the-solution-the-student-t-test" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://en.wikipedia.org/wiki/William_Sealy_Gosset">William S. Gossett</a> was working for Guinness in 1908 when he found a solution to the small sample size problem. Guinness insisted his work be kept secret, so he published on the pseudonym, student. Now we refer to his solution as the “Student t-test”.</p>
-<p>We can use the Student’s t-distribution to:</p>
+</div>
+<div class="section" id="the-solution-student-s-t-test">
+<h2>The solution - Student’s t-test<a class="headerlink" href="#the-solution-student-s-t-test" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/William_Sealy_Gosset">William S. Gossett</a> was working for Guinness in 1908 when he found a solution to the small sample size problem. To prevent the release of trade secrets (which had happened in the past), Guinness only allowed their employees to publish under the conditions that they not mention: <em>“1. beer, 2. Guiness, or 3. their own surname”</em>. Gossett published under the pseudonym Student, and we now refer to his work as “Student’s t-distribution” and “Student’s t-test”.</p>
+<p>We can use Student’s t-distribution to:</p>
 <ol class="simple">
-<li><p>Establish confidence limits for the mean estimated from smaller sample sizes. This will give us error bars</p></li>
+<li><p>Establish confidence limits for the mean estimated from smaller sample sizes. This will give us error bars.</p></li>
 <li><p>Test the statistical significance of the difference between means from two independent samples.</p></li>
 </ol>
 <div class="section" id="confidence-intervals">
-<h3>1 - Confidence intervals<a class="headerlink" href="#confidence-intervals" title="Permalink to this headline">¶</a></h3>
-<p>The confidence interval for a given data set is calculated with the mean, <span class="math notranslate nohighlight">\(\mu\)</span>, standard deviation, <span class="math notranslate nohighlight">\(\sigma\)</span>, number of data points <span class="math notranslate nohighlight">\(N\)</span>, and t-statistic <span class="math notranslate nohighlight">\(t=f(\sigma, N)\)</span>. The equation for the confidence interval of a small data set is as such</p>
-<p>x=<span class="math notranslate nohighlight">\(\mu \pm t(C.I.,df)\frac{\sigma}{\sqrt{N}}\)</span>,</p>
-<p>where x is the measured quantity, C.I. is the chosen confidence interval (95% here), df=N-1 is the degrees of freedom, and <span class="math notranslate nohighlight">\(t\sigma/\sqrt{N}\)</span> is an estimated true standard deviation. For example, lets look at the previous data set of <span class="math notranslate nohighlight">\(\mu=10\)</span> and <span class="math notranslate nohighlight">\(\sigma=1\)</span>. Notice the confidence interval increases.</p>
+<h3>Confidence intervals<a class="headerlink" href="#confidence-intervals" title="Permalink to this headline">¶</a></h3>
+<p>When describing a set of sample measurements, we can describe the variance and standard deviation <em>of the data set</em> using the expression for <span class="math notranslate nohighlight">\(S_x\)</span> shown above. However, using this to <em>estimate population parameters</em> will underestimate the population variance. We must instead use the <em>sample standard deviation</em> (which is an “unbiased estimator”), with <span class="math notranslate nohighlight">\(n-1\)</span> in the denominator:</p>
+<p><span class="math notranslate nohighlight">\(S_x^2 = \frac{\sum_{i=1}^{n}(x_{i}-\bar{x})^2}{n-1}\)</span></p>
+<p>The confidence interval for a given data set is calculated with the mean: <span class="math notranslate nohighlight">\(\bar{x}\)</span>, sample standard deviation: <span class="math notranslate nohighlight">\(S_x\)</span>, number of sample points: <span class="math notranslate nohighlight">\(n\)</span>, and t-statistic: <span class="math notranslate nohighlight">\(t=f(S_x, n)\)</span>. The equation for the confidence interval of a small data set is:</p>
+<p><span class="math notranslate nohighlight">\(x'\)</span>=<span class="math notranslate nohighlight">\(\bar{x} \pm t_{(\nu,P)}\frac{S_x}{\sqrt{n}}\)</span></p>
+<p>where x is the measured quantity, P is the chosen confidence interval, <span class="math notranslate nohighlight">\(\nu\)</span>=df=n-1 is the degrees of freedom, and <span class="math notranslate nohighlight">\(\frac{S_x}{\sqrt{n}}\)</span> is the “standard deviation of the mean”.</p>
+<p>For example, lets look at the previous data set generated from a normal distribution with <span class="math notranslate nohighlight">\(\mu=10\)</span> and <span class="math notranslate nohighlight">\(\sigma=1\)</span>. Here, we are establishing a confidence interval to 95%. Notice the confidence interval narrows with increasing <span class="math notranslate nohighlight">\(n\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span><span class="o">=</span><span class="mi">20</span>
-<span class="n">tstat</span><span class="o">=</span><span class="n">t</span><span class="o">.</span><span class="n">interval</span><span class="p">(</span><span class="mf">0.95</span><span class="p">,</span> <span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># calculate the 95% interval t-statistic</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">=</span><span class="mi">20</span>
+<span class="n">tstat</span><span class="o">=</span><span class="n">t</span><span class="o">.</span><span class="n">interval</span><span class="p">(</span><span class="mf">0.95</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># calculate the 95% interval t-statistic</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
-    <span class="n">data</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">N</span><span class="p">)</span> <span class="c1"># generate N random numbers with true mean of 10 and true std of 1</span>
-    <span class="c1"># print the mean and standard deviation</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> <span class="c1"># generate N random numbers with true mean of 10 and true std of 1</span>
     <span class="n">mu</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-    <span class="n">sigma</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-    <span class="n">N</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>    
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;data confidence interval is </span><span class="si">%1.3f</span><span class="s1"> +/- </span><span class="si">%1.3f</span><span class="s1">&#39;</span><span class="o">%</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span><span class="n">tstat</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">sigma</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">N</span><span class="p">)))</span>
+    <span class="n">sigma</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#The divisor used in calculations is N - ddof, where N is the length of the data vector. </span>
+    <span class="n">n</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>    
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;data confidence interval is </span><span class="si">%1.3f</span><span class="s1"> +/- </span><span class="si">%1.3f</span><span class="s1">&#39;</span><span class="o">%</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span><span class="n">tstat</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">sigma</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">)))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data confidence interval is 10.186 +/- 0.312
-data confidence interval is 10.068 +/- 0.379
-data confidence interval is 9.991 +/- 0.446
-data confidence interval is 9.800 +/- 0.435
-data confidence interval is 10.184 +/- 0.404
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data confidence interval is 10.386 +/- 0.353
+data confidence interval is 9.492 +/- 0.426
+data confidence interval is 9.889 +/- 0.416
+data confidence interval is 10.019 +/- 0.532
+data confidence interval is 10.106 +/- 0.427
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">convergence_of_mean</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">convergence_of_mean</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-    <span class="n">y</span><span class="o">=</span><span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># convert fraction to percent</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> 
     <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
-    <span class="n">y_sample</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">N</span><span class="p">)</span>
-    <span class="n">tstat</span><span class="o">=</span><span class="n">t</span><span class="o">.</span><span class="n">interval</span><span class="p">(</span><span class="mf">0.95</span><span class="p">,</span> <span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-    <span class="n">CI</span><span class="o">=</span><span class="n">tstat</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">sigma</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+    <span class="n">y_sample</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">tstat</span><span class="o">=</span><span class="n">t</span><span class="o">.</span><span class="n">interval</span><span class="p">(</span><span class="mf">0.95</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">CI</span><span class="o">=</span><span class="n">tstat</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">sigma</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">y_sample</span><span class="p">,</span><span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">vlines</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">y_sample</span><span class="p">)</span><span class="o">-</span><span class="n">CI</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">y_sample</span><span class="p">)</span><span class="o">+</span><span class="n">CI</span><span class="p">],</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.4</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Measurement=$x_i-\mu$&#39;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Probability of</span><span class="se">\\</span><span class="s1"> Measurement (\%)&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Relative Probability&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.5</span><span class="p">])</span>
     
-<span class="n">interact</span><span class="p">(</span><span class="n">convergence_of_mean</span><span class="p">,</span><span class="n">N</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">1000</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Black bars show confidence interval based upon N measurements&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Use the slider to change the number of samples, N&#39;</span><span class="p">)</span>
+<span class="n">interact</span><span class="p">(</span><span class="n">convergence_of_mean</span><span class="p">,</span><span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">1000</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The bars show the confidence interval based upon n measurements&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Use the slider to change the number of samples, n&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "debac81d96a94aa697440d6c9f2bd812"}
-</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Black bars show confidence interval based upon N measurements
-Use the slider to change the number of samples, N
+{"version_major": 2, "version_minor": 0, "model_id": "183cee94a7174d1dbea2191d166b6113"}
+</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The bars show the confidence interval based upon n measurements
+Use the slider to change the number of samples, n
 </pre></div>
 </div>
 <img alt="../_images/ME3263-Lab_00_14_2.png" src="../_images/ME3263-Lab_00_14_2.png" />
 </div>
 </div>
-<p>The interactive plot above generates <code class="docutils literal notranslate"><span class="pre">N</span></code> normally distributed numbers and plots the histogram with two vertical lines to indicate the confidence interval of the measured mean. More measurements, larger <code class="docutils literal notranslate"><span class="pre">N</span></code>, produce a smaller interval, even though the standard deviation is constant.</p>
+<p>The interactive plot above generates <code class="docutils literal notranslate"><span class="pre">n</span></code> normally distributed numbers and plots the histogram with two vertical lines to indicate the confidence interval of the measured mean. More measurements, larger <code class="docutils literal notranslate"><span class="pre">n</span></code>, produce a smaller interval, even though the standard deviation is constant.</p>
 </div>
-</div>
-<div class="section" id="problem-2">
-<h2>Problem #2<a class="headerlink" href="#problem-2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="example-problem-2">
+<h3>Example Problem #2<a class="headerlink" href="#example-problem-2" title="Permalink to this headline">¶</a></h3>
 <p>Try creating 100 normally disributed random numbers with a true average of 10 and true standard deviation of 1. What is the confidence interval for the measured average? Is it higher or lower than the confidence interval for 20 samples?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span><span class="o">=</span><span class="mi">100</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">=</span><span class="mi">100</span>
 <span class="n">data</span> <span class="c1"># =... enter your work here</span>
 <span class="n">tstat</span><span class="c1"># =... enter your work here</span>
 <span class="n">avg</span> <span class="c1">#  =... enter your work here</span>
 <span class="n">std</span><span class="c1">#  =... enter your work here</span>
-<span class="n">conf_interval</span> <span class="o">=</span> <span class="n">tstat</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">std</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+<span class="n">conf_interval</span> <span class="o">=</span> <span class="n">tstat</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">std</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 
 <span class="n">p</span><span class="o">.</span><span class="n">check_p02</span><span class="p">(</span><span class="n">avg</span><span class="p">,</span><span class="n">conf_interval</span><span class="p">)</span>
 </pre></div>
@@ -482,65 +485,50 @@ Use the slider to change the number of samples, N
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1742</span><span class="o">/</span><span class="mf">1355488797.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1624</span><span class="o">/</span><span class="mf">148978452.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">data</span> <span class="c1"># =... enter your work here</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">tstat</span><span class="c1"># =... enter your work here</span>
 <span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">avg</span> <span class="c1">#  =... enter your work here</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">std</span><span class="c1">#  =... enter your work here</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">conf_interval</span> <span class="o">=</span> <span class="n">tstat</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">std</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">conf_interval</span> <span class="o">=</span> <span class="n">tstat</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">std</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 
 <span class="ne">NameError</span>: name &#39;avg&#39; is not defined
 </pre></div>
 </div>
 </div>
 </div>
-<div class="section" id="difference-between-means">
-<h3>2 - Difference between means<a class="headerlink" href="#difference-between-means" title="Permalink to this headline">¶</a></h3>
-<p>We will use the t test for independent samples. Each group can have different number of measurements. We assume that the population has a normal distribution if we could make infinite measurements. The student t-test tests the null hypothesis.</p>
-<p><em>null hypothesis for given data: there is no difference between the two sample means</em></p>
-<p>The t-test is based upon the means <span class="math notranslate nohighlight">\(\mu_1\)</span> and <span class="math notranslate nohighlight">\(\mu_2\)</span>, standard deviations, <span class="math notranslate nohighlight">\(\sigma_1\)</span> and <span class="math notranslate nohighlight">\(\sigma_2\)</span>, and number of data points, <span class="math notranslate nohighlight">\(N_1\)</span> and <span class="math notranslate nohighlight">\(N_2\)</span>. The t variable for sets of independent variables based upon the difference in means between sample sets as such</p>
-<p><span class="math notranslate nohighlight">\(t=\frac{|\mu_1-\mu_2|}{\sqrt{AB}}\)</span></p>
-<p><span class="math notranslate nohighlight">\(A=\frac{N_1+N_2}{N_1 N_2}\)</span></p>
-<p><span class="math notranslate nohighlight">\(B=\frac{(N_1-1)\sigma_1^2+(N_2-1)\sigma_2^2}{N_1+N_2-2}\)</span></p>
-<p>Let’s use the same random numbers from the previous examples and examine two sets of data and compare to the t-distribution table.</p>
-<p><strong>df=18</strong></p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>p=0.05</p></th>
-<th class="head"><p>p=0.025</p></th>
-<th class="head"><p>p=0.01</p></th>
-<th class="head"><p>p=0.005</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>2.10</p></td>
-<td><p>2.45</p></td>
-<td><p>2.88</p></td>
-<td><p>3.20</p></td>
-</tr>
-</tbody>
-</table>
+</div>
+</div>
+<div class="section" id="the-difference-between-two-means">
+<h2>The Difference Between Two Means<a class="headerlink" href="#the-difference-between-two-means" title="Permalink to this headline">¶</a></h2>
+<p>Two test for a difference between the means of two independent sampes, we use the <em>t-test for independent samples</em>, also called the <em>two-sample t-test</em>. Each sample set can contain a different number of measurements. We assume that the populations we are sampling from follow a normal distribution. Student’s t-test tests the Null Hypothesis.</p>
+<p><em>Null hypothesis: there is no difference between the two sample means</em></p>
+<p>The t-test is based upon the means: <span class="math notranslate nohighlight">\(\bar{x}_1\)</span> and <span class="math notranslate nohighlight">\(\bar{x}_2\)</span>, sample standard deviations (i.e., using <span class="math notranslate nohighlight">\(n-1\)</span> in the denominator): <span class="math notranslate nohighlight">\(S_{x,1}\)</span> and <span class="math notranslate nohighlight">\(S_{x,2}\)</span>, and number of data points: <span class="math notranslate nohighlight">\(n_1\)</span> and <span class="math notranslate nohighlight">\(n_2\)</span>. The t-variable for sets of independent samples is based upon the difference in means between sample sets:</p>
+<p><span class="math notranslate nohighlight">\(t=\frac{|\bar{x}_1-\bar{x}_2|}{\sqrt{AB}}\)</span></p>
+<p>where:</p>
+<p><span class="math notranslate nohighlight">\(A=\frac{n_1+n_2}{n_1 n_2}\)</span></p>
+<p><span class="math notranslate nohighlight">\(B=\frac{(n_1-1)S_{x,1}^2+(n_2-1)S_{x,2}^2}{n_1+n_2-2}\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span><span class="o">=</span><span class="mi">200</span>
-<span class="n">data1</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">N</span><span class="p">)</span>
-<span class="n">data2</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">N</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">=</span><span class="mi">200</span>
+<span class="n">data1</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+<span class="n">data2</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
 
-<span class="n">mu1</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data1</span><span class="p">);</span> <span class="n">mu2</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data2</span><span class="p">)</span>
-<span class="n">sigma1</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">data1</span><span class="p">);</span> <span class="n">sigma2</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">data2</span><span class="p">);</span> 
-<span class="n">N1</span><span class="o">=</span><span class="n">N2</span><span class="o">=</span><span class="n">N</span>
+<span class="n">avg1</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data1</span><span class="p">);</span> <span class="n">avg2</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data2</span><span class="p">)</span>
+<span class="n">std1</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">data1</span><span class="p">,</span><span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span> <span class="n">std2</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">data2</span><span class="p">,</span><span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span> <span class="c1">#making sure to use ddof=1 to divide by n-1</span>
+<span class="n">n1</span><span class="o">=</span><span class="n">n2</span><span class="o">=</span><span class="n">n</span>
 
-<span class="n">A</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">N1</span><span class="o">+</span><span class="n">N2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">N1</span><span class="o">*</span><span class="n">N2</span><span class="o">*</span><span class="mf">1.0</span><span class="p">)</span>
-<span class="n">B</span><span class="o">=</span><span class="p">((</span><span class="n">N1</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">sigma1</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="p">(</span><span class="n">N2</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">sigma2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">N1</span><span class="o">+</span><span class="n">N2</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">A</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">n1</span><span class="o">+</span><span class="n">n2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">n1</span><span class="o">*</span><span class="n">n2</span><span class="o">*</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="n">B</span><span class="o">=</span><span class="p">((</span><span class="n">n1</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">std1</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="p">(</span><span class="n">n2</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">std2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">n1</span><span class="o">+</span><span class="n">n2</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
 
-<span class="n">tstat</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">mu1</span><span class="o">-</span><span class="n">mu2</span><span class="p">)</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">A</span><span class="o">*</span><span class="n">B</span><span class="p">)</span>
+<span class="n">tstat</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">avg1</span><span class="o">-</span><span class="n">avg2</span><span class="p">)</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">A</span><span class="o">*</span><span class="n">B</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;t=</span><span class="si">%1.2f</span><span class="s1">&#39;</span><span class="o">%</span><span class="k">tstat</span>)
 
-<span class="n">df</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">N</span><span class="o">-</span><span class="mi">2</span>
+<span class="n">df</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span>
 
 <span class="c1"># Print out the table for df degrees of freedom (N1+N2-2)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;df=</span><span class="si">%i</span><span class="s1">&#39;</span><span class="o">%</span><span class="k">N</span> )
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;df=</span><span class="si">%i</span><span class="s1">&#39;</span><span class="o">%</span><span class="k">df</span> )
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;| p=0.05 | p=0.025 | p=0.01 | p=0.005 |&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;|    --- |     --- |    --- |     --- |&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;| </span><span class="si">%1.2f</span><span class="s2">   | </span><span class="si">%1.2f</span><span class="s2">    | </span><span class="si">%1.2f</span><span class="s2">   | </span><span class="si">%1.2f</span><span class="s2">    |&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">interval</span><span class="p">(</span><span class="mf">0.95</span><span class="p">,</span> <span class="n">df</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span>\
@@ -550,15 +538,22 @@ Use the slider to change the number of samples, N
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>t=0.10
+df=398
+| p=0.05 | p=0.025 | p=0.01 | p=0.005 |
+|    --- |     --- |    --- |     --- |
+| 1.97   | 2.25    | 2.59   | 2.82    |
+</pre></div>
 </div>
-<p>Our t-statistic is lower than even the p=0.05 confidence interval. This indicates that we cannot reject the null hypothesis. Based upon the current data set, there is no measured difference between the two sample averages. This makes sense because the two sample means should be the same. We just used two random data sets with the same average and same standard deviation.</p>
 </div>
 </div>
-<div class="section" id="problem-3">
-<h2>Problem 3<a class="headerlink" href="#problem-3" title="Permalink to this headline">¶</a></h2>
-<p>Try changing the mean between samples. What happens to the value of tstat?</p>
+<p>For almost all random sets generated for <code class="docutils literal notranslate"><span class="pre">data1</span></code> and <code class="docutils literal notranslate"><span class="pre">data2</span></code>, our t-statistic will be lower than even the p=0.05 confidence interval (equivalent to P=95% - this is often written both ways). This indicates that we cannot reject the null hypothesis. Based upon the current data set, there is no observed difference between the two sample averages. This makes sense - the two sample sets were drawn from the same normal distribution with <span class="math notranslate nohighlight">\(\mu=10\)</span> and <span class="math notranslate nohighlight">\(\sigma=1\)</span>.</p>
+<div class="section" id="example-problem-3">
+<h3>Example Problem #3<a class="headerlink" href="#example-problem-3" title="Permalink to this headline">¶</a></h3>
+<p>Try changing the means of the two sample sets. What happens to the value of tstat?</p>
 <p>At what point does the t-statistic become statistically significant? Keep the standard deviations, <span class="math notranslate nohighlight">\(\sigma=1\)</span>, and vary the averages for <code class="docutils literal notranslate"><span class="pre">data1</span></code> and <code class="docutils literal notranslate"><span class="pre">data2</span></code>, shown above as <code class="docutils literal notranslate"><span class="pre">10</span></code> and <code class="docutils literal notranslate"><span class="pre">10</span></code>. With 200 samples, can you reliably measure the difference between 10 and 11? or 10 and 10.1?</p>
-<p>Create two datasets, <code class="docutils literal notranslate"><span class="pre">data1</span></code> and <code class="docutils literal notranslate"><span class="pre">data2</span></code> that <em>are</em> different, statistically with p<span class="math notranslate nohighlight">\(\le 0.05\)</span>, but have means within 10% of each set.</p>
+<p>Create two datasets, <code class="docutils literal notranslate"><span class="pre">data1</span></code> and <code class="docutils literal notranslate"><span class="pre">data2</span></code>, that <em>are</em> statistically different, with <span class="math notranslate nohighlight">\(p\le 0.05\)</span> (in other words, <span class="math notranslate nohighlight">\(P\ge 95\%\)</span>), but have means within 10% of each other.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data1</span> <span class="c1">#=</span>
@@ -569,8 +564,9 @@ Use the slider to change the number of samples, N
 </div>
 </div>
 </div>
+</div>
 <div class="section" id="data-to-analyze-marble-madness-design-problem">
-<h2>Data to analyze - Marble Madness Design Problem<a class="headerlink" href="#data-to-analyze-marble-madness-design-problem" title="Permalink to this headline">¶</a></h2>
+<h2>Data to Analyze - Marble Madness Design Problem<a class="headerlink" href="#data-to-analyze-marble-madness-design-problem" title="Permalink to this headline">¶</a></h2>
 <p>Your company manufactures marbles with glass. There was a mix-up with the glass delivery and all of the affected marbles are at higher risk of shattering. The faulty glass has a slightly different density, <span class="math notranslate nohighlight">\(\rho_{faulty}\)</span>=2.80 g/cm<span class="math notranslate nohighlight">\(^3\)</span>, than your normal manufacturing glass, <span class="math notranslate nohighlight">\(\rho_{mfg}\)</span>=2.52 g/cm<span class="math notranslate nohighlight">\(^3\)</span>.</p>
 <p>You take 15 samples from three bins: A, B, and C. You know that bin A is the correct glass, but bins B and C might have the faulty glass. Write a report that clarifies whether bins B and C are safe to ship using the student t-test and creating confidence intervals for the three bins’ samples.</p>
 <table class="colwidths-auto table">
@@ -647,35 +643,41 @@ Use the slider to change the number of samples, N
 <div class="section" id="your-report">
 <h2>Your Report<a class="headerlink" href="#your-report" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
-<li><p>Introduction</p></li>
-</ol>
-<p>a. What is the problem and how can you solve it?</p>
-<p>b. What is the student t-test?</p>
-<p>c. What assumptions are used in the student t-test?</p>
-<p>d. What do the results of the t-test tell you?</p>
-<p>e. Why would you use the student t-test?</p>
+<li><p>INTRODUCTION</p>
 <ol class="simple">
-<li><p>Methods</p></li>
+<li><p>What is the problem and how will you solve it?</p></li>
+<li><p>What is Student’s t-test?</p></li>
+<li><p>In general, what assumptions are made when using a t-test?</p></li>
+<li><p>What do the results of a t-test tell you?</p></li>
+<li><p>When/why would you use Student’s t-test?</p></li>
+<li><p>What assumptions, if any, have been made for your analysis?</p></li>
 </ol>
-<p>a. Description of materials and measurements</p>
-<p>b. Description of t-test procedure</p>
-<p>c. If someone repeated the experiment he/she would read only this section</p>
+</li>
+<li><p>METHODS</p>
 <ol class="simple">
-<li><p>Results and Discussion</p></li>
+<li><p>Description of materials and measurements</p></li>
+<li><p>Description of t-test procedure</p></li>
+<li><p>If someone repeated the experiment, he/she would read only this section</p></li>
 </ol>
-<p>a. Present experimental results succinctly</p>
-<p>b. Present propagation of error clearly</p>
-<p>c. Interpret results clearly</p>
-<p>d. Compare the averages and confidence intervals for bins A, B, and C</p>
-<p>e. Describe the student t-test results, how confident is you rejection/non-rejection of the null hypothesis</p>
+</li>
+<li><p>RESULTS AND DISCUSSION</p>
 <ol class="simple">
-<li><p>Conclusion</p></li>
+<li><p>Present experimental results succinctly</p></li>
+<li><p>Interpret results clearly</p></li>
+<li><p>Compare the averages and confidence intervals for bins A, B, and C</p></li>
+<li><p>Describe the t-test results - how confident is your rejection/non-rejection of the null hypothesis?</p></li>
 </ol>
-<p>a. Is this a good method to use for this application?</p>
-<p>b. How could we make it better?</p>
-<p>c. What other applications would benefit from this technique/these results?</p>
+</li>
+<li><p>CONCLUSION</p>
+<ol class="simple">
+<li><p>Is this a good method to use for this application?</p></li>
+<li><p>How could we make it better?</p></li>
+<li><p>What other applications could benefit from this technique/these results?</p></li>
+</ol>
+</li>
+</ol>
 <p><strong>Links of Interest and References</strong></p>
-<p>[0] Student. (1908). <span class="xref myst">The probable error of a mean</span>. Biometrika, 1-25.</p>
+<p>[0] Student. (1908). <a class="reference external" href="https://github.com/cooperrc/sensors_and_data/blob/master/ME3263-Lab_00/student_error-of-mean.pdf">The probable error of a mean</a>. Biometrika, 1-25.</p>
 <p>[1] <a class="reference external" href="https://www.ruf.rice.edu/~bioslabs/tools/stats/ttest.html">‘Student’s’ t Test (For Independent Samples)
 </a></p>
 <p>[2] <a class="reference external" href="http://www.stat.wmich.edu/s216/book/node79.html">t-based Confidence Interval for the Mean</a></p>
@@ -683,7 +685,7 @@ Use the slider to change the number of samples, N
 t tests,
 P values</a></p>
 <p>[4] <a class="reference external" href="https://serc.carleton.edu/introgeo/teachingwdata/Ttest.html">Student’s t-test</a></p>
-<p>[5] Sehgal, J., &amp; Ito, S. (1999). <span class="xref myst">Brittleness of glass</span>. Journal of non-crystalline solids, 253(1-3), 126-132.</p>
+<p>[5] Sehgal, J., &amp; Ito, S. (1999). <a class="reference external" href="https://github.com/cooperrc/sensors_and_data/blob/master/ME3263-Lab_00/brittleness_of_glass.pdf">Brittleness of glass</a>. Journal of non-crystalline solids, 253(1-3), 126-132.</p>
 </div>
 </div>
 
