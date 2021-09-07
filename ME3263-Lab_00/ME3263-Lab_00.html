@@ -310,12 +310,12 @@
 </div>
 <div class="section" id="mean-and-standard-deviation">
 <h2>Mean and standard deviation<a class="headerlink" href="#mean-and-standard-deviation" title="Permalink to this headline">¶</a></h2>
-<p>When the same measurement is taken multiple times, the measurements will tend to cluster about a central value: the mean, <span class="math notranslate nohighlight">\(\bar{x}\)</span>. If we’re able to determine an average value, then we’re also able to describe how much our measurements deviate from that average value: the standard deviation, <span class="math notranslate nohighlight">\(S_x\)</span>. The expressions for mean and standard deviation are:</p>
+<p>When the same measurement is taken multiple times, the measurements will tend to cluster about a central value: the mean, <span class="math notranslate nohighlight">\(\bar{x}\)</span>. If we’re able to determine an average value, then we’re also able to describe how much our measurements deviate from that average value: the standard deviation, <span class="math notranslate nohighlight">\(s\)</span>. The expressions for mean and standard deviation are:</p>
 <p><span class="math notranslate nohighlight">\(\bar{x} = \sum_{i=1}^{N}\frac{x_{i}}{N}\)</span></p>
 <p>and</p>
-<p><span class="math notranslate nohighlight">\(S_x^2 = \frac{\sum_{i=1}^{N}(x_{i}-\bar{x})^2}{N}\)</span>,</p>
+<p><span class="math notranslate nohighlight">\(s^2 = \frac{\sum_{i=1}^{N}(x_{i}-\bar{x})^2}{N}\)</span>,</p>
 <p>where <span class="math notranslate nohighlight">\(x_i\)</span> is the <span class="math notranslate nohighlight">\(i^{th}\)</span> measurement in a dataset called <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(N\)</span> is the number of data points.</p>
-<p>If we know the mean <span class="math notranslate nohighlight">\(\mu\)</span> and standard deviation <span class="math notranslate nohighlight">\(\sigma\)</span> of a <em>normally distributed</em> data set, then we can predict the relative probability a given measurement will occur. The <a class="reference external" href="https://en.wikipedia.org/wiki/Probability_density_function">probability density function</a> (PDF) for the difference between measurement <span class="math notranslate nohighlight">\(x_{i}\)</span> and mean <span class="math notranslate nohighlight">\(\mu\)</span> is shown below for <span class="math notranslate nohighlight">\(\sigma=1\)</span>.</p>
+<p>When discussing a normal distribution, the mean and standard deviation are notated by <span class="math notranslate nohighlight">\(\mu\)</span> and <span class="math notranslate nohighlight">\(\sigma\)</span>, respectively. If we know <span class="math notranslate nohighlight">\(\mu\)</span> and <span class="math notranslate nohighlight">\(\sigma\)</span> of a <em>normally distributed</em> data set, then we can predict the relative probability a given measurement will occur. The <a class="reference external" href="https://en.wikipedia.org/wiki/Probability_density_function">probability density function</a> (PDF) for the difference between measurement <span class="math notranslate nohighlight">\(x_{i}\)</span> and mean <span class="math notranslate nohighlight">\(\mu\)</span> is shown below for <span class="math notranslate nohighlight">\(\sigma=1\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
@@ -366,11 +366,11 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data mean=10.085, standard deviation=1.003
-data mean=10.177, standard deviation=1.093
-data mean=10.256, standard deviation=0.995
-data mean=10.507, standard deviation=0.870
-data mean=9.715, standard deviation=0.975
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data mean=9.923, standard deviation=1.064
+data mean=9.802, standard deviation=0.948
+data mean=9.932, standard deviation=1.120
+data mean=9.998, standard deviation=1.053
+data mean=10.523, standard deviation=0.990
 </pre></div>
 </div>
 </div>
@@ -404,7 +404,7 @@ data mean=9.715, standard deviation=0.975
 </ol>
 <div class="section" id="confidence-intervals">
 <h3>Confidence intervals<a class="headerlink" href="#confidence-intervals" title="Permalink to this headline">¶</a></h3>
-<p>When describing a set of sample measurements, we can describe the variance and standard deviation <em>of the data set</em> using the expression for <span class="math notranslate nohighlight">\(S_x\)</span> shown above. However, using this to <em>estimate population parameters</em> will underestimate the population variance. We must instead use the <em>sample standard deviation</em> (which is an “unbiased estimator”), with <span class="math notranslate nohighlight">\(n-1\)</span> in the denominator:</p>
+<p>When describing a set of sample measurements, we can describe the variance and standard deviation <em>of the data set</em> using the expression for <span class="math notranslate nohighlight">\(s\)</span> shown above. However, using this to <em>estimate population parameters</em> will underestimate the population variance. We must instead use the <em>sample standard deviation</em> (which is an “unbiased estimator”), with <span class="math notranslate nohighlight">\(n-1\)</span> in the denominator:</p>
 <p><span class="math notranslate nohighlight">\(S_x^2 = \frac{\sum_{i=1}^{n}(x_{i}-\bar{x})^2}{n-1}\)</span></p>
 <p>The confidence interval for a given data set is calculated with the mean: <span class="math notranslate nohighlight">\(\bar{x}\)</span>, sample standard deviation: <span class="math notranslate nohighlight">\(S_x\)</span>, number of sample points: <span class="math notranslate nohighlight">\(n\)</span>, and t-statistic: <span class="math notranslate nohighlight">\(t=f(S_x, n)\)</span>. The equation for the confidence interval of a small data set is:</p>
 <p><span class="math notranslate nohighlight">\(x'\)</span>=<span class="math notranslate nohighlight">\(\bar{x} \pm t_{(\nu,P)}\frac{S_x}{\sqrt{n}}\)</span></p>
@@ -424,11 +424,11 @@ data mean=9.715, standard deviation=0.975
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data confidence interval is 9.784 +/- 0.379
-data confidence interval is 10.124 +/- 0.383
-data confidence interval is 9.972 +/- 0.405
-data confidence interval is 9.861 +/- 0.403
-data confidence interval is 10.065 +/- 0.427
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data confidence interval is 10.075 +/- 0.493
+data confidence interval is 10.140 +/- 0.542
+data confidence interval is 10.070 +/- 0.397
+data confidence interval is 9.681 +/- 0.364
+data confidence interval is 10.067 +/- 0.330
 </pre></div>
 </div>
 </div>
@@ -456,7 +456,7 @@ data confidence interval is 10.065 +/- 0.427
 </div>
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "f4d18e1a87a14e1bb8d6c69f2e7be42c"}
+{"version_major": 2, "version_minor": 0, "model_id": "db7cf1d5a97d4fd58eeee0100176c260"}
 </script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The bars show the confidence interval based upon n measurements
 Use the slider to change the number of samples, n
 </pre></div>
@@ -485,7 +485,7 @@ Use the slider to change the number of samples, n
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1701</span><span class="o">/</span><span class="mf">148978452.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1812</span><span class="o">/</span><span class="mf">148978452.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">data</span> <span class="c1"># =... enter your work here</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">tstat</span><span class="c1"># =... enter your work here</span>
 <span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">avg</span> <span class="c1">#  =... enter your work here</span>
