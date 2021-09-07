@@ -366,11 +366,11 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data mean=9.783, standard deviation=0.895
-data mean=9.862, standard deviation=1.036
-data mean=10.038, standard deviation=1.029
-data mean=9.858, standard deviation=0.643
-data mean=9.791, standard deviation=0.845
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data mean=10.250, standard deviation=0.850
+data mean=9.932, standard deviation=0.723
+data mean=10.436, standard deviation=1.162
+data mean=10.211, standard deviation=1.221
+data mean=9.796, standard deviation=0.852
 </pre></div>
 </div>
 </div>
@@ -424,11 +424,11 @@ data mean=9.791, standard deviation=0.845
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data confidence interval is 10.386 +/- 0.353
-data confidence interval is 9.492 +/- 0.426
-data confidence interval is 9.889 +/- 0.416
-data confidence interval is 10.019 +/- 0.532
-data confidence interval is 10.106 +/- 0.427
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data confidence interval is 9.920 +/- 0.390
+data confidence interval is 9.763 +/- 0.474
+data confidence interval is 10.477 +/- 0.447
+data confidence interval is 9.903 +/- 0.449
+data confidence interval is 9.948 +/- 0.452
 </pre></div>
 </div>
 </div>
@@ -456,7 +456,7 @@ data confidence interval is 10.106 +/- 0.427
 </div>
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "183cee94a7174d1dbea2191d166b6113"}
+{"version_major": 2, "version_minor": 0, "model_id": "481bf0ac012a4addaa1555f67216ce0d"}
 </script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The bars show the confidence interval based upon n measurements
 Use the slider to change the number of samples, n
 </pre></div>
@@ -485,7 +485,7 @@ Use the slider to change the number of samples, n
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1624</span><span class="o">/</span><span class="mf">148978452.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1675</span><span class="o">/</span><span class="mf">148978452.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">data</span> <span class="c1"># =... enter your work here</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">tstat</span><span class="c1"># =... enter your work here</span>
 <span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">avg</span> <span class="c1">#  =... enter your work here</span>
@@ -501,7 +501,7 @@ Use the slider to change the number of samples, n
 </div>
 <div class="section" id="the-difference-between-two-means">
 <h2>The Difference Between Two Means<a class="headerlink" href="#the-difference-between-two-means" title="Permalink to this headline">¶</a></h2>
-<p>Two test for a difference between the means of two independent sampes, we use the <em>t-test for independent samples</em>, also called the <em>two-sample t-test</em>. Each sample set can contain a different number of measurements. We assume that the populations we are sampling from follow a normal distribution. Student’s t-test tests the Null Hypothesis.</p>
+<p>To test for a difference between the means of two independent sampes, we use the <em>t-test for independent samples</em>, also called the <em>two-sample t-test</em>. Each sample set can contain a different number of measurements. We assume that the populations we are sampling from follow a normal distribution. Student’s t-test tests the Null Hypothesis.</p>
 <p><em>Null hypothesis: there is no difference between the two sample means</em></p>
 <p>The t-test is based upon the means: <span class="math notranslate nohighlight">\(\bar{x}_1\)</span> and <span class="math notranslate nohighlight">\(\bar{x}_2\)</span>, sample standard deviations (i.e., using <span class="math notranslate nohighlight">\(n-1\)</span> in the denominator): <span class="math notranslate nohighlight">\(S_{x,1}\)</span> and <span class="math notranslate nohighlight">\(S_{x,2}\)</span>, and number of data points: <span class="math notranslate nohighlight">\(n_1\)</span> and <span class="math notranslate nohighlight">\(n_2\)</span>. The t-variable for sets of independent samples is based upon the difference in means between sample sets:</p>
 <p><span class="math notranslate nohighlight">\(t=\frac{|\bar{x}_1-\bar{x}_2|}{\sqrt{AB}}\)</span></p>
