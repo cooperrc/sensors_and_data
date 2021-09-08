@@ -5,7 +5,7 @@ Welcome to the laboratory site for Sensors and Data, Fall 2021. Here you will fi
 
 ## Format
 
-The labs are presented as python-based Jupyter Notebooks. Each notebook begins with a background section, reviewing the material and posing example problems. This material will not be turned in orgit s graded, but __you are expected to read and complete this section before arriving in the lab__.
+The labs are presented as python-based Jupyter Notebooks. Each notebook begins with a background section, reviewing the material and posing example problems. This material will not be turned in or graded, but __you are expected to read and complete this section before arriving in the lab__.
 
 The lab procedures are then presented, as well as any necessary data, followed by guidelines on what should be included in your final report.
 
