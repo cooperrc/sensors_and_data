@@ -366,11 +366,11 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data mean=9.923, standard deviation=1.064
-data mean=9.802, standard deviation=0.948
-data mean=9.932, standard deviation=1.120
-data mean=9.998, standard deviation=1.053
-data mean=10.523, standard deviation=0.990
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data mean=9.329, standard deviation=0.958
+data mean=9.930, standard deviation=0.764
+data mean=9.981, standard deviation=1.176
+data mean=9.872, standard deviation=0.574
+data mean=10.422, standard deviation=0.885
 </pre></div>
 </div>
 </div>
@@ -416,19 +416,19 @@ data mean=10.523, standard deviation=0.990
 <span class="n">tstat</span><span class="o">=</span><span class="n">t</span><span class="o">.</span><span class="n">interval</span><span class="p">(</span><span class="mf">0.95</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># calculate the 95% interval t-statistic</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
     <span class="n">data</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> <span class="c1"># generate N random numbers with true mean of 10 and true std of 1</span>
-    <span class="n">mu</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-    <span class="n">sigma</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#The divisor used in calculations is N - ddof, where N is the length of the data vector. </span>
+    <span class="n">avg</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">std</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#The divisor used in calculations is N - ddof, where N is the length of the data vector. </span>
     <span class="n">n</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>    
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;data confidence interval is </span><span class="si">%1.3f</span><span class="s1"> +/- </span><span class="si">%1.3f</span><span class="s1">&#39;</span><span class="o">%</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span><span class="n">tstat</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">sigma</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">)))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;data confidence interval is </span><span class="si">%1.3f</span><span class="s1"> +/- </span><span class="si">%1.3f</span><span class="s1">&#39;</span><span class="o">%</span><span class="p">(</span><span class="n">avg</span><span class="p">,</span><span class="n">tstat</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">std</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">)))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data confidence interval is 10.075 +/- 0.493
-data confidence interval is 10.140 +/- 0.542
-data confidence interval is 10.070 +/- 0.397
-data confidence interval is 9.681 +/- 0.364
-data confidence interval is 10.067 +/- 0.330
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data confidence interval is 10.083 +/- 0.315
+data confidence interval is 9.705 +/- 0.450
+data confidence interval is 10.105 +/- 0.463
+data confidence interval is 9.622 +/- 0.417
+data confidence interval is 9.947 +/- 0.461
 </pre></div>
 </div>
 </div>
@@ -456,7 +456,7 @@ data confidence interval is 10.067 +/- 0.330
 </div>
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "db7cf1d5a97d4fd58eeee0100176c260"}
+{"version_major": 2, "version_minor": 0, "model_id": "69d79640af2b4d6a859a5539566e5fc7"}
 </script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The bars show the confidence interval based upon n measurements
 Use the slider to change the number of samples, n
 </pre></div>
@@ -483,16 +483,10 @@ Use the slider to change the number of samples, n
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1812</span><span class="o">/</span><span class="mf">148978452.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">data</span> <span class="c1"># =... enter your work here</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">tstat</span><span class="c1"># =... enter your work here</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">avg</span> <span class="c1">#  =... enter your work here</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">std</span><span class="c1">#  =... enter your work here</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">conf_interval</span> <span class="o">=</span> <span class="n">tstat</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">std</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;avg&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nice work
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
 </pre></div>
 </div>
 </div>
@@ -539,7 +533,7 @@ Use the slider to change the number of samples, n
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>t=0.10
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>t=0.56
 df=398
 | p=0.05 | p=0.025 | p=0.01 | p=0.005 |
 |    --- |     --- |    --- |     --- |
@@ -559,6 +553,29 @@ df=398
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data1</span> <span class="c1">#=</span>
 <span class="n">data2</span> <span class="c1">#=</span>
 <span class="n">p</span><span class="o">.</span><span class="n">check_p03</span><span class="p">(</span><span class="n">data1</span><span class="p">,</span><span class="n">data2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>t=0.57
+Whoops, try again
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">UnboundLocalError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1617</span><span class="o">/</span><span class="mf">2060265219.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">data1</span> <span class="c1">#=</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">data2</span> <span class="c1">#=</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">p</span><span class="o">.</span><span class="n">check_p03</span><span class="p">(</span><span class="n">data1</span><span class="p">,</span><span class="n">data2</span><span class="p">)</span>
+
+<span class="nn">~/work/sensors_and_data/sensors_and_data/ME3263-Lab_00/check_lab00.py</span> in <span class="ni">check_p03</span><span class="nt">(data1, data2)</span>
+<span class="g g-Whitespace">     </span><span class="mi">45</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">46</span>         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Whoops, try again&#39;</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">47</span>         <span class="k">return</span> <span class="n">points</span>
+<span class="g g-Whitespace">     </span><span class="mi">48</span> 
+<span class="g g-Whitespace">     </span><span class="mi">49</span> <span class="k">if</span> <span class="vm">__name__</span><span class="o">==</span><span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+
+<span class="ne">UnboundLocalError</span>: local variable &#39;points&#39; referenced before assignment
 </pre></div>
 </div>
 </div>
