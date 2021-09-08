@@ -5,7 +5,7 @@ Welcome to the laboratory site for Sensors and Data, Fall 2021. Here you will fi
 
 ## Format
 
-The labs are presented as python-based Jupyter Notebooks. Each notebook begins with a background section, reviewing the material and posing example problems. This material will not be turned in or graded, but __you are expected to read and complete this section before arriving in the lab__.
+The labs are presented as python-based Jupyter Notebooks. Each notebook begins with a background section, reviewing the material and posing example problems. This material will not be turned in orgit s graded, but __you are expected to read and complete this section before arriving in the lab__.
 
 The lab procedures are then presented, as well as any necessary data, followed by guidelines on what should be included in your final report.
 
@@ -13,7 +13,7 @@ The lab procedures are then presented, as well as any necessary data, followed b
 
 There are two ways to interact with these notebooks:
 
-1. __In your browser:__ When viewing a notebook, click the rocket-ship in the top menu to open the notebook using Binder. It will take a minute or two to build. You will be able to write and run python code in the fields provided. You will not be able to save your code, so you may want to document your work with screenshots and copy/paste.
+1. __In your browser:__ When viewing a notebook, hover the rocket-ship in the top menu, then click on "Binder" to open the notebook in your browser. It will take a minute or two to build. You will be able to write and run python code in the fields provided. You will not be able to save your code, so you may want to document your work with screenshots and copy/paste.
 1. __In the computer lab:__ Jupyter Notebook is available in the computer lab. To download the notebooks and access them from a lab PC, use the following instructions: [Accessing Jupyter](https://github.com/cooperrc/sensors_and_data/blob/master/Access_Jupyter.pdf)
 
 ## Submitting Lab Reports
