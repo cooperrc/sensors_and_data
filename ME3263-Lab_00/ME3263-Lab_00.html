@@ -366,11 +366,11 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data mean=9.329, standard deviation=0.958
-data mean=9.930, standard deviation=0.764
-data mean=9.981, standard deviation=1.176
-data mean=9.872, standard deviation=0.574
-data mean=10.422, standard deviation=0.885
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data mean=9.680, standard deviation=1.019
+data mean=9.900, standard deviation=1.075
+data mean=10.049, standard deviation=0.686
+data mean=9.628, standard deviation=0.804
+data mean=10.044, standard deviation=0.892
 </pre></div>
 </div>
 </div>
@@ -424,11 +424,11 @@ data mean=10.422, standard deviation=0.885
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data confidence interval is 10.083 +/- 0.315
-data confidence interval is 9.705 +/- 0.450
-data confidence interval is 10.105 +/- 0.463
-data confidence interval is 9.622 +/- 0.417
-data confidence interval is 9.947 +/- 0.461
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data confidence interval is 10.161 +/- 0.436
+data confidence interval is 9.902 +/- 0.474
+data confidence interval is 9.837 +/- 0.493
+data confidence interval is 10.440 +/- 0.454
+data confidence interval is 9.900 +/- 0.454
 </pre></div>
 </div>
 </div>
@@ -440,8 +440,9 @@ data confidence interval is 9.947 +/- 0.461
     <span class="n">y</span><span class="o">=</span><span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> 
     <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
     <span class="n">y_sample</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">std</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">y_sample</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">tstat</span><span class="o">=</span><span class="n">t</span><span class="o">.</span><span class="n">interval</span><span class="p">(</span><span class="mf">0.95</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-    <span class="n">CI</span><span class="o">=</span><span class="n">tstat</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">sigma</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">CI</span><span class="o">=</span><span class="n">tstat</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">std</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">y_sample</span><span class="p">,</span><span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">vlines</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">y_sample</span><span class="p">)</span><span class="o">-</span><span class="n">CI</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">y_sample</span><span class="p">)</span><span class="o">+</span><span class="n">CI</span><span class="p">],</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.4</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Measurement=$x_i-\mu$&#39;</span><span class="p">)</span>
@@ -456,7 +457,7 @@ data confidence interval is 9.947 +/- 0.461
 </div>
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "69d79640af2b4d6a859a5539566e5fc7"}
+{"version_major": 2, "version_minor": 0, "model_id": "bafb18344aac4df4bddaa0d60e38e970"}
 </script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The bars show the confidence interval based upon n measurements
 Use the slider to change the number of samples, n
 </pre></div>
@@ -533,7 +534,7 @@ Use the slider to change the number of samples, n
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>t=0.56
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>t=1.18
 df=398
 | p=0.05 | p=0.025 | p=0.01 | p=0.005 |
 |    --- |     --- |    --- |     --- |
@@ -557,13 +558,13 @@ df=398
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>t=0.57
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>t=1.18
 Whoops, try again
 </pre></div>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">UnboundLocalError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1617</span><span class="o">/</span><span class="mf">2060265219.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1671</span><span class="o">/</span><span class="mf">2060265219.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">data1</span> <span class="c1">#=</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">data2</span> <span class="c1">#=</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">p</span><span class="o">.</span><span class="n">check_p03</span><span class="p">(</span><span class="n">data1</span><span class="p">,</span><span class="n">data2</span><span class="p">)</span>
