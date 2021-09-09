@@ -5,9 +5,9 @@ gi# Table of content
 - file: ME3263-Lab_00/README
   sections:
     - file: ME3263-Lab_00/ME3263-Lab_00
-- file: ME3263-Lab_01/README
-  sections:
-    - file: ME3263-Lab_01/ME3263-Lab_01
+#- file: ME3263-Lab_01/README
+#  sections:
+#    - file: ME3263-Lab_01/ME3263-Lab_01
 #- file: ME3263-Lab_02/README
 #  sections:
 #    - file: ME3263-Lab_02/ME3263-Lab_02
