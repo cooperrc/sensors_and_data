@@ -8,8 +8,8 @@
 - file: ME3263-Lab_01/README
   sections:
     - file: ME3263-Lab_01/ME3263-Lab_01
-#- file: ME3263-Lab_02/README
-#  sections:
+- file: ME3263-Lab_02/README
+  sections:
 #    - file: ME3263-Lab_02/ME3263-Lab_02
 #- file: ME3263-Lab_03/README
 #  sections:
