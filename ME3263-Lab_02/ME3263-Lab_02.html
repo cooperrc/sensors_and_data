@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ME 3263 Introduction to Sensors and Data Analysis (Fall 2018) &#8212; Introduction to Sensors and Data</title>
+    <title>ME 3263 - Laboratory #2 &#8212; Introduction to Sensors and Data</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,6 +53,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Lab 2 - Static beam deflections with strain gauge" href="README.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -87,7 +88,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../ME3263-Lab_00/README.html">
    Lab 0 - Statistics and Student’s t-test
@@ -118,6 +119,23 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../ME3263-Lab_01/ME3263-Lab_01.html">
      ME 3263 - Laboratory #1
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="README.html">
+   Lab 2 - Static beam deflections with strain gauge
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     ME 3263 - Laboratory #2
     </a>
    </li>
   </ul>
@@ -228,37 +246,48 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   ME 3263 Introduction to Sensors and Data Analysis (Fall 2018)
+   ME 3263 - Laboratory #2
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-a-strain-gauge">
+     What is a Strain Gauge?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#validating-static-strain-gauge-measurements">
+   Validating static strain gauge measurements
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-problem-1">
+     Example Problem 1
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#visualizing-deflection-and-curvature">
+     Visualizing deflection and curvature
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#example-problem-2">
+       Example Problem 2
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-1-validate-strain-gauge-measurements">
+   Task 1: Validate Strain Gauge Measurements
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lab-2-static-beam-deflections-with-strain-gage">
-   Lab #2 - Static beam deflections with strain gage
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-a-strain-gage">
-   What is a Strain Gage?
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#validate-static-strain-gage-measurements">
-   Validate static strain gage measurements
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#problem-1">
-   Problem 1
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#problem-2">
-   Problem 2
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#measure-constitutive-properties">
-   Measure constitutive properties
+  <a class="reference internal nav-link" href="#measuring-constitutive-properties">
+   Measuring constitutive properties
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
@@ -266,27 +295,51 @@
      Constitutive Model
     </a>
    </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-2-collect-data-for-a-constitutive-model">
+   Task 2: Collect Data for a Constitutive Model
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fitting-your-data-to-your-model">
+   Fitting your data to your model
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-3-determine-young-s-modulus">
+   Task 3: Determine Young’s Modulus
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#propagation-of-error">
+   Propagation of Error
+  </a>
+  <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#fitting-your-data-to-your-model">
-     Fitting your data to your model
+    <a class="reference internal nav-link" href="#example-problem-3">
+     Example Problem 3
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#problem-3">
-   Problem 3
+  <a class="reference internal nav-link" href="#task-4-determine-the-uncertainty-in-your-estimate-of-young-s-modulus">
+   Task 4: Determine the uncertainty in your estimate of Young’s modulus
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#your-report">
      Your Report
     </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#references">
-     References
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#references">
+       References
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -316,68 +369,55 @@
 </div>
 </div>
 </div>
-<div class="section" id="me-3263-introduction-to-sensors-and-data-analysis-fall-2018">
-<h1>ME 3263 Introduction to Sensors and Data Analysis (Fall 2018)<a class="headerlink" href="#me-3263-introduction-to-sensors-and-data-analysis-fall-2018" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="lab-2-static-beam-deflections-with-strain-gage">
-<h1>Lab #2 - Static beam deflections with strain gage<a class="headerlink" href="#lab-2-static-beam-deflections-with-strain-gage" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="what-is-a-strain-gage">
-<h1>What is a Strain Gage?<a class="headerlink" href="#what-is-a-strain-gage" title="Permalink to this headline">¶</a></h1>
-<p>A strain gage consists of a looped wire that is embedded in a thin backing. Two
+<div class="section" id="me-3263-laboratory-2">
+<h1>ME 3263 - Laboratory #2<a class="headerlink" href="#me-3263-laboratory-2" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-is-a-strain-gauge">
+<h2>What is a Strain Gauge?<a class="headerlink" href="#what-is-a-strain-gauge" title="Permalink to this headline">¶</a></h2>
+<p>A strain gauge consists of a looped wire that is embedded in a thin backing. Two
 copper coated tabs serve as solder points for the leads. See Figure 1a. The
-strain gage is mounted to the structure, whose deformation is to be measured. As
+strain gauge is mounted to the structure, whose deformation is to be measured. As
 the structure deforms, the wire stretches (increasing its net length ) and its
 electrical resistance changes: <span class="math notranslate nohighlight">\(R=\rho L/A\)</span>, where <span class="math notranslate nohighlight">\(\rho\)</span> is the material
 resistivity, <span class="math notranslate nohighlight">\(L\)</span> is the total length of the wire, and <span class="math notranslate nohighlight">\(A\)</span> is the cross sectional
 area of the wire.  Note that as <span class="math notranslate nohighlight">\(L\)</span> increases, the cross sectional area changes as
 well due to the Poisson contraction; the resistivity also changes.</p>
-<p><img alt="Figure 1: a) A typical strain gage. b) One common setup: the gage ismounted to measure the x-direction strain on the top surface. It'sengaged in a quarter bridge configuration of the Wheatstone bridgecircuit." src="../_images/figure_01.png" /></p>
-<p><em>Figure 1: a) A typical strain gage. b) One common setup: the gage is
+<p><img alt="Figure 1: a) A typical strain gauge. b) One common setup: the gauge ismounted to measure the x-direction strain on the top surface. It'sengaged in a quarter bridge configuration of the Wheatstone bridgecircuit." src="../_images/figure_01.png" /></p>
+<p><em>Figure 1: a) A typical strain gauge. b) One common setup: the gauge is
 mounted to measure the x-direction strain on the top surface. It’s
 engaged in a quarter bridge configuration of the Wheatstone bridge
 circuit.</em></p>
 </div>
-<div class="section" id="validate-static-strain-gage-measurements">
-<h1>Validate static strain gage measurements<a class="headerlink" href="#validate-static-strain-gage-measurements" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="validating-static-strain-gauge-measurements">
+<h1>Validating static strain gauge measurements<a class="headerlink" href="#validating-static-strain-gauge-measurements" title="Permalink to this headline">¶</a></h1>
 <p>In this lab we will calibrate strain measurements using Euler-Bernouli beam theory
 kinematics [1]. The axial strain in a beam is directly proportional to the distance
-from the neutral axis and curvature as such</p>
+from the neutral axis and curvature:</p>
 <p><span class="math notranslate nohighlight">\(\epsilon_x=-\kappa z\)</span>. (1)</p>
-<p>The curvature of the beam is approximated as such</p>
+<p>Where <span class="math notranslate nohighlight">\(\epsilon_x\)</span> is the strain in the material, <span class="math notranslate nohighlight">\(z\)</span> is the distance from the neutral axis, and <span class="math notranslate nohighlight">\(\kappa\)</span> is the curvature of the beam. <span class="math notranslate nohighlight">\(\kappa\)</span> is approximated as the second derivative of the displacement of the center axis:</p>
 <p><span class="math notranslate nohighlight">\(\kappa=\frac{d^2 w}{dx^2}\)</span>. (2)</p>
 <p>Equations 1 and 2 relate beam deflection to axial strain. These are called
 kinematic equations because they define the geometry of the beam deflection.</p>
 <p>The Euler-Bernouli beam theory uses Newton’s second law (kinetics) and Hooke’s
 law (constitutive) to derive the linear equations of motion for one dimensional
-deformable objects [1,4]. The relation between a static applied force q(x) and static
-deflection w(x) is as such</p>
+deformable objects [1,4]. The relation between a <em>static applied force</em> <span class="math notranslate nohighlight">\(q(x)\)</span> and <em>static
+deflection</em> <span class="math notranslate nohighlight">\(w(x)\)</span> is:</p>
 <p><span class="math notranslate nohighlight">\(\frac{\partial^2}{\partial x^2}\left(EI\frac{\partial^2 w}{\partial
 x^2}\right)=q(x)\)</span> (3)</p>
 <p>where <span class="math notranslate nohighlight">\(E\)</span> is the Young’s modulus, <span class="math notranslate nohighlight">\(x\)</span> is the distance along the neutral axis,
 and <span class="math notranslate nohighlight">\(I\)</span> is the second moment of area of the beam’s cross-section. For a
 rectangular cross-section <span class="math notranslate nohighlight">\(b \times t\)</span>, width by thickness the second moment of
-area is</p>
+area is:</p>
 <p><span class="math notranslate nohighlight">\(I=\frac{bt^3}{12}\)</span>. (4)</p>
-<p>We will design our strain gage validation such that <span class="math notranslate nohighlight">\(E\)</span> and <span class="math notranslate nohighlight">\(I\)</span> are not necessary. The boundary conditions for a clamped beam that is
-deflected by a distance <span class="math notranslate nohighlight">\(\delta\)</span> are <span class="math notranslate nohighlight">\(w(0)=0\)</span>, <span class="math notranslate nohighlight">\(w'(0)=0\)</span>, <span class="math notranslate nohighlight">\(w(L)=\delta\)</span>, and
-<span class="math notranslate nohighlight">\(w''(L)=0\)</span>. Therefore, the functions <span class="math notranslate nohighlight">\(w(x)\)</span> and <span class="math notranslate nohighlight">\(w''(x)\)</span> can be determined by
-integrating equation 3 four times and using the four boundary conditions as such</p>
+<p>We can design our strain gage validation such that <span class="math notranslate nohighlight">\(E\)</span> and <span class="math notranslate nohighlight">\(I\)</span> are not necessary. A cantilevered (clamped) beam of length <span class="math notranslate nohighlight">\(L\)</span> that is deflected by a distance <span class="math notranslate nohighlight">\(\delta\)</span> at the free end has the following boundary conditions for its static deflection:</p>
+<p><span class="math notranslate nohighlight">\(w(0)=0\)</span>, <span class="math notranslate nohighlight">\(w'(0)=0\)</span>, <span class="math notranslate nohighlight">\(w(L)=\delta\)</span>, and <span class="math notranslate nohighlight">\(w''(L)=0\)</span></p>
+<p>Therefore, the functions <span class="math notranslate nohighlight">\(w(x)\)</span> and <span class="math notranslate nohighlight">\(w''(x)\)</span> can be determined by integrating equation 3 four times and using the four boundary conditions:</p>
 <p><span class="math notranslate nohighlight">\(w(x)=-\frac{1}{2}\left(\frac{\delta}{L^3}x^3-3\frac{\delta}{L^2}x^2\right)\)</span> (5a)</p>
 <p>and the curvature</p>
 <p><span class="math notranslate nohighlight">\(w''(x)=-\left(3\frac{\delta}{L^3}x-3\frac{\delta}{L^2}\right)\)</span> (5b)</p>
-<p>Using equations 5a-b, the only quantities needed to determine strain at a given
-location on a linear, homogeneous beam are <span class="math notranslate nohighlight">\(z\)</span>, <span class="math notranslate nohighlight">\(\delta\)</span>, <span class="math notranslate nohighlight">\(w(L)\)</span>, and <span class="math notranslate nohighlight">\(L\)</span>.</p>
-<p><img alt="Figure 2: Diagram of the validation process. The strain gage is placed at a distance  from the cantilever support. A linear-elastic beam of length  is deflected by distance, ." src="../_images/figure_02.png" /></p>
-<p><em>Figure 2: Diagram of the validation process. The strain gage is placed at a distance <span class="math notranslate nohighlight">\(x_{SG}\)</span> from the cantilever support. A linear-elastic beam of length <span class="math notranslate nohighlight">\(L\)</span> is deflected by distance, <span class="math notranslate nohighlight">\(\delta\)</span>.</em></p>
-<ul class="simple">
-<li><p>Apply a known tip displacement  as seen in Figure 2.  Measure and record the strain at your strain
-gage location, the displacement, <span class="math notranslate nohighlight">\(\delta\)</span> and length where load was applied,
-<span class="math notranslate nohighlight">\(L\)</span>.</p></li>
-<li><p>Calculate the strain at the location of the strain gage using equations 1,2,
-and 5a-b.</p></li>
-</ul>
-<p>Below are two functions that calculate displacement and curvature given a bar of length <code class="docutils literal notranslate"><span class="pre">L</span></code>, that is deflected by a distance, <code class="docutils literal notranslate"><span class="pre">delta</span></code>.</p>
+<p>Using equations 1,2, and 5, the only quantities needed to determine strain at a given
+location on a linear, homogeneous beam are <span class="math notranslate nohighlight">\(z\)</span>, <span class="math notranslate nohighlight">\(\delta\)</span>, and <span class="math notranslate nohighlight">\(L\)</span>.</p>
+<p>Below are two functions that calculate displacement and curvature given a cantilevered beam of length <code class="docutils literal notranslate"><span class="pre">L</span></code> that is deflected by a distance <code class="docutils literal notranslate"><span class="pre">delta</span></code> at its free end.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">disp_at_x</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">L</span><span class="p">,</span><span class="n">delta</span><span class="p">):</span>
@@ -411,34 +451,37 @@ and 5a-b.</p></li>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="problem-1">
-<h1>Problem 1<a class="headerlink" href="#problem-1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="example-problem-1">
+<h2>Example Problem 1<a class="headerlink" href="#example-problem-1" title="Permalink to this headline">¶</a></h2>
 <p>If your beam is 400 mm long by 10 mm thick and it deflects 15 mm at the tip, determine the following:</p>
-<p>a. displacement <code class="docutils literal notranslate"><span class="pre">w400</span></code> of the beam 20 mm from the base</p>
-<p>b. the curvature <code class="docutils literal notranslate"><span class="pre">k400</span></code> of the beam 20 mm from the base</p>
-<p>c. the strain <code class="docutils literal notranslate"><span class="pre">e400</span></code> of the beam 20 mm pixels from the base</p>
+<p>a. displacement of the beam 20 mm from the base. Save as <code class="docutils literal notranslate"><span class="pre">w20</span></code></p>
+<p>b. the curvature of the beam 20 mm from the base. Save as <code class="docutils literal notranslate"><span class="pre">k20</span></code></p>
+<p>c. the strain of the beam 20 mm from the base. Save as <code class="docutils literal notranslate"><span class="pre">e20</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your work here</span>
 
-<span class="n">p</span><span class="o">.</span><span class="n">check_p01</span><span class="p">(</span><span class="n">w400</span><span class="p">,</span><span class="n">k400</span><span class="p">,</span><span class="n">e400</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">check_p01</span><span class="p">(</span><span class="n">w20</span><span class="p">,</span><span class="n">k20</span><span class="p">,</span><span class="n">e20</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1699</span><span class="o">/</span><span class="mf">3577948261.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2378</span><span class="o">/</span><span class="mf">232341384.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># your work here</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">p</span><span class="o">.</span><span class="n">check_p01</span><span class="p">(</span><span class="n">w400</span><span class="p">,</span><span class="n">k400</span><span class="p">,</span><span class="n">e400</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">p</span><span class="o">.</span><span class="n">check_p01</span><span class="p">(</span><span class="n">w20</span><span class="p">,</span><span class="n">k20</span><span class="p">,</span><span class="n">e20</span><span class="p">)</span>
 
-<span class="ne">NameError</span>: name &#39;w400&#39; is not defined
+<span class="ne">NameError</span>: name &#39;w20&#39; is not defined
 </pre></div>
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="visualizing-deflection-and-curvature">
+<h2>Visualizing deflection and curvature<a class="headerlink" href="#visualizing-deflection-and-curvature" title="Permalink to this headline">¶</a></h2>
+<p>We can use the above expressions for <span class="math notranslate nohighlight">\(w\)</span> and <span class="math notranslate nohighlight">\(w''\)</span> to plot the deflection and curvature of a cantilevered beam:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">400</span><span class="p">)</span>
@@ -454,7 +497,7 @@ and 5a-b.</p></li>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Shape of deflected cantilever beam&#39;)
 </pre></div>
 </div>
-<img alt="../_images/ME3263-Lab_02_11_1.png" src="../_images/ME3263-Lab_02_11_1.png" />
+<img alt="../_images/ME3263-Lab_02_12_1.png" src="../_images/ME3263-Lab_02_12_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -472,41 +515,75 @@ and 5a-b.</p></li>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Curvature of deflected cantilever beam&#39;)
 </pre></div>
 </div>
-<img alt="../_images/ME3263-Lab_02_12_1.png" src="../_images/ME3263-Lab_02_12_1.png" />
+<img alt="../_images/ME3263-Lab_02_13_1.png" src="../_images/ME3263-Lab_02_13_1.png" />
 </div>
 </div>
-</div>
-<div class="section" id="problem-2">
-<h1>Problem 2<a class="headerlink" href="#problem-2" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="example-problem-2">
+<h3>Example Problem 2<a class="headerlink" href="#example-problem-2" title="Permalink to this headline">¶</a></h3>
 <p>If your beam is 400 mm long by 10 mm thick and it deflects 15 mm at the tip, determine the position along the beam for the following:</p>
 <p>a. Where is the maximum deflection in the beam? save as <code class="docutils literal notranslate"><span class="pre">x_max_defl</span></code></p>
 <p>b. Where is the maximum curvature in the beam? save as <code class="docutils literal notranslate"><span class="pre">x_max_curv</span></code></p>
 <p>c. Where is the maximum strain in the beam? save as <code class="docutils literal notranslate"><span class="pre">x_max_strain</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">check_lab02</span> <span class="k">as</span> <span class="nn">p</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#your work here</span>
 
 <span class="n">p</span><span class="o">.</span><span class="n">check_p02</span><span class="p">(</span><span class="n">x_max_defl</span><span class="p">,</span><span class="n">x_max_curv</span><span class="p">,</span><span class="n">x_max_strain</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="n">ec3929850900</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#your work here</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">p</span><span class="o">.</span><span class="n">check_p02</span><span class="p">(</span><span class="n">x_max_defl</span><span class="p">,</span><span class="n">x_max_curv</span><span class="p">,</span><span class="n">x_max_strain</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;x_max_defl&#39; is not defined
+</pre></div>
 </div>
 </div>
-<div class="section" id="measure-constitutive-properties">
-<h1>Measure constitutive properties<a class="headerlink" href="#measure-constitutive-properties" title="Permalink to this headline">¶</a></h1>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="task-1-validate-strain-gauge-measurements">
+<h1>Task 1: Validate Strain Gauge Measurements<a class="headerlink" href="#task-1-validate-strain-gauge-measurements" title="Permalink to this headline">¶</a></h1>
+<p><img alt="Figure 2: Diagram of the validation process. The strain gage is placed at a distance  from the cantilever support. A linear-elastic beam of length  is deflected by distance, ." src="https://raw.githubusercontent.com/cooperrc/sensors_and_data/master/ME3263-Lab_02/figure_02.png" /></p>
+<p><em>Figure 2: Diagram of the validation process. The strain gauge is placed at a distance <span class="math notranslate nohighlight">\(x_{SG}\)</span> from the cantilever support. A linear-elastic beam of length <span class="math notranslate nohighlight">\(L\)</span> is deflected by distance, <span class="math notranslate nohighlight">\(\delta\)</span>.</em></p>
+<ul class="simple">
+<li><p>Apply a known tip displacement  as seen in Figure 2.</p></li>
+<li><p>Measure and record the strain at your strain gage location, the displacement, <span class="math notranslate nohighlight">\(\delta\)</span>, and position where load was applied,
+<span class="math notranslate nohighlight">\(L\)</span>.</p></li>
+<li><p>Calculate the strain at the location of the strain gage using equations 1,2,
+and 5a-b.</p></li>
+<li><p>Compare the calculated and measured strain values</p></li>
+</ul>
+</div>
+<div class="section" id="measuring-constitutive-properties">
+<h1>Measuring constitutive properties<a class="headerlink" href="#measuring-constitutive-properties" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="constitutive-model">
 <h2>Constitutive Model<a class="headerlink" href="#constitutive-model" title="Permalink to this headline">¶</a></h2>
-<p>Now the strain gage should be calibrated. We need to determine the Young’s modulus, <span class="math notranslate nohighlight">\(E\)</span> and second moment of area, <span class="math notranslate nohighlight">\(I\)</span>. This measurement requires three components: kinematic (which we solved in the validation), kinetic (<span class="math notranslate nohighlight">\(\sum{F}=0\)</span>), and a constitutive model (Hooke’s Law). The constitutive equation for a linear-elastic beam subject to a moment is as such</p>
+<p>Now that the strain gauge has been calibrated, we can use it to determine constitutive properties of our workpiece. Using measurements of strain, we wish to determine the Young’s modulus of the beam, <span class="math notranslate nohighlight">\(E\)</span>. This measurement requires three components: kinematic (the geometric equations solved in the validation), kinetic (<span class="math notranslate nohighlight">\(\sum{F}=0\)</span>), and a constitutive model (Hooke’s Law). The constitutive equation for a linear-elastic beam subject to an applied moment is:</p>
 <p><span class="math notranslate nohighlight">\(M=EI\kappa\)</span>. (6)</p>
-<p>In equation 6, <span class="math notranslate nohighlight">\(M\)</span> is the applied moment, <span class="math notranslate nohighlight">\(E\)</span> is the Young’s modulus, <span class="math notranslate nohighlight">\(I\)</span> is the second moment of inertia of the area of the beam, and <span class="math notranslate nohighlight">\(\kappa\)</span> is the curvature of the beam. The constant <span class="math notranslate nohighlight">\(I\)</span> is based upon the geometry from equation 4. The material constant <span class="math notranslate nohighlight">\(E\)</span> is unknown.</p>
-<p>Use the weights to apply forces at different distances, <span class="math notranslate nohighlight">\(r\)</span>, from the support as seen in Figure 3. Increasing the weight or the distance the weight is applied will increase the applied moment. Use Table 1 to record the trial no., strain, force, distance, and moment. Use at least two trials per measurement.</p>
-<p><img alt="Figure 3: A linear-elastic beam of length  has a force applied at distance, .The strain gage is placed at a distance  from the cantilever support." src="../_images/figure_03.png" /></p>
+<p>where <span class="math notranslate nohighlight">\(M\)</span> is the applied moment, <span class="math notranslate nohighlight">\(E\)</span> is the Young’s modulus, <span class="math notranslate nohighlight">\(I\)</span> is the second moment of inertia of the area of the beam, and <span class="math notranslate nohighlight">\(\kappa\)</span> is the curvature of the beam. The constant <span class="math notranslate nohighlight">\(I\)</span> is based upon the geometry from equation 4 (<span class="math notranslate nohighlight">\(I=\frac{bt^3}{12}\)</span>). The material constant <span class="math notranslate nohighlight">\(E\)</span> is unknown.</p>
+</div>
+</div>
+<div class="section" id="task-2-collect-data-for-a-constitutive-model">
+<h1>Task 2: Collect Data for a Constitutive Model<a class="headerlink" href="#task-2-collect-data-for-a-constitutive-model" title="Permalink to this headline">¶</a></h1>
+<p><img alt="Figure 3: A linear-elastic beam of length  has a force applied at distance, .The strain gauge is placed at a distance  from the cantilever support." src="https://raw.githubusercontent.com/cooperrc/sensors_and_data/master/ME3263-Lab_02/figure_03.png" /></p>
 <p><em>Figure 3: A linear-elastic beam of length <span class="math notranslate nohighlight">\(L\)</span> has a force applied at distance, <span class="math notranslate nohighlight">\(r\)</span>.
-The strain gage is placed at a distance <span class="math notranslate nohighlight">\(x\)</span> from the cantilever support.</em></p>
+The strain gauge is placed at a distance <span class="math notranslate nohighlight">\(x\)</span> from the cantilever support.</em></p>
+<ul class="simple">
+<li><p>Measure and record the length, width, and thickness of your beam for use in calculating the second moment of area. Remember that your ruler can only record to the millimeter, and your calipers to the hundredth of a millimeter.</p></li>
+<li><p>There are notches cut into your beam. Use them to attach varying weights to apply forces at varying distances, <span class="math notranslate nohighlight">\(r\)</span>, from the support (as seen in Figure 3). Increasing the weight or the distance at which the weight is applied will increase the applied moment.</p></li>
+<li><p>Record the trial no., strain, force, distance, and moment for each combination of weight and distance. Use at least two trials per measurement.</p></li>
+</ul>
 </div>
 <div class="section" id="fitting-your-data-to-your-model">
-<h2>Fitting your data to your model<a class="headerlink" href="#fitting-your-data-to-your-model" title="Permalink to this headline">¶</a></h2>
-<p>Once you have filled in a number of data points for <span class="math notranslate nohighlight">\(\kappa\)</span> and <span class="math notranslate nohighlight">\(M\)</span>, you can use a linear regression to determine the slope of the data. The constitutive model in equation (6) predicts that the moment and curvature will be related by a proportional constant, <span class="math notranslate nohighlight">\(EI\)</span>. If we know <span class="math notranslate nohighlight">\(EI\)</span>, the total squared error is as such</p>
+<h1>Fitting your data to your model<a class="headerlink" href="#fitting-your-data-to-your-model" title="Permalink to this headline">¶</a></h1>
+<p>Once you have collected a number of data points for <span class="math notranslate nohighlight">\(\kappa\)</span> and <span class="math notranslate nohighlight">\(M\)</span>, you can use a linear regression to determine the slope of the data. The constitutive model in equation (6) predicts that the moment and curvature will be related by a proportional constant, <span class="math notranslate nohighlight">\(EI\)</span>. If we know <span class="math notranslate nohighlight">\(EI\)</span>, the total squared error is as such</p>
 <p><span class="math notranslate nohighlight">\(SSE=\sum_i^N{(M_i-EI\kappa_i)^2}\)</span> (7)</p>
 <p>where SSE is the sum of squares error between the predicted moment and measured moment for the <span class="math notranslate nohighlight">\(i^{th}\)</span> measurement with <span class="math notranslate nohighlight">\(N\)</span> total measurements <a class="reference external" href="https://www.amazon.com/Numerical-Methods-Engineers-Steven-Chapra/dp/0073401064">[2]</a>. We can choose a of <span class="math notranslate nohighlight">\(EI\)</span> that minimizes <span class="math notranslate nohighlight">\(SSE\)</span>, but it will never be zero. Below is an example calculation for a linear least squares regression in python for a beam with cross-section <span class="math notranslate nohighlight">\(12\times3\)</span> mm.</p>
 <div class="cell docutils container">
@@ -558,7 +635,7 @@ The strain gage is placed at a distance <span class="math notranslate nohighligh
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Moment (N-mm)&#39;)
 </pre></div>
 </div>
-<img alt="../_images/ME3263-Lab_02_18_2.png" src="../_images/ME3263-Lab_02_18_2.png" />
+<img alt="../_images/ME3263-Lab_02_20_2.png" src="../_images/ME3263-Lab_02_20_2.png" />
 </div>
 </div>
 <p><em>Note:</em></p>
@@ -584,372 +661,59 @@ The strain gage is placed at a distance <span class="math notranslate nohighligh
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0,0.5,&#39;Error=$M-EI\\kappa$&#39;)
 </pre></div>
 </div>
-<img alt="../_images/ME3263-Lab_02_20_1.png" src="../_images/ME3263-Lab_02_20_1.png" />
+<img alt="../_images/ME3263-Lab_02_22_1.png" src="../_images/ME3263-Lab_02_22_1.png" />
 </div>
 </div>
 </div>
+<div class="section" id="task-3-determine-young-s-modulus">
+<h1>Task 3: Determine Young’s Modulus<a class="headerlink" href="#task-3-determine-young-s-modulus" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Using a linear least squares regression, determine the Young’s modulus, <span class="math notranslate nohighlight">\(E\)</span>, of your beam</p></li>
+</ul>
 </div>
-<div class="section" id="problem-3">
-<h1>Problem 3<a class="headerlink" href="#problem-3" title="Permalink to this headline">¶</a></h1>
-<p>If the thickness of the beam is not measured properly, you can have large systematic errors in your results. In the example above, the width of the beam was 12 mm and the thickness of the beam was 3 mm. On the line,</p>
+<div class="section" id="propagation-of-error">
+<h1>Propagation of Error<a class="headerlink" href="#propagation-of-error" title="Permalink to this headline">¶</a></h1>
+<p>If the physical quantities involved in the calculation (e.g., the thickness of the beam) are not measured properly, you can have large systematic errors in your results.</p>
+<div class="section" id="example-problem-3">
+<h2>Example Problem 3<a class="headerlink" href="#example-problem-3" title="Permalink to this headline">¶</a></h2>
+<p>In the example E calculation above, the width of the beam was 12 mm and the thickness of the beam was 3 mm. On the line,</p>
 <p><code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">=</span> <span class="pre">12*3**3/12.0</span></code></p>
-<p>Change the thickness to 3.1 mm and calculate <code class="docutils literal notranslate"><span class="pre">E31</span></code></p>
+<p>Change the thickness to 3.1 mm and calculate <span class="math notranslate nohighlight">\(E\)</span>. Save the value as <code class="docutils literal notranslate"><span class="pre">E31</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">check_lab02.py</span> <span class="k">as</span> <span class="nn">p</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your work here</span>
 
 <span class="n">p</span><span class="o">.</span><span class="n">check_p03</span><span class="p">(</span><span class="n">E31</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mf">1e6</span><span class="n">b442bf583</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Your work here</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">p</span><span class="o">.</span><span class="n">check_p03</span><span class="p">(</span><span class="n">E31</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;E31&#39; is not defined
+</pre></div>
 </div>
-<p><em>Table 1: Fill in the measured and calculated values.</em></p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>trial</p></th>
-<th class="head"><p>distance, <span class="math notranslate nohighlight">\(r\)</span></p></th>
-<th class="head"><p>force= <span class="math notranslate nohighlight">\(mg\)</span></p></th>
-<th class="head"><p>strain (mm/mm)</p></th>
-<th class="head"><p>curvature (1/mm)</p></th>
-<th class="head"><p>Moment=<span class="math notranslate nohighlight">\(r\times F\)</span></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>1</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>1</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>1</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>1</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>1</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>1</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>1</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>1</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>1</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>1</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>1</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>1</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>1</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>2</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>2</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>2</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>2</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>2</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>2</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>2</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>2</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>2</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>2</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>2</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>2</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>2</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>2</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>2</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>2</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>2</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>2</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>2</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>2</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-</tbody>
-</table>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="task-4-determine-the-uncertainty-in-your-estimate-of-young-s-modulus">
+<h1>Task 4: Determine the uncertainty in your estimate of Young’s modulus<a class="headerlink" href="#task-4-determine-the-uncertainty-in-your-estimate-of-young-s-modulus" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Using the method learned in class for calculating propagation of error, determine the uncertainty in your estimate of <span class="math notranslate nohighlight">\(E\)</span>.</p></li>
+<li><p>The uncertainties in your measurements of length derive from the resolutions of your ruler and calipers. For the strain gauge uncertainty, use the offset value under zero load at the end of the experiment.</p></li>
+</ul>
 <div class="section" id="your-report">
 <h2>Your Report<a class="headerlink" href="#your-report" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>Introduction</p></li>
-<li><p>Procedure</p></li>
-<li><p>Results and Discussion</p></li>
-<li><p>Conclusion</p></li>
-</ol>
-</div>
+<p>Describe and discuss the results you obtained for the measurement of <span class="math notranslate nohighlight">\(E\)</span>.</p>
+<p>Follow the established format for lab reports: Introduction, Methods, Results &amp; Discussion, Conclusion</p>
 <div class="section" id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h3>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>
 <p>References</p>
 <ol class="simple">
 <li><p>Sutton, M. A., Orteu, J. J., &amp; Schreier, H. (2009). Image correlation for shape, motion and deformation measurements: basic concepts, theory and applications. Springer Science &amp; Business Media.</p></li>
@@ -961,6 +725,7 @@ McGraw-Hill, 1992.</p></li>
 <li><p><a class="reference external" href="https://courses.washington.edu/phys431/uncertainty_notes.pdf">Uncertainty
 Notes courses.washington.edu</a></p></li>
 </ol>
+</div>
 </div>
 </div>
 
@@ -993,6 +758,15 @@ Notes courses.washington.edu</a></p></li>
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="README.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Lab 2 - Static beam deflections with strain gauge</p>
+            </div>
+        </a>
+    </div>
 
 </div>
         

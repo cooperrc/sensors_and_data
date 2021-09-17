@@ -1,19 +1,19 @@
 Traceback (most recent call last):
-  File "/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+  File "/opt/hostedtoolcache/Python/3.9.7/x64/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
     executenb(
-  File "/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/nbclient/client.py", line 1117, in execute
+  File "/opt/hostedtoolcache/Python/3.9.7/x64/lib/python3.9/site-packages/nbclient/client.py", line 1117, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
-  File "/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/nbclient/util.py", line 78, in wrapped
+  File "/opt/hostedtoolcache/Python/3.9.7/x64/lib/python3.9/site-packages/nbclient/util.py", line 78, in wrapped
     return just_run(coro(*args, **kwargs))
-  File "/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/nbclient/util.py", line 57, in just_run
+  File "/opt/hostedtoolcache/Python/3.9.7/x64/lib/python3.9/site-packages/nbclient/util.py", line 57, in just_run
     return loop.run_until_complete(coro)
-  File "/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+  File "/opt/hostedtoolcache/Python/3.9.7/x64/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
     return future.result()
-  File "/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/nbclient/client.py", line 558, in async_execute
+  File "/opt/hostedtoolcache/Python/3.9.7/x64/lib/python3.9/site-packages/nbclient/client.py", line 558, in async_execute
     await self.async_execute_cell(
-  File "/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/nbclient/client.py", line 862, in async_execute_cell
+  File "/opt/hostedtoolcache/Python/3.9.7/x64/lib/python3.9/site-packages/nbclient/client.py", line 862, in async_execute_cell
     self._check_raise_for_error(cell, exec_reply)
-  File "/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/nbclient/client.py", line 765, in _check_raise_for_error
+  File "/opt/hostedtoolcache/Python/3.9.7/x64/lib/python3.9/site-packages/nbclient/client.py", line 765, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
@@ -23,7 +23,7 @@ pi=np.pi
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mKeyError[0m                                  Traceback (most recent call last)
-[0;32m/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/matplotlib/__init__.py[0m in [0;36m__setitem__[0;34m(self, key, val)[0m
+[0;32m/opt/hostedtoolcache/Python/3.9.7/x64/lib/python3.9/site-packages/matplotlib/__init__.py[0m in [0;36m__setitem__[0;34m(self, key, val)[0m
 [1;32m    594[0m             [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 [0;32m--> 595[0;31m                 [0mcval[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mvalidate[0m[0;34m[[0m[0mkey[0m[0;34m][0m[0;34m([0m[0mval[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m    596[0m             [0;32mexcept[0m [0mValueError[0m [0;32mas[0m [0mve[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
@@ -33,7 +33,7 @@ pi=np.pi
 The above exception was the direct cause of the following exception:
 
 [0;31mKeyError[0m                                  Traceback (most recent call last)
-[0;32m/tmp/ipykernel_1783/1109053810.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_2466/1109053810.py[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0mpretty_plots[0m[0;34m.[0m[0msetdefaults[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m      2[0m [0mpi[0m[0;34m=[0m[0mnp[0m[0;34m.[0m[0mpi[0m[0;34m[0m[0;34m[0m[0m
 
@@ -44,7 +44,7 @@ The above exception was the direct cause of the following exception:
 [0m[1;32m      7[0m   plt.rcParams['text.latex.preamble'] = [
 [1;32m      8[0m          [0;34mr'\usepackage{siunitx}'[0m[0;34m,[0m   [0;31m# I need upright \micro symbols, but you need...[0m[0;34m[0m[0;34m[0m[0m
 
-[0;32m/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/matplotlib/__init__.py[0m in [0;36m__setitem__[0;34m(self, key, val)[0m
+[0;32m/opt/hostedtoolcache/Python/3.9.7/x64/lib/python3.9/site-packages/matplotlib/__init__.py[0m in [0;36m__setitem__[0;34m(self, key, val)[0m
 [1;32m    598[0m             [0mdict[0m[0;34m.[0m[0m__setitem__[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mkey[0m[0;34m,[0m [0mcval[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [1;32m    599[0m         [0;32mexcept[0m [0mKeyError[0m [0;32mas[0m [0merr[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 [0;32m--> 600[0;31m             raise KeyError(
