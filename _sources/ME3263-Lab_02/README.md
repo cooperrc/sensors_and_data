@@ -1,5 +1,4 @@
 # Lab 2 - Static beam deflections with strain gauge
-=====================================
 
 ## What is a Strain Gauge?
 
