@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -71,6 +71,7 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
       
       
       <h1 class="site-logo" id="site-title">Introduction to Sensors and Data</h1>
@@ -469,7 +470,7 @@ location on a linear, homogeneous beam are <span class="math notranslate nohighl
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2366</span><span class="o">/</span><span class="mf">232341384.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1678</span><span class="o">/</span><span class="mf">232341384.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># your work here</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> 
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">p</span><span class="o">.</span><span class="n">check_p01</span><span class="p">(</span><span class="n">w20</span><span class="p">,</span><span class="n">k20</span><span class="p">,</span><span class="n">e20</span><span class="p">)</span>
@@ -705,9 +706,14 @@ The strain gauge is placed at a distance <span class="math notranslate nohighlig
 </div>
 <div class="section" id="task-4-determine-the-uncertainty-in-your-estimate-of-young-s-modulus">
 <h1>Task 4: Determine the uncertainty in your estimate of Young’s modulus<a class="headerlink" href="#task-4-determine-the-uncertainty-in-your-estimate-of-young-s-modulus" title="Permalink to this headline">¶</a></h1>
+<p>Each measurement you have taken over the course of this lab has its own associated uncertainty, and that uncertainty propagates through any calculated quantities. Your calculations of moment of inertia from geometry of the beam: <span class="math notranslate nohighlight">\(I=\frac{bt^3}{12}\)</span>, curvature from strain: <span class="math notranslate nohighlight">\(\kappa=-\frac{\epsilon}{z}\)</span>, and moment from applied mass: <span class="math notranslate nohighlight">\(M=rF\)</span> all possess uncertainties due to the measured quantities involved in their calculation.</p>
 <ul class="simple">
-<li><p>Using the method learned in class for calculating propagation of error, determine the uncertainty in your estimate of <span class="math notranslate nohighlight">\(E\)</span>.</p></li>
-<li><p>The uncertainties in your measurements of length derive from the resolutions of your ruler and calipers. For the strain gauge uncertainty, use the offset value under zero load at the end of the experiment.</p></li>
+<li><p>Using the method we learned in class for calculating propagation of error, determine the uncertainties in <span class="math notranslate nohighlight">\(I\)</span>, <span class="math notranslate nohighlight">\(\kappa\)</span>, and <span class="math notranslate nohighlight">\(M\)</span>.</p></li>
+<li><p>Using these uncertainties, calculate the uncertainty in <span class="math notranslate nohighlight">\(E\)</span> obtained by the expression <span class="math notranslate nohighlight">\(E=\frac{M}{I\kappa}\)</span>.</p></li>
+<li><p>To estimate the overall uncertainty in the experiment, it is acceptable to use the means of all measured values in the calculation - the mean of <span class="math notranslate nohighlight">\(r\)</span>, the mean of <span class="math notranslate nohighlight">\(\epsilon\)</span>, etc.</p></li>
+<li><p>The uncertainties in your measurements of length can be assumed to be zero-order. In other words, consider only the errors due to instrument resolution: <span class="math notranslate nohighlight">\(u_{xi}=\frac{resolution}{2}\)</span>.</p></li>
+<li><p>The uncertainty in your strain measurements can be estimated in two ways for this lab. They will give different results, but both will work for our purposes. First, you may record the “drift” value of your strain gauge after all measurements have been taken. This is the readout of the strain gauge in Lab View when the beam is under no applied moment. Second, you may use the difference between calculated and measured strain from your calibration in Task 1.</p></li>
+<li><p>Assume the applied mass is known perfectly - i.e., there is no uncertainty to the force applied to the beam.</p></li>
 </ul>
 <div class="section" id="your-report">
 <h2>Your Report<a class="headerlink" href="#your-report" title="Permalink to this headline">¶</a></h2>
@@ -773,7 +779,7 @@ Notes courses.washington.edu</a></p></li>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
