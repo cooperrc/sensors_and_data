@@ -11,9 +11,9 @@
 - file: ME3263-Lab_02/README
   sections:
     - file: ME3263-Lab_02/ME3263-Lab_02
-#- file: ME3263-Lab_03/README
-#  sections:
-#    - file: ME3263-Lab_03/ME3263-Lab_03
+- file: ME3263-Lab_03/README
+  sections:
+    - file: ME3263-Lab_03/ME3263-Lab_03
 #- file: ME3263-Lab_04/README
 #  sections:
 #    - file: ME3263-Lab_04/ME3263-Lab_04
