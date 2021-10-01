@@ -24,7 +24,7 @@ Answer # = 'yes' or 'no'
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mNameError[0m                                 Traceback (most recent call last)
-[0;32m/tmp/ipykernel_1696/4010596980.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_1784/4010596980.py[0m in [0;36m<module>[0;34m[0m
 [1;32m      1[0m [0mtstat[0m [0;31m# your work here[0m[0;34m[0m[0;34m[0m[0m
 [0;32m----> 2[0;31m [0mtvar[0m[0;34m=[0m[0mt[0m[0;34m.[0m[0minterval[0m[0;34m([0m[0;36m0.95[0m[0;34m,[0m[0mdegrees_of_freedom[0m[0;34m)[0m[0;34m[[0m[0;36m1[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m      3[0m [0mAnswer[0m [0;31m# = 'yes' or 'no'[0m[0;34m[0m[0;34m[0m[0m

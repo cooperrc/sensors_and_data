@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ME 3263 Introduction to Sensors and Data Analysis (Fall 2018) &#8212; Introduction to Sensors and Data</title>
+    <title>Lab 3 - Measuring Natural Frequencies &#8212; Introduction to Sensors and Data</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -42,6 +42,8 @@
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -51,6 +53,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ME 3263 Laboratory #3" href="ME3263-Lab_03.html" />
+    <link rel="prev" title="ME 3263 - Laboratory #2" href="../ME3263-Lab_02/ME3263-Lab_02.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -86,7 +90,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../ME3263-Lab_00/README.html">
    Lab 0 - Statistics and Student’s t-test
@@ -134,6 +138,23 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../ME3263-Lab_02/ME3263-Lab_02.html">
      ME 3263 - Laboratory #2
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   Lab 3 - Measuring Natural Frequencies
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ME3263-Lab_03.html">
+     ME 3263 Laboratory #3
     </a>
    </li>
   </ul>
@@ -226,16 +247,19 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lab-3-measuring-natural-frequencies">
-   Lab #3 Measuring Natural Frequencies
+  <a class="reference internal nav-link" href="#what-are-natural-frequencies">
+   What are natural frequencies?
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#what-are-natural-frequencies">
-     What are natural frequencies
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#determining-natural-frequencies">
+   Determining natural frequencies?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#deliverables">
+   Deliverables
+  </a>
  </li>
 </ul>
 
@@ -248,16 +272,14 @@
         
               <div>
                 
-  <div class="section" id="me-3263-introduction-to-sensors-and-data-analysis-fall-2018">
-<h1>ME 3263 Introduction to Sensors and Data Analysis (Fall 2018)<a class="headerlink" href="#me-3263-introduction-to-sensors-and-data-analysis-fall-2018" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="lab-3-measuring-natural-frequencies">
-<h2>Lab #3 Measuring Natural Frequencies<a class="headerlink" href="#lab-3-measuring-natural-frequencies" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="lab-3-measuring-natural-frequencies">
+<h1>Lab 3 - Measuring Natural Frequencies<a class="headerlink" href="#lab-3-measuring-natural-frequencies" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="what-are-natural-frequencies">
-<h3>What are natural frequencies<a class="headerlink" href="#what-are-natural-frequencies" title="Permalink to this headline">¶</a></h3>
+<h2>What are natural frequencies?<a class="headerlink" href="#what-are-natural-frequencies" title="Permalink to this headline">¶</a></h2>
 <p>In free vibration (i.e., no external forcing), structural components
-oscillate at specified frequencies or combinations of frequencies. Since
-these vibrations are unforced, the associated frequencies are referred
-to as natural frequencies; it’s how the system vibrates if left to
+oscillate at frequencies (or combinations of frequencies) that are dictated by their geometry and material properties. Since
+these vibrations occur in the absence of a driving force, the associated frequencies are referred
+to as <em>natural frequencies</em>. They describe how the system vibrates if left to
 behave on its own. In contrast, driven linear systems vibrate at the
 driving frequency. An amplification of the response (called resonance)
 occurs when the driving frequency coincides with one of the natural
@@ -265,6 +287,26 @@ frequencies. In short, the system is driven at a frequency at which it
 likes to vibrate. Large amplitude oscillations are the result. So it is
 important to know what the natural frequencies are <em>a priori</em> so you can
 avoid driving the system into resonance.</p>
+</div>
+<div class="section" id="determining-natural-frequencies">
+<h2>Determining natural frequencies?<a class="headerlink" href="#determining-natural-frequencies" title="Permalink to this headline">¶</a></h2>
+<p>In this lab, you will measure the first 3 natural frequencies, <span class="math notranslate nohighlight">\(\omega_n\)</span>, of a rectangular beam using strain gauge data.
+Your goal is
+to measure the free response time series data using a strain gauge. With this data, you will
+determine the first natural frequency in two ways:</p>
+<ul class="simple">
+<li><p>(i) by peak counting in the time domain (which gives a very rough estimate of <span class="math notranslate nohighlight">\(\omega_n\)</span>)</p></li>
+<li><p>(ii) by a formal frequency domain analysis, using the <a class="reference external" href="https://en.wikipedia.org/wiki/Fast_Fourier_transform">fast Fourier transform</a> (FFT).</p></li>
+</ul>
+<p>For a rectangular beam, analytic expressions of the natural frequencies exist,
+and you can confirm that you’re doing everything properly by getting the
+analytical frequencies to agree with the experimental frequencies.</p>
+</div>
+<div class="section" id="deliverables">
+<h2>Deliverables<a class="headerlink" href="#deliverables" title="Permalink to this headline">¶</a></h2>
+<p>For this assignment, you and your lab partner will submit a <strong>joint report</strong> as a .pdf to your HuskyCT section within <strong>one week</strong> of your lab date. It will only be necessary for one of you to submit the report. Please clearly mark, either in the body as footnotes or in the appendix as a separate section, what each of you contributed to the overall report.</p>
+<p>You are limited to <strong>5 pages</strong> (not including the title page, references, or appendix) and <strong>4 figures</strong>. Additional data, figures, and information can be put in an appendix. The appendix will not be graded, but you may refer to it to explain data, methods, or other relevant information.</p>
+<div class="toctree-wrapper compound">
 </div>
 </div>
 </div>
@@ -298,6 +340,24 @@ avoid driving the system into resonance.</p>
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="../ME3263-Lab_02/ME3263-Lab_02.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">ME 3263 - Laboratory #2</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="ME3263-Lab_03.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">ME 3263 Laboratory #3</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
 
 </div>
         
