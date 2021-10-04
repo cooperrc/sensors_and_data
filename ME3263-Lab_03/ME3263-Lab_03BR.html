@@ -42,6 +42,8 @@
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
@@ -330,8 +332,8 @@
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mirroring-about-the-nyquist-frequency">
-     Mirroring about the Nyquist frequency
+    <a class="reference internal nav-link" href="#mirroring-about-a-central-frequency">
+     Mirroring about a central frequency
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
@@ -1446,7 +1448,7 @@ if (IPython.notebook.kernel !== null) {
         mpl.mpl_figure_comm
     );
 }
-</script><div class="output text_html"><div id='4a58bacd-8421-4569-aa6b-94f77509dbec'></div></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;microstrain&#39;)
+</script><div class="output text_html"><div id='3091be90-60e2-466a-8634-3f424c845099'></div></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;microstrain&#39;)
 </pre></div>
 </div>
 </div>
@@ -2451,7 +2453,7 @@ if (IPython.notebook.kernel !== null) {
         mpl.mpl_figure_comm
     );
 }
-</script><div class="output text_html"><div id='0274298f-0d65-4891-8cb0-afef519ae816'></div></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;amplitude&#39;)
+</script><div class="output text_html"><div id='5a7be6e2-47c7-4808-8419-05f00f4c6ca2'></div></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;amplitude&#39;)
 </pre></div>
 </div>
 </div>
@@ -3500,7 +3502,7 @@ if (IPython.notebook.kernel !== null) {
         mpl.mpl_figure_comm
     );
 }
-</script><div class="output text_html"><div id='3a344b60-eae0-4cfa-a086-821a884c09ac'></div></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-5.0, 5.0)
+</script><div class="output text_html"><div id='99db8c1a-c8c6-45e9-840d-6e26ee7a657e'></div></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-5.0, 5.0)
 </pre></div>
 </div>
 </div>
@@ -4507,14 +4509,14 @@ if (IPython.notebook.kernel !== null) {
         mpl.mpl_figure_comm
     );
 }
-</script><div class="output text_html"><div id='de66346b-0448-47c3-b13e-7ac48f06806f'></div></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.0, 20.0)
+</script><div class="output text_html"><div id='642a4139-7911-44b2-a83e-2cd9baf6bee9'></div></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.0, 20.0)
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="mirroring-about-the-nyquist-frequency">
-<h2>Mirroring about the Nyquist frequency<a class="headerlink" href="#mirroring-about-the-nyquist-frequency" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="mirroring-about-a-central-frequency">
+<h2>Mirroring about a central frequency<a class="headerlink" href="#mirroring-about-a-central-frequency" title="Permalink to this headline">¶</a></h2>
 <p>The above plot has been artificialy cut short at 20 Hz. If you’d like, you may comment out the final line <code class="docutils literal notranslate"><span class="pre">plt.xlim(0,20)</span></code> to see the whole plot. You will see the results are mirrored around 1000 Hz - our sampling rate divided by two. It will be clearer if you examine the end of the plot - <code class="docutils literal notranslate"><span class="pre">plt.xlim(1980,</span> <span class="pre">2000)</span></code>. This is an effect of the complex exponentials involved in the FFT. It also means that, as a rule of thumb, <strong>do not trust</strong> any peaks you find above <span class="math notranslate nohighlight">\(f_{sampling}/2\)</span>.</p>
 </div>
 <div class="section" id="matlab-fft">
