@@ -17,18 +17,25 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# your work here
-
-p.check_p01(w20,k20,e20)
+data1 #=
+data2 #=
+p.check_p03(data1,data2)
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mNameError[0m                                 Traceback (most recent call last)
-[0;32m/tmp/ipykernel_1741/232341384.py[0m in [0;36m<module>[0;34m[0m
-[1;32m      1[0m [0;31m# your work here[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      2[0m [0;34m[0m[0m
-[0;32m----> 3[0;31m [0mp[0m[0;34m.[0m[0mcheck_p01[0m[0;34m([0m[0mw20[0m[0;34m,[0m[0mk20[0m[0;34m,[0m[0me20[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;31mUnboundLocalError[0m                         Traceback (most recent call last)
+[0;32m/tmp/ipykernel_1672/2060265219.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      1[0m [0mdata1[0m [0;31m#=[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      2[0m [0mdata2[0m [0;31m#=[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 3[0;31m [0mp[0m[0;34m.[0m[0mcheck_p03[0m[0;34m([0m[0mdata1[0m[0;34m,[0m[0mdata2[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m
-[0;31mNameError[0m: name 'w20' is not defined
-NameError: name 'w20' is not defined
+[0;32m~/work/sensors_and_data/sensors_and_data/ME3263-Lab_00/check_lab00.py[0m in [0;36mcheck_p03[0;34m(data1, data2)[0m
+[1;32m     45[0m     [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     46[0m         [0mprint[0m[0;34m([0m[0;34m'Whoops, try again'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 47[0;31m         [0;32mreturn[0m [0mpoints[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     48[0m [0;34m[0m[0m
+[1;32m     49[0m [0;32mif[0m [0m__name__[0m[0;34m==[0m[0;34m'__main__'[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mUnboundLocalError[0m: local variable 'points' referenced before assignment
+UnboundLocalError: local variable 'points' referenced before assignment
 
