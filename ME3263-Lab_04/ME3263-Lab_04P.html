@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lab 0 - Statistics and Student’s t-test &#8212; Introduction to Sensors and Data</title>
+    <title>Laboratory 4 - Procedure &#8212; Introduction to Sensors and Data</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="ME 3263 - Laboratory # 0" href="ME3263-Lab_00.html" />
-    <link rel="prev" title="Introduction to Sensors and Data Analysis" href="../README.html" />
+    <link rel="prev" title="Laboratory 4 - Background and Resources" href="ME3263-Lab_04BR.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -89,18 +88,18 @@
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ME3263-Lab_00/README.html">
    Lab 0 - Statistics and Student’s t-test
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="ME3263-Lab_00.html">
+    <a class="reference internal" href="../ME3263-Lab_00/ME3263-Lab_00.html">
      ME 3263 - Laboratory # 0
     </a>
    </li>
@@ -162,23 +161,23 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../ME3263-Lab_04/README.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="README.html">
    Lab 4 - Predicting Natural Frequencies with the Finite Element Method
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../ME3263-Lab_04/ME3263-Lab_04BR.html">
+    <a class="reference internal" href="ME3263-Lab_04BR.html">
      Laboratory 4 - Background and Resources
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../ME3263-Lab_04/ME3263-Lab_04P.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Laboratory 4 - Procedure
     </a>
    </li>
@@ -225,7 +224,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/ME3263-Lab_00/README.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/ME3263-Lab_04/ME3263-Lab_04P.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -245,7 +244,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/cooperrc/sensors_and_data/issues/new?title=Issue%20on%20page%20%2FME3263-Lab_00/README.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/cooperrc/sensors_and_data/issues/new?title=Issue%20on%20page%20%2FME3263-Lab_04/ME3263-Lab_04P.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -272,13 +271,28 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
+  <a class="reference internal nav-link" href="#task-0-getting-started">
+   Task 0 - Getting started
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#deliverables">
-   Deliverables
+  <a class="reference internal nav-link" href="#task-1-define-your-physical-model">
+   Task 1 - Define your physical model
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-2-define-your-analysis">
+   Task 2 - Define your analysis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-3-run-your-analysis">
+   Task 3 - Run your analysis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#your-report">
+   Your Report
   </a>
  </li>
 </ul>
@@ -292,24 +306,57 @@
         
               <div>
                 
-  <div class="section" id="lab-0-statistics-and-student-s-t-test">
-<h1>Lab 0 - Statistics and Student’s t-test<a class="headerlink" href="#lab-0-statistics-and-student-s-t-test" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>All experimental measurements are subject to random variation. No two measurements will be exactly the same. This variation can, for example, be caused by:</p>
-<ol class="simple">
-<li><p>Natural differences in a population</p></li>
-<li><p>Unpredictable fluctuations in experimental conditions</p></li>
-<li><p>Uncertainties inherent to the measurement device or system</p></li>
-</ol>
-<p>In practice, this means that we will always be working with uncertain data. Due to cost or practicallity concerns, we will often be working with <em>limited samples</em> of uncertain data. In these situations, we can use Student’s t-test to test hypotheses about our data sets, and we can use t-values to establish confidence intervals for the true mean of our measured value.</p>
-<p>In this lab, we will use the two-sample t-test to check for a possible manufacturing error in samples of glass marbles</p>
+  <div class="section" id="laboratory-4-procedure">
+<h1>Laboratory 4 - Procedure<a class="headerlink" href="#laboratory-4-procedure" title="Permalink to this headline">¶</a></h1>
+<p>In this lab, you will develop a model of your cantilevered beam using Ansys, and conduct a modal analysis to discover its fundamental
+frequencies and mode shapes. You will be judging the accuracy of your model in three ways:</p>
+<ul class="simple">
+<li><p>Convergence - examining the tendency of the FEA to approach a final solution with decreasing element size</p></li>
+<li><p>Verification - comparing your results to an analytical model</p></li>
+<li><p>Validation - comparing your results to an experimental model</p></li>
+</ul>
+<div class="section" id="task-0-getting-started">
+<h2>Task 0 - Getting started<a class="headerlink" href="#task-0-getting-started" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Open Ansys, and familiarize yourself with the interface. Poke around and take a look at different menus</p></li>
+<li><p>There is extensive “Help” documentation available from the top menu bar. It includes “getting started” resources that could be helpful</p></li>
+</ul>
 </div>
-<div class="section" id="deliverables">
-<h2>Deliverables<a class="headerlink" href="#deliverables" title="Permalink to this headline">¶</a></h2>
-<p>For this assignment, you will submit a .pdf of your report to your HuskyCT section by Wednesday, Sept. 15th. You are limited to <strong>3 pages</strong> (not including the title page, references, or appendix) and <strong>2 figures</strong>. Additional data, figures, and information can be put in an appendix.  The appendix will not be graded, but you may refer to it to explain data, methods, or other relevant information.</p>
-<div class="toctree-wrapper compound">
+<div class="section" id="task-1-define-your-physical-model">
+<h2>Task 1 - Define your physical model<a class="headerlink" href="#task-1-define-your-physical-model" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Start a new project.</p></li>
+<li><p>To select a modal analysis, drag the “modal” option from the left-hand menu into the project schematic.</p></li>
+<li><p>Right-click on “engineering data” to add materials to your model and edit their properties</p></li>
+<li><p>Right-click on “geometry” and open a new DesignModeler file. Here you can define the geometry of your bar.</p></li>
+</ul>
 </div>
+<div class="section" id="task-2-define-your-analysis">
+<h2>Task 2 - Define your analysis<a class="headerlink" href="#task-2-define-your-analysis" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Right-click on “model” to edit</p></li>
+<li><p>Make sure your bar is using the correct material - under “geometry” select your shape and check the bottom-left info pane</p></li>
+<li><p>Add a fixed-support condition to one end of your beam by right-clicking on “modal”</p></li>
+<li><p>Select “mesh” in the left-hand pane. In the info panel, turn off adaptive sizing. Edit the element size to change the number of nodes</p></li>
+</ul>
+</div>
+<div class="section" id="task-3-run-your-analysis">
+<h2>Task 3 - Run your analysis<a class="headerlink" href="#task-3-run-your-analysis" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Right-click “solution” and select solve</p></li>
+<li><p>Make a note of the natural frequencies and the number of nodes</p></li>
+<li><p>You may add mode shape visualizations to the model by highlighting them in the table and selecting “Create mode shape results” in the right-click context menu</p></li>
+<li><p>Increase the number of nodes and re-run the solution.</p></li>
+<li><p>You are looking to demonstrate and document convergence of the first three mode shapes.</p></li>
+<li><p>Using a probe, investigate the strain at a location corresponding to you strain gauge.</p></li>
+</ul>
+</div>
+<div class="section" id="your-report">
+<h2>Your Report<a class="headerlink" href="#your-report" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Demonstrate convergence of the first three modes, using the two methods shown in the Background and Resources section.</p></li>
+<li><p>Compare your FEA results to your experimental and analytically predicted results.</p></li>
+</ul>
 </div>
 </div>
 
@@ -326,7 +373,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./ME3263-Lab_00"
+            path: "./ME3263-Lab_04"
         },
         predefinedOutput: true
     }
@@ -343,23 +390,14 @@
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="../README.html" title="previous page">
+        <a class="left-prev" href="ME3263-Lab_04BR.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Introduction to Sensors and Data Analysis</p>
+                <p class="prevnext-title">Laboratory 4 - Background and Resources</p>
             </div>
         </a>
     </div>
-     <div id="next">
-        <a class="right-next" href="ME3263-Lab_00.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">ME 3263 - Laboratory # 0</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
 
 </div>
         
