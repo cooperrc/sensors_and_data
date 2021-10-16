@@ -53,6 +53,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Laboratory 4 - Procedure" href="ME3263-Lab_04P.html" />
+    <link rel="prev" title="Lab 4 - Predicting Natural Frequencies with the Finite Element Method" href="README.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -88,7 +90,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../ME3263-Lab_00/README.html">
    Lab 0 - Statistics and Student’s t-test
@@ -158,6 +160,28 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../ME3263-Lab_03/ME3263-Lab_03P.html">
      Laboratory 3 - Procedure
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="README.html">
+   Lab 4 - Predicting Natural Frequencies with the Finite Element Method
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Laboratory 4 - Background and Resources
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ME3263-Lab_04P.html">
+     Laboratory 4 - Procedure
     </a>
    </li>
   </ul>
@@ -294,8 +318,18 @@
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#predicting-natural-frequencies">
-       Predicting Natural Frequencies
+      <a class="reference internal nav-link" href="#vibration-modes-from-fea">
+       Vibration modes from FEA
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#convergence">
+       Convergence
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fea-model-accuracy">
+       FEA model accuracy
       </a>
      </li>
     </ul>
@@ -338,7 +372,7 @@
 <div class="section" id="what-is-the-finite-element-method">
 <h2>What is the Finite Element Method?<a class="headerlink" href="#what-is-the-finite-element-method" title="Permalink to this headline">¶</a></h2>
 <p>Many engineering problems present themselves as partial differential equations (PDEs). The fields of solid mechanics, electromagnetics, fluid mechanics, and heat transfer often describe a spatially varying quantity using PDEs - imagine, for example, the strain or temperature distribution across an engine component. For simple geometries, these types of “boundary value problems” can be solved analytically. For complicated geometries, analytical solutions are at best prohibitively time consuming and at worst impossible. In such cases, Finite Element Analysis (FEA) is the standard solution method.</p>
-<p>The Finite Element Method (FEM) involves taking a continuous representation of a physical system and breaking it up into a finite number of elements. In three dimensions, these elements would commonly be shapes like cubes (hexahedrons) or pyramids (tetrahedrons). They are connected to their neighbors via “nodes” at each corner. This method results in a set of simultaneous algebraic equations that, when solved together, satisfies the governing equations (e.g., displacement or stress) at every node. With an increasing number of elements, the solution found using FEA will approach the analytical solution.</p>
+<p>The Finite Element Method (FEM) involves taking a continuous representation of a physical system and breaking it up into a finite number of elements. In three dimensions, these elements would commonly be shapes like cubes (hexahedrons) or pyramids (tetrahedrons). They are connected to their neighbors via “nodes” at each corner. This method results in a set of simultaneous algebraic equations that, when solved together, satisfies the governing equations (e.g., displacement or stress) at every node. With an increasing number of elements (i.e., decreasing element size), the solution found using FEA will approach the analytical solution.</p>
 <p>As a simple example, consider a rectangular beam with a force applied to stretch it axially, as seen in Figure 1. This beam is representative of a simple, 1-DOF element with a “node” at each end. Hooke’s law relates the applied force to strain and deflection:</p>
 <p><span class="math notranslate nohighlight">\(F = AE\epsilon = AE\frac{\delta}{l}=k\delta\)</span>     (1)</p>
 <p>where <span class="math notranslate nohighlight">\(k\)</span> is the stiffness (force/displacement) of the element, <span class="math notranslate nohighlight">\(E\)</span> is the Young’s modulus of the element, <span class="math notranslate nohighlight">\(\epsilon\)</span> is the strain in the element, <span class="math notranslate nohighlight">\(\delta\)</span> is the change in length of the element, and <span class="math notranslate nohighlight">\(l\)</span> is the original length of the element. Considering the displacement of each node, <span class="math notranslate nohighlight">\(u_{i}\)</span>, the force on this element is:</p>
@@ -382,8 +416,8 @@ k_1+k_2 &amp; -k_2 \\
 x_1 \\
 x_2 \end{array}\right]\)</span>  (4a)</p>
 <p>or</p>
-<p><span class="math notranslate nohighlight">\([M]\ddot{x}+[K]\ddot{x}=0\)</span> (4b)</p>
-<p>As we saw in class, assuming a harmonic solution of <span class="math notranslate nohighlight">\(x=ve^{i\omega t}\)</span>, and differentiating it twice, allows us to write equation 4b in the form:</p>
+<p><span class="math notranslate nohighlight">\([M]\ddot{x}+[K]x=0\)</span> (4b)</p>
+<p>As we saw in class, assuming a harmonic solution of <span class="math notranslate nohighlight">\(x=ve^{i\omega t}\)</span> (and differentiating it twice) allows us to write equation 4b in the form:</p>
 <p><span class="math notranslate nohighlight">\([M]^{-1}[K]x=\omega^2x\)</span>  (5)</p>
 <p>Equation 5 is an eigenvalue problem, with <span class="math notranslate nohighlight">\(\lambda = \omega^2\)</span>. The solution of this problem will reveal the natural frequencies and mode shapes of the system.</p>
 <p>In the following example, the natural frequencies for <span class="math notranslate nohighlight">\(m_1=m_2\)</span> = 0.2 kg and <span class="math notranslate nohighlight">\(k_1=k_2=k_3\)</span> = 500 N/m are shown.</p>
@@ -408,7 +442,7 @@ x_2 \end{array}\right]\)</span>  (4a)</p>
 <span class="n">w1</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">real</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="o">/</span><span class="n">pi</span>
 <span class="n">w2</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">real</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="o">/</span><span class="n">pi</span>
 
-<span class="c1">#&quot;normalize&quot; the vectors</span>
+<span class="c1">#&quot;normalize&quot; the vectors (not a true normalization - here the magnitudes of their elements equal one, not the overall magnitude)</span>
 <span class="n">v1</span><span class="o">=</span><span class="n">v</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="nb">max</span><span class="p">(</span><span class="n">v</span><span class="p">[:,</span><span class="mi">0</span><span class="p">])</span>
 <span class="n">v2</span><span class="o">=</span><span class="n">v</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="nb">max</span><span class="p">(</span><span class="n">v</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span>
 
@@ -438,7 +472,23 @@ are 8 and 14 Hz, for mode 1 and 2, respectively.</p>
 </div>
 <div class="section" id="fea-modal-analysis">
 <h2>FEA modal analysis<a class="headerlink" href="#fea-modal-analysis" title="Permalink to this headline">¶</a></h2>
-<p>In the FEA modal analysis, each element is composed of 8 nodes (for hexahedrals, i.e. cubes) that are shared by adjoining elements. Each node can move in three dimensions, which means the total degrees of freedom of the system is <span class="math notranslate nohighlight">\(3\times\)</span>(number of nodes). So the eigenvalue solution would reveal <span class="math notranslate nohighlight">\(3\times\)</span>(number of nodes) natural frequencies and vibration modes. We cannot use the high vibration mode results because they will not be accurate, but the lowest vibration modes will become more accurate as we increase the number of nodes in the system. This is called “convergence”. The ideal FEA solution will reproduce our analytical or experimental results. Table 1 demonstrates the convergence of the first natural frequency for a beam where E=200 GPa, L=300 mm, t=3 mm, w=12 mm, and <span class="math notranslate nohighlight">\(\rho\)</span>=8050 kg/m^3.</p>
+<p>In the FEA modal analysis, each element is composed of 8 nodes (for hexahedrals, i.e. cubes) that are shared by adjoining elements. This network of interconnected nodes is called a <em>mesh</em>. Each node can move in three dimensions, which means the total degrees of freedom of the system is <span class="math notranslate nohighlight">\(3\times\)</span>(number of nodes). The eigenvalue solution would reveal <span class="math notranslate nohighlight">\(3\times\)</span>(number of nodes) natural frequencies and vibration modes.</p>
+<p>We cannot use the higher frequency vibration mode results because they will not be accurate, but the lowest vibration modes will become more accurate as we increase the number of nodes in the system.</p>
+<div class="section" id="vibration-modes-from-fea">
+<h3>Vibration modes from FEA<a class="headerlink" href="#vibration-modes-from-fea" title="Permalink to this headline">¶</a></h3>
+<p>In Lab 3, our strain gauge was mounted to the top surface of the beam, aligned with its long axis. The setup was perfect for capturing one type of vibration mode - displacement in the vertical axis (Figure 4).</p>
+<p><img alt="Figure 4: Vibration in the vertical axis." src="../_images/Vertical.png" /></p>
+<p><em>Figure 4: Vibration in the vertical plane (Side View).</em></p>
+<p>A modal analysis will also reveal other types of vibration modes. There will be vibration in the horizontal plane (Figure 5), and at frequencies beyond our investigation there will also be torsional (twisting) modes.</p>
+<p><img alt="Figure 5: Vibration in the horizonal plane." src="../_images/Horizontal.png" /></p>
+<p><em>Figure 5: Vibration in the horizontal plane (Top View).</em></p>
+<p>The first step in evaluating your data will be determining which of the modes discovered by FEA match the modes you discovered via FFT analysis of strain gauge data.</p>
+</div>
+<div class="section" id="convergence">
+<h3>Convergence<a class="headerlink" href="#convergence" title="Permalink to this headline">¶</a></h3>
+<p>The FEA solution will approach the analytical solution as we increase the number of nodes. This is called “convergence”. The ideal FEA solution will reproduce our analytical or experimental results, with the fewest nodes required to see convergence.</p>
+<p>It is tempting to simply set the number of nodes extremely high to ensure immediate convergence. For a simple model, this is unlikely to be detrimental. For complicated models, this can result in an analysis that requires hours or days to complete and takes up huge amounts of disk space. In a real-world scenario, it is important to limit this waste of time and resources by finding the minimum number of elements required for convergence.</p>
+<p>Table 1 demonstrates the convergence of the first natural frequency for a beam where E=200 GPa, L=300 mm, t=3 mm, w=12 mm, and <span class="math notranslate nohighlight">\(\rho\)</span>=8050 kg/m^3.</p>
 <p><em>Table 1: Convergence of the first natural frequency for a steel beam
 where E=200 GPa, L=300 mm, t=3 mm, w=12 mm, and <span class="math notranslate nohighlight">\(\rho\)</span>=8050 kg/m^3.</em></p>
 <table class="colwidths-auto table">
@@ -487,11 +537,12 @@ where E=200 GPa, L=300 mm, t=3 mm, w=12 mm, and <span class="math notranslate no
 </tr>
 </tbody>
 </table>
-<p>The error in table one is calculated based upon the current best estimate, <span class="math notranslate nohighlight">\(f_{best}\)</span>, and analytical prediction, <span class="math notranslate nohighlight">\(f_{an}\)</span>. Relative error is the percent difference between the previous iteration and the current:</p>
-<p><span class="math notranslate nohighlight">\(\frac{f_{best}-f_{prev}}{f_{best}}\)</span> (6)</p>
-<p>and absolute error is the percent difference between the current iteration and the analytical (calculated) value.</p>
-<p><span class="math notranslate nohighlight">\(\frac{f_{an}-f_{best}}{f_{an}}\)</span> (7)</p>
-<p>Below, we explore how these both of these metrics converge as the number of nodes increases.</p>
+<p>The error in table 1 is calculated based upon the current estimate, <span class="math notranslate nohighlight">\(f_{current}\)</span>, and analytical prediction, <span class="math notranslate nohighlight">\(f_{an}\)</span>.</p>
+<p><em>Relative error</em> is the difference between the previous iteration and the current:</p>
+<p><span class="math notranslate nohighlight">\(\frac{f_{current}-f_{prev}}{f_{current}}\)</span> (6)</p>
+<p><em>Absolute error</em> is the difference between the current iteration and the analytical (calculated) value.</p>
+<p><span class="math notranslate nohighlight">\(\frac{f_{an}-f_{current}}{f_{an}}\)</span> (7)</p>
+<p>Both of these metrics will approach a stable value (i.e., <em>converge</em>) as the number of nodes increases. Below, we explore their convergence.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1153</span><span class="p">,</span>  <span class="mi">1438</span><span class="p">,</span>  <span class="mi">1913</span><span class="p">,</span>  <span class="mi">3621</span><span class="p">,</span>   <span class="mi">4521</span><span class="p">,</span>   <span class="mi">10437</span><span class="p">,</span> <span class="mi">15316</span><span class="p">,</span>  <span class="mi">17801</span><span class="p">,</span> <span class="mi">21351</span><span class="p">])</span>
@@ -508,7 +559,7 @@ where E=200 GPa, L=300 mm, t=3 mm, w=12 mm, and <span class="math notranslate no
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;relative error&#39;)
 </pre></div>
 </div>
-<img alt="../_images/ME3263-Lab_04BR_13_1.png" src="../_images/ME3263-Lab_04BR_13_1.png" />
+<img alt="../_images/ME3263-Lab_04BR_15_1.png" src="../_images/ME3263-Lab_04BR_15_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -523,10 +574,13 @@ where E=200 GPa, L=300 mm, t=3 mm, w=12 mm, and <span class="math notranslate no
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;absolute error&#39;)
 </pre></div>
 </div>
-<img alt="../_images/ME3263-Lab_04BR_14_1.png" src="../_images/ME3263-Lab_04BR_14_1.png" />
+<img alt="../_images/ME3263-Lab_04BR_16_1.png" src="../_images/ME3263-Lab_04BR_16_1.png" />
 </div>
 </div>
-<p>After 4,000 degrees of freedom, the first natural frequency mode has converged (the relative error is stable and the absolute error has diminishing returns). The absolute error compares the analytical model to the FEA model. There is a stable 2.2 % error in the frequencies predicted from Euler-Lagrange beam theory and 3D FEA.</p>
+<p>After 4,000 nodes, the first natural frequency mode has converged (the relative error is stable and the absolute error has diminishing returns). The absolute error compares the analytical model to the FEA model. There is a stable 2.2 % error in the frequencies predicted from Euler-Lagrange beam theory and 3D FEA.</p>
+</div>
+<div class="section" id="fea-model-accuracy">
+<h3>FEA model accuracy<a class="headerlink" href="#fea-model-accuracy" title="Permalink to this headline">¶</a></h3>
 <p>You can check the accuracy of your model in 3 ways:</p>
 <ol class="simple">
 <li><p>Check convergence of your results (convergence)</p></li>
@@ -540,64 +594,6 @@ validation of your model. Validation uses measured results to confirm your model
 is correct. For many engineering structures, method 2 is not feasible. Instead,
 we check convergence with method 1 and validate the model with experimental
 results. Here, we are using natural frequencies as our comparison metric.</p>
-<p>The other method we will use to confirm our results is to look at the mode shape
-and the strain or acceleration at the point of measurement. We can probe the
-value of a given measurement in the FEA results. The absolute value of
-the result will depend upon the amplitude of the impulse applied (from the
-hammer), but we can compare relative amplitudes based upon the frequency mode.
-In the example used previously, 300-by-12-by-3 mm^3 steel beam (10,437 nodes),
-the amplitude of axial strain on the top surface 11 mm from the support is given
-for the first 3 vibration modes in Table 2. The mode 2 axial strain is nominally
-zero. This is the first torsion vibration mode. In order to measure this response
-we would need a different experimental setup.</p>
-<p><em>Table 2: Relative amplitude of axial strain for first three modes on top
-surface for a steel beam where E=200 GPa, L=300 mm, t=3 mm, w=12 mm, and
-<span class="math notranslate nohighlight">\(\rho\)</span>=8050 kg/m^3.</em></p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>mode</p></th>
-<th class="head"><p>amplitude of strain (%)</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>1</p></td>
-<td><p>1.2</p></td>
-</tr>
-<tr class="row-odd"><td><p>2</p></td>
-<td><p>0.005</p></td>
-</tr>
-<tr class="row-even"><td><p>3</p></td>
-<td><p>-6.5</p></td>
-</tr>
-</tbody>
-</table>
-<div class="section" id="predicting-natural-frequencies">
-<h3>Predicting Natural Frequencies<a class="headerlink" href="#predicting-natural-frequencies" title="Permalink to this headline">¶</a></h3>
-<p>In this lab you will use Ansys to predict natural frequencies of the
-rectangular cantilever
-beam. In finite element analysis (FEA), this is called a modal
-analysis. In any FEA simulation, there are three steps: pre-process, solve, and
-post-process. Here are the steps in a FEA modal analysis <span class="xref myst">(2)</span>:</p>
-<ol class="simple">
-<li><p>Pre-process</p></li>
-</ol>
-<p>a. Define material constants</p>
-<p>b. Create geometric model</p>
-<p>c. Define boundary conditions</p>
-<p>d. Mesh the model (turn the continuous volume into discrete nodes and elements)</p>
-<ol class="simple">
-<li><p>Solve</p></li>
-</ol>
-<p>a. Assemble stiffness matrix, <span class="math notranslate nohighlight">\(K\)</span></p>
-<p>b. Assemble mass matrix, <span class="math notranslate nohighlight">\(M\)</span></p>
-<p>c. solve the eigenvalue problem, <span class="math notranslate nohighlight">\(Ku=\lambda M u\)</span></p>
-<ol class="simple">
-<li><p>Post-process</p></li>
-</ol>
-<p>a. Determine natural frequencies</p>
-<p>a. Plot mode shapes</p>
-<p>b. Determine maximum displacement/acceleration for each mode</p>
-<p>c. Determine maximum stress and strain for each mode</p>
 </div>
 </div>
 </div>
@@ -639,6 +635,24 @@ post-process. Here are the steps in a FEA modal analysis <span class="xref myst"
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="README.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Lab 4 - Predicting Natural Frequencies with the Finite Element Method</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="ME3263-Lab_04P.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Laboratory 4 - Procedure</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
 
 </div>
         

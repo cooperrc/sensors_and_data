@@ -51,6 +51,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Laboratory 4 - Background and Resources" href="ME3263-Lab_04BR.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -86,7 +87,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../ME3263-Lab_00/README.html">
    Lab 0 - Statistics and Student’s t-test
@@ -156,6 +157,28 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../ME3263-Lab_03/ME3263-Lab_03P.html">
      Laboratory 3 - Procedure
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="README.html">
+   Lab 4 - Predicting Natural Frequencies with the Finite Element Method
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="ME3263-Lab_04BR.html">
+     Laboratory 4 - Background and Resources
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Laboratory 4 - Procedure
     </a>
    </li>
   </ul>
@@ -248,23 +271,23 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-0-getting-started">
-   Task 0 - Getting started
+  <a class="reference internal nav-link" href="#task-0-getting-started-20-30-minutes">
+   Task 0 - Getting started (20-30 minutes)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-1-define-your-physical-model">
-   Task 1 - Define your physical model
+  <a class="reference internal nav-link" href="#task-1-define-your-fea-model-45-60-minutes">
+   Task 1 - Define your FEA model (45-60 minutes)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-2-define-your-analysis">
-   Task 2 - Define your analysis
+  <a class="reference internal nav-link" href="#task-2-run-your-initial-analysis-10-15-minutes">
+   Task 2 - Run your initial analysis (10-15 minutes)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-3-run-your-analysis">
-   Task 3 - Run your analysis
+  <a class="reference internal nav-link" href="#adjust-your-analysis-to-find-convergence-30-45-minutes">
+   Adjust your analysis to find convergence (30-45 minutes)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -289,50 +312,89 @@
 frequencies and mode shapes. You will be judging the accuracy of your model in three ways:</p>
 <ul class="simple">
 <li><p>Convergence - examining the tendency of the FEA to approach a final solution with decreasing element size</p></li>
-<li><p>Verification - comparing your results to an analytical model</p></li>
-<li><p>Validation - comparing your results to an experimental model</p></li>
+<li><p>Verification - comparing your results to an analytical model (the frequencies you calculated in Lab 3)</p></li>
+<li><p>Validation - comparing your results to an experimental model (the frequencies you measured in Lab 3 using FFT analysis)</p></li>
 </ul>
-<div class="section" id="task-0-getting-started">
-<h2>Task 0 - Getting started<a class="headerlink" href="#task-0-getting-started" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Open Ansys, and familiarize yourself with the interface. Poke around and take a look at different menus</p></li>
-<li><p>There is extensive “Help” documentation available from the top menu bar. It includes “getting started” resources that could be helpful</p></li>
-</ul>
+<div class="section" id="task-0-getting-started-20-30-minutes">
+<h2>Task 0 - Getting started (20-30 minutes)<a class="headerlink" href="#task-0-getting-started-20-30-minutes" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Read through the <strong>Background and Resources</strong> document for this lab.</p></li>
+<li><p>Open Ansys Workbench on your lab computer and get familiar with its interface. Poke around and take a look at different menus.</p></li>
+<li><p>Click “Help” -&gt; “Getting Started” and read through the instructions that appear.</p></li>
+</ol>
+<p><strong>TAs will not answer your questions until you have completed Task 0</strong></p>
 </div>
-<div class="section" id="task-1-define-your-physical-model">
-<h2>Task 1 - Define your physical model<a class="headerlink" href="#task-1-define-your-physical-model" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Start a new project.</p></li>
-<li><p>To select a modal analysis, drag the “modal” option from the left-hand menu into the project schematic.</p></li>
-<li><p>Right-click on “engineering data” to add materials to your model and edit their properties</p></li>
-<li><p>Right-click on “geometry” and open a new DesignModeler file. Here you can define the geometry of your bar.</p></li>
-</ul>
+<div class="section" id="task-1-define-your-fea-model-45-60-minutes">
+<h2>Task 1 - Define your FEA model (45-60 minutes)<a class="headerlink" href="#task-1-define-your-fea-model-45-60-minutes" title="Permalink to this headline">¶</a></h2>
+<p>First, you will create a rectangular beam with the same material properties and dimensions as the one you used in Labs 2 and 3.</p>
+<ol class="simple">
+<li><p>In Ansys Workbench, create a new project.</p></li>
+<li><p>To select a modal analysis, drag the “Modal” option from the left-hand menu into the project schematic.</p></li>
+<li><p>Double-click on “Engineering Data” to specify the material you will use for your beam.</p>
+<ol class="simple">
+<li><p>Click “Engineering Data Sources” (up top, by the tabs) then select “general materials” from the materials library.</p></li>
+<li><p>Find your material, and add it to your model using the yellow plus sign.</p></li>
+<li><p>Exit the library by clicking on “Engineering Data Sources” one more time.</p></li>
+<li><p>Select your material to edit its properties in the bottom pane. Make sure the values for Young’s modulus and density match the values you used for Lab 3.</p></li>
+<li><p>Close the tab to return to the project schematic.</p></li>
+</ol>
+</li>
+<li><p>Right-click on “geometry” and open a new SpaceClaim file. Here you can define the geometry of your beam.</p>
+<ol class="simple">
+<li><p>Sketch a rectangle on the xy, yz, or xz plane.</p></li>
+<li><p>Dimension the rectangle to match the cross-section of your beam</p></li>
+<li><p>Using the “extrude” tool, extrude your sketch to match the length of your beam.</p></li>
+<li><p>Save the model, and return to the main Workbench window.</p></li>
+</ol>
+</li>
+</ol>
+<p>Next, you will define the specifics of the analysis.</p>
+<ol class="simple">
+<li><p>Double-click on “Model” in the project schematic. Ansys Mechanical will load in a new window.</p>
+<ol class="simple">
+<li><p>The top left pane is the “Project tree”. Here, all the elements of your model are accessible.</p></li>
+</ol>
+</li>
+<li><p>Click the plus sign next to “Geometry” to expand it, and select your solid by clicking on it. All of its properties will appear in the “Details” pane below. Under “Material”, make sure your solid is using the material you defined earlier.</p></li>
+<li><p>You will need to define the boundary condition for your beam. Right-click on “Modal” in the Project Tree, and “insert” a “fixed support”. Select one end-face of your beam, then press “Apply” in the details pane.</p></li>
+<li><p>Next, you will configure the “mesh” that is made up by the nodes of the model. Click on “Mesh” in the Project Tree, and take a look at the details pane.</p>
+<ol class="simple">
+<li><p>Expand “Sizing”, and turn “Use Adaptive Sizing” to No.</p></li>
+<li><p>Expand “Default”, and set “Element Order” to Linear.</p></li>
+<li><p>Still in “Default”, set your “Element Size”. This will dictate the number of elements, and therefor nodes, in your model. As a (low) starting point, set it to the width of your beam.</p></li>
+<li><p>Right-click “Mesh” in the Project Tree, and select “generate”. You should see your mesh applied to your model.</p></li>
+<li><p>Expand the “Statistics” in the details pane for your mesh. It will show the number of nodes and elements in your model.</p></li>
+</ol>
+</li>
+</ol>
 </div>
-<div class="section" id="task-2-define-your-analysis">
-<h2>Task 2 - Define your analysis<a class="headerlink" href="#task-2-define-your-analysis" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Right-click on “model” to edit</p></li>
-<li><p>Make sure your bar is using the correct material - under “geometry” select your shape and check the bottom-left info pane</p></li>
-<li><p>Add a fixed-support condition to one end of your beam by right-clicking on “modal”</p></li>
-<li><p>Select “mesh” in the left-hand pane. In the info panel, turn off adaptive sizing. Edit the element size to change the number of nodes</p></li>
-</ul>
+<div class="section" id="task-2-run-your-initial-analysis-10-15-minutes">
+<h2>Task 2 - Run your initial analysis (10-15 minutes)<a class="headerlink" href="#task-2-run-your-initial-analysis-10-15-minutes" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Right-click “Solution” and select solve. After it completes, you will see the results plotted and tabulated in the bottom two panes.</p></li>
+<li><p>You will first need to determine which modes correspond to the modes you measured in Lab 3 (Refer to <em>Background and Resources</em>).</p>
+<ol class="simple">
+<li><p>Click and drag to highlight all 6 mode shapes in the “Tabular Data” pane. Right-click and select “Create mode shape results”. This will add several “Total Deformation” results to your Solution in the Project Tree. Right-click to evaluate and display them.</p></li>
+<li><p>By inspection and by comparison of frequencies, determine which mode shapes correspond to the ones measured in Lab 3. <em>These are the frequencies we are interested in</em>. Refer to the <em>Background and Resources</em> section of Lab 3 for a depiction of mode shapes.</p></li>
+</ol>
+</li>
+<li><p>Make a note of the natural frequencies and the number of nodes.</p></li>
+<li><p>Change the number of nodes by setting a different Element Size in the Mesh detail pane. You will need to right-click on “Mesh” and select “update”.</p></li>
+</ol>
 </div>
-<div class="section" id="task-3-run-your-analysis">
-<h2>Task 3 - Run your analysis<a class="headerlink" href="#task-3-run-your-analysis" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Right-click “solution” and select solve</p></li>
-<li><p>Make a note of the natural frequencies and the number of nodes</p></li>
-<li><p>You may add mode shape visualizations to the model by highlighting them in the table and selecting “Create mode shape results” in the right-click context menu</p></li>
-<li><p>Increase the number of nodes and re-run the solution.</p></li>
-<li><p>You are looking to demonstrate and document convergence of the first three mode shapes.</p></li>
-<li><p>Using a probe, investigate the strain at a location corresponding to you strain gauge.</p></li>
-</ul>
+<div class="section" id="adjust-your-analysis-to-find-convergence-30-45-minutes">
+<h2>Adjust your analysis to find convergence (30-45 minutes)<a class="headerlink" href="#adjust-your-analysis-to-find-convergence-30-45-minutes" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Gradually decrease the element size (i.e., increase the number of nodes). As described in the <em>Background and Resources</em> section, you will see the <em>relative error</em> and <em>absolute error</em> converge on final values.</p></li>
+<li><p>Repeat this process until you have seen convergence of the three natural frequencies you measured in Lab 3.</p></li>
+</ol>
 </div>
 <div class="section" id="your-report">
 <h2>Your Report<a class="headerlink" href="#your-report" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Demonstrate convergence of the first three modes, using the two methods shown in the Background and Resources section.</p></li>
-<li><p>Compare your FEA results to your experimental and analytically predicted results.</p></li>
+<li><p>Demonstrate convergence of the first three modes, using the two methods shown in the <em>Background and Resources</em> section.</p></li>
+<li><p>What was your hypothesis for this Lab?</p></li>
+<li><p>Compare your FEA results to your experimental and analytically predicted results. Do they agree? How does this affect your hypothesis? What can you conclude from the results?</p></li>
 </ul>
 </div>
 </div>
@@ -366,6 +428,15 @@ frequencies and mode shapes. You will be judging the accuracy of your model in t
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="ME3263-Lab_04BR.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Laboratory 4 - Background and Resources</p>
+            </div>
+        </a>
+    </div>
 
 </div>
         
