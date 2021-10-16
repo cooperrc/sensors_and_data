@@ -488,7 +488,7 @@ are 8 and 14 Hz, for mode 1 and 2, respectively.</p>
 <h3>Convergence<a class="headerlink" href="#convergence" title="Permalink to this headline">¶</a></h3>
 <p>The FEA solution will approach the analytical solution as we increase the number of nodes. This is called “convergence”. The ideal FEA solution will reproduce our analytical or experimental results, with the fewest nodes required to see convergence.</p>
 <p>It is tempting to simply set the number of nodes extremely high to ensure immediate convergence. For a simple model, this is unlikely to be detrimental. For complicated models, this can result in an analysis that requires hours or days to complete and takes up huge amounts of disk space. In a real-world scenario, it is important to limit this waste of time and resources by finding the minimum number of elements required for convergence.</p>
-<p>Table 1 demonstrates the convergence of the first natural frequency for a beam where E=200 GPa, L=300 mm, t=3 mm, w=12 mm, and <span class="math notranslate nohighlight">\(\rho\)</span>=8050 kg/m^3.</p>
+<p>Table 1 demonstrates the convergence of the first natural frequency for an example beam.</p>
 <p><em>Table 1: Convergence of the first natural frequency for a steel beam
 where E=200 GPa, L=300 mm, t=3 mm, w=12 mm, and <span class="math notranslate nohighlight">\(\rho\)</span>=8050 kg/m^3.</em></p>
 <table class="colwidths-auto table">
@@ -537,12 +537,12 @@ where E=200 GPa, L=300 mm, t=3 mm, w=12 mm, and <span class="math notranslate no
 </tr>
 </tbody>
 </table>
-<p>The error in table 1 is calculated based upon the current estimate, <span class="math notranslate nohighlight">\(f_{current}\)</span>, and analytical prediction, <span class="math notranslate nohighlight">\(f_{an}\)</span>.</p>
+<p>The error in table 1 is calculated based upon the current estimate, <span class="math notranslate nohighlight">\(f_{current}\)</span>, the previous estimate, <span class="math notranslate nohighlight">\(f_{prev}\)</span>, and the analytical prediction, <span class="math notranslate nohighlight">\(f_{an}\)</span>.</p>
 <p><em>Relative error</em> is the difference between the previous iteration and the current:</p>
 <p><span class="math notranslate nohighlight">\(\frac{f_{current}-f_{prev}}{f_{current}}\)</span> (6)</p>
 <p><em>Absolute error</em> is the difference between the current iteration and the analytical (calculated) value.</p>
 <p><span class="math notranslate nohighlight">\(\frac{f_{an}-f_{current}}{f_{an}}\)</span> (7)</p>
-<p>Both of these metrics will approach a stable value (i.e., <em>converge</em>) as the number of nodes increases. Below, we explore their convergence.</p>
+<p>Both of these metrics approach a stable value (i.e., <em>converge</em>) as the number of nodes increases. Below, we explore their convergence.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1153</span><span class="p">,</span>  <span class="mi">1438</span><span class="p">,</span>  <span class="mi">1913</span><span class="p">,</span>  <span class="mi">3621</span><span class="p">,</span>   <span class="mi">4521</span><span class="p">,</span>   <span class="mi">10437</span><span class="p">,</span> <span class="mi">15316</span><span class="p">,</span>  <span class="mi">17801</span><span class="p">,</span> <span class="mi">21351</span><span class="p">])</span>

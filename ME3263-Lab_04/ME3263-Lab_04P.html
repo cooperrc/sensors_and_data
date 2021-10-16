@@ -286,8 +286,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#adjust-your-analysis-to-find-convergence-30-45-minutes">
-   Adjust your analysis to find convergence (30-45 minutes)
+  <a class="reference internal nav-link" href="#task-3-adjust-your-analysis-to-find-convergence-30-45-minutes">
+   Task 3 - Adjust your analysis to find convergence (30-45 minutes)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -351,19 +351,19 @@ frequencies and mode shapes. You will be judging the accuracy of your model in t
 <p>Next, you will define the specifics of the analysis.</p>
 <ol class="simple">
 <li><p>Double-click on “Model” in the project schematic. Ansys Mechanical will load in a new window.</p>
-<ol class="simple">
+<ul class="simple">
 <li><p>The top left pane is the “Project tree”. Here, all the elements of your model are accessible.</p></li>
-</ol>
+</ul>
 </li>
 <li><p>Click the plus sign next to “Geometry” to expand it, and select your solid by clicking on it. All of its properties will appear in the “Details” pane below. Under “Material”, make sure your solid is using the material you defined earlier.</p></li>
-<li><p>You will need to define the boundary condition for your beam. Right-click on “Modal” in the Project Tree, and “insert” a “fixed support”. Select one end-face of your beam, then press “Apply” in the details pane.</p></li>
-<li><p>Next, you will configure the “mesh” that is made up by the nodes of the model. Click on “Mesh” in the Project Tree, and take a look at the details pane.</p>
+<li><p>You will need to define the boundary condition for your beam. Right-click on “Modal” in the Project Tree, and “insert” a “fixed support”. Select one end-face of your beam with a left-click, then press “Apply” in the details pane.</p></li>
+<li><p>Next, you will configure the <em>mesh</em> that is made up by the nodes of the model. Click on “Mesh” in the Project Tree, and take a look at the details pane.</p>
 <ol class="simple">
 <li><p>Expand “Sizing”, and turn “Use Adaptive Sizing” to No.</p></li>
 <li><p>Expand “Default”, and set “Element Order” to Linear.</p></li>
 <li><p>Still in “Default”, set your “Element Size”. This will dictate the number of elements, and therefor nodes, in your model. As a (low) starting point, set it to the width of your beam.</p></li>
 <li><p>Right-click “Mesh” in the Project Tree, and select “generate”. You should see your mesh applied to your model.</p></li>
-<li><p>Expand the “Statistics” in the details pane for your mesh. It will show the number of nodes and elements in your model.</p></li>
+<li><p>Expand “Statistics” in the details pane for your mesh. It will show the number of nodes and elements in your model.</p></li>
 </ol>
 </li>
 </ol>
@@ -375,16 +375,16 @@ frequencies and mode shapes. You will be judging the accuracy of your model in t
 <li><p>You will first need to determine which modes correspond to the modes you measured in Lab 3 (Refer to <em>Background and Resources</em>).</p>
 <ol class="simple">
 <li><p>Click and drag to highlight all 6 mode shapes in the “Tabular Data” pane. Right-click and select “Create mode shape results”. This will add several “Total Deformation” results to your Solution in the Project Tree. Right-click to evaluate and display them.</p></li>
-<li><p>By inspection and by comparison of frequencies, determine which mode shapes correspond to the ones measured in Lab 3. <em>These are the frequencies we are interested in</em>. Refer to the <em>Background and Resources</em> section of Lab 3 for a depiction of mode shapes.</p></li>
+<li><p>By inspection and by comparison of frequencies, determine which mode shapes correspond to the ones measured in Lab 3. <em>These are the frequencies we are interested in</em>. (Refer to the <em>Background and Resources</em> section of Lab 3 for a depiction of mode shapes).</p></li>
 </ol>
 </li>
 <li><p>Make a note of the natural frequencies and the number of nodes.</p></li>
-<li><p>Change the number of nodes by setting a different Element Size in the Mesh detail pane. You will need to right-click on “Mesh” and select “update”.</p></li>
 </ol>
 </div>
-<div class="section" id="adjust-your-analysis-to-find-convergence-30-45-minutes">
-<h2>Adjust your analysis to find convergence (30-45 minutes)<a class="headerlink" href="#adjust-your-analysis-to-find-convergence-30-45-minutes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="task-3-adjust-your-analysis-to-find-convergence-30-45-minutes">
+<h2>Task 3 - Adjust your analysis to find convergence (30-45 minutes)<a class="headerlink" href="#task-3-adjust-your-analysis-to-find-convergence-30-45-minutes" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
+<li><p>Change the number of nodes by setting a different Element Size in the Mesh detail pane. You will need to right-click on “Mesh” and select “update” to get the model ready to solve.</p></li>
 <li><p>Gradually decrease the element size (i.e., increase the number of nodes). As described in the <em>Background and Resources</em> section, you will see the <em>relative error</em> and <em>absolute error</em> converge on final values.</p></li>
 <li><p>Repeat this process until you have seen convergence of the three natural frequencies you measured in Lab 3.</p></li>
 </ol>
@@ -393,7 +393,7 @@ frequencies and mode shapes. You will be judging the accuracy of your model in t
 <h2>Your Report<a class="headerlink" href="#your-report" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Demonstrate convergence of the first three modes, using the two methods shown in the <em>Background and Resources</em> section.</p></li>
-<li><p>What was your hypothesis for this Lab?</p></li>
+<li><p>What was your hypothesis for this investigation?</p></li>
 <li><p>Compare your FEA results to your experimental and analytically predicted results. Do they agree? How does this affect your hypothesis? What can you conclude from the results?</p></li>
 </ul>
 </div>
