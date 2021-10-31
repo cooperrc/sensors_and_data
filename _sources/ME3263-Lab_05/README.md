@@ -16,6 +16,7 @@ cantilevered beam, and you will observe the changes in its natural frequencies t
 defined points on the beam (Figure 1). From these frequency changes, you will deduce the unknown mass.
 
 ![Mass measurement cantilever](./contest_diagram.png)
+
 *Figure 1: Diagram of cantilever with unknown mass in position 2 out of 3 total
 positions. The red area indicates the placement of an accelerometer.*
 
@@ -24,6 +25,7 @@ system (Figure 2). When under acceleration, this mass moves relative to a set of
 change is proportional to accleration.
 
 ![accelerometer](./accelerometer.png)
+
 *Figure 2: Micron-scale sensor used in accelerometers. Under acceleration, the change in capacitances CS1 and CS2 will be
 proportional to the acceleration.*
 
