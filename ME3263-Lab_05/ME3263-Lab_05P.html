@@ -1,0 +1,551 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laboratory 5 - Procedure &#8212; Introduction to Sensors and Data</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Laboratory 5 - Background and Resources" href="ME3263-Lab_05BR.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Sensors and Data</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   Introduction to Sensors and Data Analysis
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ME3263-Lab_00/README.html">
+   Lab 0 - Statistics and Student’s t-test
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ME3263-Lab_00/ME3263-Lab_00.html">
+     ME 3263 - Laboratory # 0
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ME3263-Lab_01/README.html">
+   Lab 1 - 	Measurements of machining precision and accuracy
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ME3263-Lab_01/ME3263-Lab_01.html">
+     ME 3263 - Laboratory #1
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ME3263-Lab_02/README.html">
+   Lab 2 - Static beam deflections with strain gauge
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ME3263-Lab_02/ME3263-Lab_02.html">
+     ME 3263 - Laboratory #2
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ME3263-Lab_03/README.html">
+   Lab 3 - Measuring Natural Frequencies
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ME3263-Lab_03/ME3263-Lab_03BR.html">
+     Laboratory 3 - Background and Resources
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ME3263-Lab_03/ME3263-Lab_03P.html">
+     Laboratory 3 - Procedure
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ME3263-Lab_04/README.html">
+   Lab 4 - Predicting Natural Frequencies with the Finite Element Method
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ME3263-Lab_04/ME3263-Lab_04BR.html">
+     Laboratory 4 - Background and Resources
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ME3263-Lab_04/ME3263-Lab_04P.html">
+     Laboratory 4 - Procedure
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="README.html">
+   Lab 5 - Mass Measurement Device with Cantilever beam
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/ME3263-Lab_05/ME3263-Lab_05P.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/cooperrc/sensors_and_data"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/cooperrc/sensors_and_data/issues/new?title=Issue%20on%20page%20%2FME3263-Lab_05/ME3263-Lab_05P.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/cooperrc/sensors_and_data/master?urlpath=tree/ME3263-Lab_05/ME3263-Lab_05P.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Laboratory 5 - Procedure
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-0-background">
+   Task 0 - Background
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-1-unloaded-beam">
+   Task 1 - Unloaded Beam
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-2-model-validation">
+   Task 2 - Model Validation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-3-apply-masses-to-your-fem-modal-analysis">
+   Task 3 - Apply Masses to Your FEM Modal Analysis
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-4-regression-analysis">
+   Task 4 - Regression Analysis
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-5-measure-the-frequencies">
+   Task 5 - Measure the Frequencies
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-6-determine-the-mass">
+   Task 6 - Determine the Mass
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#your-report">
+   Your Report
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mass-measurement-contest">
+   Mass Measurement Contest
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="laboratory-5-procedure">
+<h1>Laboratory 5 - Procedure<a class="headerlink" href="#laboratory-5-procedure" title="Permalink to this headline">¶</a></h1>
+<p>First, please take note of three points regarding Lab 5:</p>
+<ol class="simple">
+<li><p>It is very likely you will need <strong>two full lab sessions</strong> to complete this lab. Please budget your time accordingly.</p></li>
+<li><p>When you arrive for the second session, you are expected to have written a <strong>proposed method</strong> for measuring the unknown mass. This needn’t be in-depth - a list of a few bullet points will be sufficient. Your TAs will come by to check on your proposal at the beginning of lab session 2.</p></li>
+<li><p>For the first session, the TAs have been instructed to provide <strong>limited help</strong>. You have done everything in this lab before. Here, you are simply combining the skills in a new way.</p></li>
+</ol>
+</div>
+<div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>In this lab, you will use FEM simulation to produce a predictive model that describes the variation of the natural
+frequencies of a cantilevered beam in response to an applied point mass. Using this model, you will determine the mass of an object attached to your real-world beam by observing the changes in the beam’s natural frequencies.</p>
+<p>This lab is an open-ended application of concepts you have learned up until this point in the semester. There are multiple valid approaches to solve this problem, and it is up to you and your group to find a procedure you think will
+produce an accurate estimate of the unknown mass. The most accurate group and the most precise section will win prizes, as explained in the contest rules.</p>
+<p>Broadly speaking, you will:</p>
+<ul class="simple">
+<li><p>Measure the first three natural frequencies of your beam by performing <strong>FFT on accelerometer data</strong></p></li>
+<li><p><strong>Refine your FEM model</strong> to match the experimental frequencies</p></li>
+<li><p><strong>Adjust your FEM modal analysis</strong> by adding point masses to the beam</p></li>
+<li><p>Perform a <strong>regression analysis</strong> to determine the relationship between mass and frequency change</p></li>
+<li><p><strong>Estimate</strong> the unknown mass, and <strong>determine the uncertainty</strong> in the estimate.</p></li>
+</ul>
+<p><em>Note: You aren’t required to use the values for natural frequencies and Young’s modulus that you obtained from earlier labs. This means that if you previously saw unusual results, they won’t affect your performance for this lab.</em></p>
+</div>
+<div class="section" id="task-0-background">
+<h1>Task 0 - Background<a class="headerlink" href="#task-0-background" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Read the <em>Background and Resources</em> section for this lab. Make sure you and your partner(s) have a good idea of the goal and a general understanding of how you might apply the concepts from previous labs in order to achieve it.</p></li>
+</ul>
+</div>
+<div class="section" id="task-1-unloaded-beam">
+<h1>Task 1 - Unloaded Beam<a class="headerlink" href="#task-1-unloaded-beam" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>With your beam unloaded, measure the <em>acceleration vs. time</em> signal that the accelerometer outputs in response to an impulse.</p></li>
+<li><p>Perform a fast Fourier transform on the time-domain data to determine the first three natural frequencies.</p></li>
+</ul>
+</div>
+<div class="section" id="task-2-model-validation">
+<h1>Task 2 - Model Validation<a class="headerlink" href="#task-2-model-validation" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>In Ansys, confirm that the geometry and material properties of your model match your beam.</p></li>
+<li><p>Run the modal analysis, and vary your model in Ansys until the FEM modal analysis agrees with the frequencies discovered via FFT.</p>
+<ul>
+<li><p><em>Note - for this lab, it’s perfectly acceptable to vary parameters (e.g., beam geometry and topography, Young’s Modulus, Poisson’s ratio, etc.) until your frequency values “look close.” Briefly justify your variations in your report.</em></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="task-3-apply-masses-to-your-fem-modal-analysis">
+<h1>Task 3 - Apply Masses to Your FEM Modal Analysis<a class="headerlink" href="#task-3-apply-masses-to-your-fem-modal-analysis" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>In Ansys, you can expand the “Geometry” tab of the main project tree to see the solid that makes up your model. Right-clicking on the solid will let you add a “point mass.” After clicking on a face of your model, you will be able to specifiy the exact location and mass of the point mass.</p></li>
+<li><p>Apply various masses at various locations, recording the resulting natural frequencies. <strong>It is important to approach this with purpose</strong>. You will be performing a regression on data taken from this analysis - decide <em>in advance</em> how and where you will apply the masses to generate the most useful data for a regression.</p></li>
+</ul>
+<p><strong>Here are some points to consider</strong>:</p>
+<ol class="simple">
+<li><p>What is your rough estimate of the unknown mass from simply holding it in your hand? Taking this into account, what should be the magnitudes of the point masses you introduce to your model?</p></li>
+<li><p>Where are the three mounting holes in your beam? Will you use all three? Where should you apply the point masses?</p></li>
+</ol>
+</div>
+<div class="section" id="task-4-regression-analysis">
+<h1>Task 4 - Regression Analysis<a class="headerlink" href="#task-4-regression-analysis" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Using data from Task 3, perform a regression analysis to relate the mass to natural frequency.</p></li>
+</ul>
+<p><strong>Here are some points to consider</strong>:</p>
+<ol class="simple">
+<li><p>Do you want to take into consideration only one natural frequency, or all three (using the <code class="docutils literal notranslate"><span class="pre">curve_fit</span></code> implentation from the <em>Background and Resources</em> section for multiple independent variables)?</p></li>
+<li><p>Do you want to use the frequency values themselves, or the <em>change</em> between the unloaded and loaded frequency? How would this affect the y-intercept of your regression? Would you need to add another coefficient if the intercept is non-zero?</p></li>
+<li><p>Does your data look like a linear fit, or should you consider a quadratic?</p></li>
+</ol>
+</div>
+<div class="section" id="task-5-measure-the-frequencies">
+<h1>Task 5 - Measure the Frequencies<a class="headerlink" href="#task-5-measure-the-frequencies" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Attach the mass to the beam, and measure the resulting natural frequencies using FFT of the acceleration vs time signal. Depending on your plan, you may only need to use one mounting hole. You may need to record data for all three.</p></li>
+</ul>
+</div>
+<div class="section" id="task-6-determine-the-mass">
+<h1>Task 6 - Determine the Mass<a class="headerlink" href="#task-6-determine-the-mass" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Using the regression from Task 4 and the measurements from Task 5, determine the mass of your object.</p></li>
+<li><p>Calculate the uncertainty in your mass estimate, using either of the two methods described in the <em>Background and Resources</em> section - the <em>standard error of the fit</em> and Student’s t-tables, or the covariance diagonals and the sensitivity indices.</p></li>
+</ul>
+</div>
+<div class="section" id="your-report">
+<h1>Your Report<a class="headerlink" href="#your-report" title="Permalink to this headline">¶</a></h1>
+<p>For this assignment, you are limited to <strong>6 pages</strong> and <strong>5 figures</strong>. In addition to the common themes we have discussed this semester, your report should also include details of your experimental design (i.e., your method for determining the mass and the reasoning behind it).</p>
+</div>
+<div class="section" id="mass-measurement-contest">
+<h1>Mass Measurement Contest<a class="headerlink" href="#mass-measurement-contest" title="Permalink to this headline">¶</a></h1>
+<p>Each group’s results will be entered into a contest, with the most <em>accurate group</em> and the most <em>precise section</em> receiving prizes.</p>
+<p><strong>Rules of Contest</strong></p>
+<ol class="simple">
+<li><p>The masses must not leave the lab.</p></li>
+<li><p>You may not mount other known masses to the cantilever, or use any mounting point other than the three pre-dilled holes.</p></li>
+<li><p>You must report your uncertainty in your mass measurement to enter the competition. In other words, your estimate of your
+mass must include a confidence interval.</p></li>
+<li><p>You must report the serial number of your mass (i.e., “TJM 01-TJM 12”) to enter the competition.</p></li>
+<li><p>You may use the following tools and software: accelerometer, calipers, ruler/tape, Ansys, SolidWorks, Labview, Python, Matlab, and
+Excel.</p></li>
+<li><p>It should go without saying that you may not weigh your mass.</p></li>
+</ol>
+<p><em>Note: This is intended to be a friendly competition on top of a normal lab assignment. Poking around to find loopholes will disqualify you, and could also earn you a poor grade for not following the lab procedure.</em></p>
+<p><strong>Winners of the contest</strong></p>
+<p>There will be two sets of winners for the contest:</p>
+<ol class="simple">
+<li><p>Lab group with the most accurate mass measurement calculated with
+<span class="math notranslate nohighlight">\(A=|m_{reported}-m_{actual}|\)</span></p></li>
+<li><p>Lab section with the most precise mass measurement calculated with
+<span class="math notranslate nohighlight">\(P=\frac{\sum_{i=1}^{N}(m_{reported}-m_{actual})^2}{N}\)</span></p></li>
+</ol>
+<p>Where <span class="math notranslate nohighlight">\(A\)</span> is the accuracy, <span class="math notranslate nohighlight">\(P\)</span> is the precision, <span class="math notranslate nohighlight">\(m_{reported}\)</span> is the reported
+mass from your experiment, <span class="math notranslate nohighlight">\(m_{actual}\)</span> is the actual mass of the object,
+and <span class="math notranslate nohighlight">\(N\)</span> is the total number of lab groups in a section. The group and section
+with smallest <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(P\)</span>, respectively, will win prizes. The prizes are:</p>
+<ol class="simple">
+<li><p>Each member of the winning lab group will receive a <strong>$25 gift card</strong> of their choice.</p></li>
+<li><p><strong>Donuts</strong> will be brought to the winning section.</p></li>
+</ol>
+<p>Note - due to smaller section sizes, sections 004L and 008L will be grouped as one section for the purpose of calculating <span class="math notranslate nohighlight">\(P\)</span>, as will
+sections 001L, 011L, and 014L.</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./ME3263-Lab_05"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="ME3263-Lab_05BR.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Laboratory 5 - Background and Resources</p>
+            </div>
+        </a>
+    </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Ryan C. Cooper, Martin Huber, Shubhangi Bansude<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

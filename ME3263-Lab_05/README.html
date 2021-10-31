@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lab 1 - Measurements of machining precision and accuracy &#8212; Introduction to Sensors and Data</title>
+    <title>Lab 5 - Mass Measurement Device with Cantilever beam &#8212; Introduction to Sensors and Data</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,8 +53,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="ME 3263 - Laboratory #1" href="ME3263-Lab_01.html" />
-    <link rel="prev" title="ME 3263 - Laboratory # 0" href="../ME3263-Lab_00/ME3263-Lab_00.html" />
+    <link rel="next" title="Laboratory 5 - Background and Resources" href="ME3263-Lab_05BR.html" />
+    <link rel="prev" title="Laboratory 4 - Procedure" href="../ME3263-Lab_04/ME3263-Lab_04P.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -108,18 +108,18 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ME3263-Lab_01/README.html">
    Lab 1 - 	Measurements of machining precision and accuracy
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="ME3263-Lab_01.html">
+    <a class="reference internal" href="../ME3263-Lab_01/ME3263-Lab_01.html">
      ME 3263 - Laboratory #1
     </a>
    </li>
@@ -186,8 +186,8 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../ME3263-Lab_05/README.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Lab 5 - Mass Measurement Device with Cantilever beam
   </a>
  </li>
@@ -232,7 +232,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/ME3263-Lab_01/README.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/ME3263-Lab_05/README.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -252,7 +252,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/cooperrc/sensors_and_data/issues/new?title=Issue%20on%20page%20%2FME3263-Lab_01/README.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/cooperrc/sensors_and_data/issues/new?title=Issue%20on%20page%20%2FME3263-Lab_05/README.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -278,25 +278,34 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-can-you-measure-something">
-   How can you measure something?
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Lab 5 - Mass Measurement Device with Cantilever beam
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#introduction">
+     Introduction
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-mass-measurement-device">
+     The Mass Measurement Device
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sources-of-measurement-variations">
-   Sources of measurement variations
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mass-measurement-contest">
+   Mass measurement contest
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#manufacturing-variations">
-   Manufacturing variations
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#deliverables">
-   Deliverables
-  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#deliverables-please-note-the-changes">
+     Deliverables (Please note the changes)
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -309,58 +318,75 @@
         
               <div>
                 
-  <div class="section" id="lab-1-measurements-of-machining-precision-and-accuracy">
-<h1>Lab 1 - 	Measurements of machining precision and accuracy<a class="headerlink" href="#lab-1-measurements-of-machining-precision-and-accuracy" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="how-can-you-measure-something">
-<h2>How can you measure something?<a class="headerlink" href="#how-can-you-measure-something" title="Permalink to this headline">¶</a></h2>
-<p>All measurements have traceable standards. There are seven base units in SI -
-meter (length), second (time), Mole (amount of substance), Ampere (electric
-current), Kelvin (temperature), Candela (Luminous intensity), and kilogram
-(mass) <a class="reference external" href="https://www.nist.gov/pml/weights-and-measures/metric-si/si-units">1</a>.
-Any measurement you make should have some method to check against a reference.
-In this lab, we will use calipers that measure dimensions i.e.  meter*10<span class="math notranslate nohighlight">\(^{-3}\)</span>
-(length). Calipers can always be verified to work with gage blocks.</p>
+  <div class="section" id="lab-5-mass-measurement-device-with-cantilever-beam">
+<h1>Lab 5 - Mass Measurement Device with Cantilever beam<a class="headerlink" href="#lab-5-mass-measurement-device-with-cantilever-beam" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>It is usually the case that we wish to use the results of a simulation or experiment to form a predictive model of some physical
+phenomenon. In this lab, you will use FEM simulation to produce a predictive model that describes the variation of the natural
+frequencies of a cantilevered beam in response to an applied point mass. Using this model, you will determine the mass of an object
+attached to your real-world beam by observing the changes in the beam’s natural frequencies.</p>
 </div>
-<div class="section" id="sources-of-measurement-variations">
-<h2>Sources of measurement variations<a class="headerlink" href="#sources-of-measurement-variations" title="Permalink to this headline">¶</a></h2>
-<p>No measurement is exact. No surface is compeletely flat. Every measurement you
-make has two types of uncertainties, <em>systematic</em> and <em>random</em>. <em>Systematic</em>
-uncertainties come from faults in your assumptions or equipment. Here are some
-examples for caliper measurements:</p>
-<ul class="simple">
-<li><p>Your calipers were dropped on the floor and bent, now all of your measurements
-will be too long or too short.</p></li>
-<li><p>The bar stock was not machined with square edges so each measurement along the
-sides increases or decreases</p></li>
-<li><p>You align the calipers with the bar stock, instead of measuring
-point-to-point. Now your measurements are only the maximum length from
-edge-to-edge</p></li>
-</ul>
-<p><em>Random</em> uncertainties are associated with unpredictable (or unforeseen at the
-time) experimental conditions. These can also be due to simplifications of your
-model. Here are some examples for caliper measurements:</p>
-<ul class="simple">
-<li><p>You assume the surface is flat, but it is in fact rough</p></li>
-<li><p>The temperature in the room changes the dimensions through thermal expansion</p></li>
-<li><p>Your calipers are not aligned parallel to the edges of the bar stock</p></li>
-</ul>
-<p>In theory, all uncertainies could be accounted for by factoring in all physics
-in a problem e.g. Temperature-dependence, Coriolis effect, electrical
-disturbances in your readings. In practice, the diminishing return on investment
-prevents this practice. For something like measuring bar stock, it is more than
-sufficient to report the average and standard deviation with good calipers.</p>
+<div class="section" id="the-mass-measurement-device">
+<h2>The Mass Measurement Device<a class="headerlink" href="#the-mass-measurement-device" title="Permalink to this headline">¶</a></h2>
+<p>You will apply many of the skills you have learned over the previous weeks. With your knowledge of FFT, linear regression,
+and FEM modal analysis, you will develop and implement a method to measure the mass of an object. Your measurement device will be your
+cantilevered beam, and you will observe the changes in its natural frequencies that result from attaching the object to various pre-
+defined points on the beam (Figure 1). From these frequency changes, you will deduce the unknown mass.</p>
+<p><img alt="Mass measurement cantilever" src="../_images/contest_diagram.png" />
+<em>Figure 1: Diagram of cantilever with unknown mass in position 2 out of 3 total
+positions. The red area indicates the placement of an accelerometer.</em></p>
+<p>An accelerometer will provide the data describing the motion of the beam. This type of sensor employs a micron-scale spring-mass
+system (Figure 2). When under acceleration, this mass moves relative to a set of fixed plates, inducing a change in capacitance. This
+change is proportional to accleration.</p>
+<p><img alt="accelerometer" src="../_images/accelerometer.png" />
+<em>Figure 2: Micron-scale sensor used in accelerometers. Under acceleration, the change in capacitances CS1 and CS2 will be
+proportional to the acceleration.</em></p>
 </div>
-<div class="section" id="manufacturing-variations">
-<h2>Manufacturing variations<a class="headerlink" href="#manufacturing-variations" title="Permalink to this headline">¶</a></h2>
-<p>Different production methods will often exhibit varying degrees of precision and accuracy. It’s important to understand these differences, and how to measure them.
-In this lab, you will investigate several different sets of round stock. Some have been cut
-with a bandsaw, some with a CNC mill. You will identify and examine the differences between the two
-methods.</p>
 </div>
-<div class="section" id="deliverables">
-<h2>Deliverables<a class="headerlink" href="#deliverables" title="Permalink to this headline">¶</a></h2>
-<p>For this assignment, you and your lab partner will submit a <strong>joint report</strong> as a .pdf to your HuskyCT section within <strong>one week</strong> of your lab date. It will only be necessary for one of you to submit the report. Please clearly mark, either in the body as footnotes or in the appendix as a separate section, what each of you contributed to the overall report.</p>
-<p>You are limited to <strong>3 pages</strong> (not including the title page, references, or appendix) and <strong>2 figures</strong>. Additional data, figures, and information can be put in an appendix. The appendix will not be graded, but you may refer to it to explain data, methods, or other relevant information.</p>
+<div class="section" id="mass-measurement-contest">
+<h1>Mass measurement contest<a class="headerlink" href="#mass-measurement-contest" title="Permalink to this headline">¶</a></h1>
+<p>There are multiple valid approaches to solve this problem, and it is up to you and your partner(s) to find a procedure you think will
+produce an accurate estimate of the unknown mass.</p>
+<p>Each group’s results will be entered into a contest, with the most <em>accurate group</em> and the most <em>precise section</em> receiving prizes.</p>
+<p><strong>Rules of Contest</strong></p>
+<ol class="simple">
+<li><p>The masses must not leave the lab.</p></li>
+<li><p>You may not mount other known masses to the cantilever, or use any mounting point other than the three pre-dilled holes.</p></li>
+<li><p>You must report your uncertainty in your mass measurement to enter the competition. In other words, your estimate of your
+mass must include a confidence interval.</p></li>
+<li><p>You must report the serial number of your mass (i.e., “TJM 01-TJM 12”) to enter the competition.</p></li>
+<li><p>You may use the following tools and software: accelerometer, calipers, ruler/tape, Ansys, SolidWorks, Labview, Python, Matlab, and
+Excel.</p></li>
+<li><p>It should go without saying that you may not weigh your mass.</p></li>
+</ol>
+<p><em>Note: This is intended to be a friendly competition on top of a normal lab assignment. Poking around to find loopholes will
+disqualify you, and could also earn you a poor grade for not following the lab procedure.</em></p>
+<p><strong>Winners of the contest</strong></p>
+<p>There will be two sets of winners for the contest:</p>
+<ol class="simple">
+<li><p>Lab group with the most accurate mass measurement calculated with
+<span class="math notranslate nohighlight">\(A=|m_{reported}-m_{actual}|\)</span></p></li>
+<li><p>Lab section with the most precise mass measurement calculated with
+<span class="math notranslate nohighlight">\(P=\frac{\sum_{i=1}^{N}(m_{reported}-m_{actual})^2}{N}\)</span></p></li>
+</ol>
+<p>Where <span class="math notranslate nohighlight">\(A\)</span> is the accuracy, <span class="math notranslate nohighlight">\(P\)</span> is the precision, <span class="math notranslate nohighlight">\(m_{reported}\)</span> is the reported
+mass from your experiment, <span class="math notranslate nohighlight">\(m_{actual}\)</span> is the actual mass of the object,
+and <span class="math notranslate nohighlight">\(N\)</span> is the total number of lab groups in a section. The group and section
+with smallest <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(P\)</span>, respectively, will win prizes. The prizes are:</p>
+<ol class="simple">
+<li><p>Each member of the winning lab group will receive a <strong>$25 gift card</strong> of their choice.</p></li>
+<li><p><strong>Donuts</strong> will be brought to the winning section.</p></li>
+</ol>
+<p>Note - due to smaller section sizes, sections 004L and 008L will be grouped as one section for the purpose of calculating <span class="math notranslate nohighlight">\(P\)</span>, as will
+sections 001L, 011L, and 014L.</p>
+<div class="section" id="deliverables-please-note-the-changes">
+<h2>Deliverables (Please note the changes)<a class="headerlink" href="#deliverables-please-note-the-changes" title="Permalink to this headline">¶</a></h2>
+<p>For this assignment, you will have two weeks in the lab. You and your lab partner will submit a <strong>joint</strong> report as a .pdf to your
+HuskCT section within <strong>one week</strong> of your final lab date. It will only be necessary for one of you to submit the report. Please
+clearly mark, either in the body as footnotes or in the appendix as a separate section, what each of you contributed to the report.</p>
+<p>You are limited to <strong>6 pages</strong> and <strong>5 figures</strong>. Additional data, figures, and information can be put in an appendix. The appendix
+will not be graded, but you may refer to it to explain data, methods, or other relevant information.</p>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -379,7 +405,7 @@ methods.</p>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./ME3263-Lab_01"
+            path: "./ME3263-Lab_05"
         },
         predefinedOutput: true
     }
@@ -396,19 +422,19 @@ methods.</p>
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="../ME3263-Lab_00/ME3263-Lab_00.html" title="previous page">
+        <a class="left-prev" href="../ME3263-Lab_04/ME3263-Lab_04P.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">ME 3263 - Laboratory # 0</p>
+                <p class="prevnext-title">Laboratory 4 - Procedure</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="ME3263-Lab_01.html" title="next page">
+        <a class="right-next" href="ME3263-Lab_05BR.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">ME 3263 - Laboratory #1</p>
+                <p class="prevnext-title">Laboratory 5 - Background and Resources</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
