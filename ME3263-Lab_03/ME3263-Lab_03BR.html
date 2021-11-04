@@ -1472,7 +1472,7 @@ if (IPython.notebook.kernel !== null) {
         mpl.mpl_figure_comm
     );
 }
-</script><div class="output text_html"><div id='531dbbce-4b74-4d7b-8e2b-40db1d837d92'></div></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;microstrain&#39;)
+</script><div class="output text_html"><div id='c08639e1-d6c0-4061-a842-1f4743ae09e0'></div></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;microstrain&#39;)
 </pre></div>
 </div>
 </div>
@@ -2477,7 +2477,7 @@ if (IPython.notebook.kernel !== null) {
         mpl.mpl_figure_comm
     );
 }
-</script><div class="output text_html"><div id='953e5904-cb90-44f6-84dd-8565b3e5cbb9'></div></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;amplitude&#39;)
+</script><div class="output text_html"><div id='1a29205b-7935-4d88-bc25-1dcc1cd25b94'></div></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;amplitude&#39;)
 </pre></div>
 </div>
 </div>
@@ -2521,6 +2521,8 @@ if (IPython.notebook.kernel !== null) {
 <span class="n">Ns</span> <span class="o">=</span> <span class="mi">2000</span>
 <span class="c1"># sampling period</span>
 <span class="n">ts</span> <span class="o">=</span> <span class="mf">1.0</span><span class="o">/</span><span class="n">Ns</span>
+<span class="c1"># sampling rate (here, it is over one second)</span>
+<span class="n">Sr</span> <span class="o">=</span> <span class="n">Ns</span><span class="o">/</span><span class="mf">1.0</span>
 <span class="c1">#time vector of sampling points for a 1 second sample</span>
 <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">ts</span><span class="p">)</span> 
 
@@ -3526,7 +3528,7 @@ if (IPython.notebook.kernel !== null) {
         mpl.mpl_figure_comm
     );
 }
-</script><div class="output text_html"><div id='f2f53397-2105-41f6-9346-ab0970d3ac16'></div></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-5.0, 5.0)
+</script><div class="output text_html"><div id='4f67476e-e0de-4efb-a258-f3aa47ce68a9'></div></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-5.0, 5.0)
 </pre></div>
 </div>
 </div>
@@ -3546,10 +3548,10 @@ if (IPython.notebook.kernel !== null) {
 <span class="c1">#by multiplying by 2. </span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
 
-<span class="c1">#We use the sampling rate, number of samples, and time of sampling to define the frequency domain</span>
+<span class="c1">#We use the sampling rate (Sr) and number of samples (L) to define the frequency domain. </span>
 <span class="n">L</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 <span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
-<span class="n">T</span> <span class="o">=</span> <span class="n">L</span><span class="o">/</span><span class="n">Ns</span>
+<span class="n">T</span> <span class="o">=</span> <span class="n">L</span><span class="o">/</span><span class="n">Sr</span>
 <span class="n">freq</span> <span class="o">=</span> <span class="n">n</span><span class="o">/</span><span class="n">T</span> 
 
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
@@ -4533,7 +4535,7 @@ if (IPython.notebook.kernel !== null) {
         mpl.mpl_figure_comm
     );
 }
-</script><div class="output text_html"><div id='bce87e0f-c91e-4a08-ad48-4d546baff3ff'></div></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.0, 20.0)
+</script><div class="output text_html"><div id='5bdae220-7532-4dda-867f-bd61d7051f6a'></div></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.0, 20.0)
 </pre></div>
 </div>
 </div>
