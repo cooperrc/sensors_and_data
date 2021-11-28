@@ -42,8 +42,6 @@
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
@@ -386,6 +384,11 @@
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -519,12 +522,15 @@ enable continuous motion.</p>
 <h3>3. Transient Test<a class="headerlink" href="#transient-test" title="Permalink to this headline">¶</a></h3>
 <p><strong>Finding <span class="math notranslate nohighlight">\(\tau\)</span> and <span class="math notranslate nohighlight">\(J\)</span></strong></p>
 <p>Recording the angular velocity of the motor over time after applying a step input (i.e., applying a voltage to turn on the motor) will produce a data series similar to the one shown in Figures 2 and 3. Each of the three methods mentioned previously will be used to determine the time constant <span class="math notranslate nohighlight">\(\tau\)</span> of the system. Once <span class="math notranslate nohighlight">\(\tau\)</span> is known, the only unknown variable in Equation 14b is the rotational inertia <span class="math notranslate nohighlight">\(J\)</span>, which can be found by simply rearranging 14b.</p>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>Franklin, G.F., Powell, D.J., and Emami-Naeini, A. 2001. <em>Feedback Control of Dynamic Systems</em> (4th ed.). Prentice Hall PTR, USA.</p></li>
 <li><p>Lipták, B.G. 2005. <em>Instrument Engineers’ Handbook, Volume Two: Process Control and Optimization</em> (4th ed.). CRC Press, USA.</p></li>
 <li><p>Kong, Q., Siauw, T., Bayen, A. 2020. <em>Python Programming and Numerical Methods: A Guide for Scientists and Engineers</em> (1st ed.). Academic Press, USA</p></li>
 </ol>
-</div>
 </div>
 </div>
 
