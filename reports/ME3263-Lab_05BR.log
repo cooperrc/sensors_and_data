@@ -31,7 +31,7 @@ b = coeff[1]
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mNameError[0m                                 Traceback (most recent call last)
-[0;32m/tmp/ipykernel_1877/3775020928.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_1789/3775020928.py[0m in [0;36m<module>[0;34m[0m
 [1;32m      1[0m [0;31m#Here, OutputData, InputData1, and InputData2 are presumably imported from some data source[0m[0;34m[0m[0;34m[0m[0m
 [1;32m      2[0m [0;34m[0m[0m
 [0;32m----> 3[0;31m [0mdependent_variable[0m [0;34m=[0m [0mOutputData[0m[0;34m[0m[0;34m[0m[0m

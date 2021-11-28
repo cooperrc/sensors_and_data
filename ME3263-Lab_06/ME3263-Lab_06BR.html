@@ -1,0 +1,593 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 6 - Background and Resources &#8212; Introduction to Sensors and Data</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Lab 6 - Procedure" href="ME3263-Lab_06P.html" />
+    <link rel="prev" title="Lab 6 - DC Motors and the Step Response of First Order Systems" href="README.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Sensors and Data</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   Introduction to Sensors and Data Analysis
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ME3263-Lab_00/README.html">
+   Lab 0 - Statistics and Student’s t-test
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ME3263-Lab_00/ME3263-Lab_00.html">
+     ME 3263 - Laboratory # 0
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ME3263-Lab_01/README.html">
+   Lab 1 - 	Measurements of machining precision and accuracy
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ME3263-Lab_01/ME3263-Lab_01.html">
+     ME 3263 - Laboratory #1
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ME3263-Lab_02/README.html">
+   Lab 2 - Static beam deflections with strain gauge
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ME3263-Lab_02/ME3263-Lab_02.html">
+     ME 3263 - Laboratory #2
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ME3263-Lab_03/README.html">
+   Lab 3 - Measuring Natural Frequencies
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ME3263-Lab_03/ME3263-Lab_03BR.html">
+     Laboratory 3 - Background and Resources
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ME3263-Lab_03/ME3263-Lab_03P.html">
+     Laboratory 3 - Procedure
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ME3263-Lab_04/README.html">
+   Lab 4 - Predicting Natural Frequencies with the Finite Element Method
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ME3263-Lab_04/ME3263-Lab_04BR.html">
+     Laboratory 4 - Background and Resources
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ME3263-Lab_04/ME3263-Lab_04P.html">
+     Laboratory 4 - Procedure
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ME3263-Lab_05/README.html">
+   Lab 5 - Mass Measurement Device with Cantilever beam
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="README.html">
+   Lab 6 - DC Motors and the Step Response of First Order Systems
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Lab 6 - Background and Resources
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ME3263-Lab_06P.html">
+     Lab 6 - Procedure
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/ME3263-Lab_06/ME3263-Lab_06BR.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/cooperrc/sensors_and_data"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/cooperrc/sensors_and_data/issues/new?title=Issue%20on%20page%20%2FME3263-Lab_06/ME3263-Lab_06BR.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/cooperrc/sensors_and_data/master?urlpath=tree/ME3263-Lab_06/ME3263-Lab_06BR.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#first-order-systems">
+   First Order Systems
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dc-motors">
+   DC Motors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#measuring-angular-velocity">
+   Measuring Angular Velocity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-time-constant-and-the-response-to-a-step-input">
+   The Time Constant and the Response to a Step Input
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inspection">
+     1. Inspection
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-slope-of-the-response">
+     2. The Slope of the Response
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linear-regression">
+     3. Linear Regression
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defining-the-electro-mechanical-system">
+   Defining the Electro-mechanical System
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#determining-motor-and-system-parameters">
+   Determining Motor and System parameters
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#blocked-rotor-test">
+     1. Blocked Rotor Test
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#free-speed-test">
+     2. Free Speed Test
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#transient-test">
+     3. Transient Test
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="lab-6-background-and-resources">
+<h1>Lab 6 - Background and Resources<a class="headerlink" href="#lab-6-background-and-resources" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="first-order-systems">
+<h2>First Order Systems<a class="headerlink" href="#first-order-systems" title="Permalink to this headline">¶</a></h2>
+<p>A first order system is a system whose dynamic response can be described by a first order differential equation. There are countless
+examples of such systems - RC circuits, interest accumulation, population models, emptying rates of fluid tanks - and all of them can be
+represented by an equation of the form:</p>
+<p><span class="math notranslate nohighlight">\(\tau\frac{dy}{dt}+y=kF(t)\)</span> <span class="math notranslate nohighlight">\(\quad\)</span>  (1)</p>
+<p>where <span class="math notranslate nohighlight">\(\tau\)</span> is the <em>time constant</em> which describes the dynamic behavior of the system, <span class="math notranslate nohighlight">\(k\)</span> is the <em>steady-state gain</em> which describes
+the system’s steady-state behavior in relation to its input, and <span class="math notranslate nohighlight">\(F(t)\)</span> is the forcing function or input disturbance. For a given
+<span class="math notranslate nohighlight">\(F(t)\)</span>, knowledge of <span class="math notranslate nohighlight">\(\tau\)</span> and <span class="math notranslate nohighlight">\(k\)</span> will enable prediction of the system behavior.</p>
+</div>
+<div class="section" id="dc-motors">
+<h2>DC Motors<a class="headerlink" href="#dc-motors" title="Permalink to this headline">¶</a></h2>
+<p>DC motors are devices which take in a continuous direct current and output rotary motion. Stationary permanent magnets (called stators)
+surround a coil of wire (called the armature) that is carried by the rotor (the rotating portion of the DC motor) (Figure 1). When a
+current flows through the armature, a magnetic field is induced according to Ampere’s law. The presence of the magnetic field from the stators causes the rotor to
+turn in response to the magnetic field induced by the armature. To transfer current to the moving rotor, brushes make electrical contact
+with a piece of the rotor called the commutator. The commutator is wired to regularly flip the direction of the armature current to
+enable continuous motion.</p>
+<p><img alt="Figure 1" src="../_images/figure1.jpg" /></p>
+<p><em>Figure 1: Schematic of a DC motor</em> [1]</p>
+<p>The response of a DC motor to an applied voltage can be described by a first order system:</p>
+<p><span class="math notranslate nohighlight">\(\tau\frac{d\Omega}{dt}+\Omega=ke_i\)</span>  <span class="math notranslate nohighlight">\(\quad\)</span>  (2)</p>
+<p>where <span class="math notranslate nohighlight">\(\Omega\)</span> is the angular velocity (rad/s) and <span class="math notranslate nohighlight">\(e_i\)</span> is the voltage applied to the armature (V). The time constant <span class="math notranslate nohighlight">\(\tau\)</span> is expressed in seconds, and for the case of a DC motor the steady-state gain <span class="math notranslate nohighlight">\(k\)</span> is expressed in (rad/s)/V.</p>
+</div>
+<div class="section" id="measuring-angular-velocity">
+<h2>Measuring Angular Velocity<a class="headerlink" href="#measuring-angular-velocity" title="Permalink to this headline">¶</a></h2>
+<p>There are several ways to measure the angular velocity of a rotating shaft. Devices for this purpose are called <em>tachometers</em>. Two of the most common send one or more voltage pulses for each revolution of the shaft: optical sensors detect a laser bouncing off a reflective surface, and Hall effect sensors detect a passing magnet. For each of these methods, the pulses must be counted per unit time to obtain a value for RPM or rad/s.</p>
+<p>Any DC motor can also be used as a generator. When the shaft is spun by an outside force, the armature wire loop moves in the magnetic field of the stators. By Faraday’s law of induction, this will generate an electromotive force (i.e., voltage). When using a DC motor in this way, the generated voltage will be proportional to the speed of the rotation.</p>
+<p>It is therefore possible to use a DC motor as a tachometer, as we will see in this lab. The output sensor voltage <span class="math notranslate nohighlight">\(V_s\)</span> is proportional to the input angular velocity <span class="math notranslate nohighlight">\(\Omega\)</span> by some constant <span class="math notranslate nohighlight">\(c\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(\Omega = cV_s\)</span>  <span class="math notranslate nohighlight">\(\quad\)</span>  (3)</p>
+<p>We will use a small DC motor as a tachometer to measure the speed of our motor.</p>
+</div>
+<div class="section" id="the-time-constant-and-the-response-to-a-step-input">
+<h2>The Time Constant and the Response to a Step Input<a class="headerlink" href="#the-time-constant-and-the-response-to-a-step-input" title="Permalink to this headline">¶</a></h2>
+<p>The time constant <span class="math notranslate nohighlight">\(\tau\)</span> is the main descriptive characteristic of a first order system. It describes the system’s response to a step input: either the rise time in reponse to a positive step, or the decay time in response to a negative step [2].</p>
+<p>Consider an arbitrary first order system described by Equation 1. For a step input, the forcing function is:</p>
+<p><span class="math notranslate nohighlight">\(F(t)=Xu(t)\)</span> <span class="math notranslate nohighlight">\(\quad\)</span> (4a)</p>
+<p>where <span class="math notranslate nohighlight">\(X\)</span> is a constant and <span class="math notranslate nohighlight">\(u(t)\)</span> is the Heaviside step function given by:</p>
+<p><span class="math notranslate nohighlight">\(u(t) = \left\{ \begin{array}{ll} 0 \quad t \le 0 \\ 1 \quad t &gt; 0 \end{array} \right. \)</span> <span class="math notranslate nohighlight">\(\quad\)</span> (4b)</p>
+<p>The response of the system to this input is:</p>
+<p><span class="math notranslate nohighlight">\(y(t) = Y\left ( 1-e^{\frac{-t}{\tau}}\right )\)</span> <span class="math notranslate nohighlight">\(\quad\)</span> (5)</p>
+<p>where the steady state response is given by <span class="math notranslate nohighlight">\(Y=kX\)</span>. <span class="math notranslate nohighlight">\(k\)</span> is the steady-state gain of the system and <span class="math notranslate nohighlight">\(X\)</span> is the magnitude of the step input.</p>
+<p>The time constant <span class="math notranslate nohighlight">\(\tau\)</span> can be extracted in three ways:</p>
+<div class="section" id="inspection">
+<h3>1. Inspection<a class="headerlink" href="#inspection" title="Permalink to this headline">¶</a></h3>
+<p>Figure 2 displays a normalized plot of the step response for an arbitrary first order system. The point referred to as the “63.2% response point” is marked. This is the point at which <span class="math notranslate nohighlight">\(t/\tau = 1\)</span>, i.e. <span class="math notranslate nohighlight">\(t=\tau\)</span>. At this point the dynamic response has reached 63.2% of its steady-state value:</p>
+<p><span class="math notranslate nohighlight">\(\frac{y_{t=\tau}}{Y} = 1-e^{-1}=0.632\)</span> <span class="math notranslate nohighlight">\(\quad\)</span> (6)</p>
+<p><img alt="Figure 2" src="../_images/figure2.png" /></p>
+<p><em>Figure 2: Step response of a first order system, 63.2% response point</em></p>
+<p>Determining the time at which a system has reached 63.2% of its steady-state response provides a quick estimate of the system’s time constant.</p>
+</div>
+<div class="section" id="the-slope-of-the-response">
+<h3>2. The Slope of the Response<a class="headerlink" href="#the-slope-of-the-response" title="Permalink to this headline">¶</a></h3>
+<p>The time constant of the system can also be identified by calculating the slope of the response, i.e. the derivative of the response with respect to time. Taking the derivative of the response (Equation 5) yields an expression for the slope of the response at any given time:</p>
+<p><span class="math notranslate nohighlight">\(\frac{dy}{dt}=\frac{Y}{\tau}e^{\frac{-t}{\tau}}\)</span> <span class="math notranslate nohighlight">\(\quad\)</span> (7)</p>
+<p>This slope can be used to construct a tangent line to the curve at any point in time. As shown in Figure 3, this line will intersect the asymptotic (steady-state) value at <span class="math notranslate nohighlight">\(\tau\)</span> time units after the point at which the tangent line was placed.</p>
+<p><img alt="Figure 3" src="../_images/figure3.png" /></p>
+<p><em>Figure 3: The slope of the response, intersection with the steady-state value</em></p>
+<p>To obtain an estimate of the derivative of an experimental data series, <em>finite difference</em> methods are often used. The definition of the derivative of a function <span class="math notranslate nohighlight">\(f(x)\)</span> at point <span class="math notranslate nohighlight">\(a\)</span> is:</p>
+<p><span class="math notranslate nohighlight">\(f'(a)=\lim\limits_{x \to a}\frac{f(x)-f(a)}{x-a}\)</span> <span class="math notranslate nohighlight">\(\quad\)</span> (8a)</p>
+<p>If our data consists of discrete points, as all sample data will, the denominator <span class="math notranslate nohighlight">\(x-a\)</span> can only become as small as the sampling period. Figure 4 illustrates the concept - each data point is separated by <span class="math notranslate nohighlight">\(h\)</span>.</p>
+<p><img alt="Figure 4" src="../_images/figure4.png" /></p>
+<p><em>Figure 4: Data points separated by sampling period h</em> [3]</p>
+<p>Conceptually, considering Equation 8a, we could attempt to approximate the derivative at point <span class="math notranslate nohighlight">\(x_j\)</span> by taking the difference between it and its neighbor <span class="math notranslate nohighlight">\(x_{j+1}\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(f'(x_j)\approx \frac{f(x_{j+1})-f(x_j)}{h}\)</span> <span class="math notranslate nohighlight">\(\quad\)</span> (8b)</p>
+<p>This is called the <em>forward difference</em> approximation. The <em>backward difference</em> uses <span class="math notranslate nohighlight">\(x_{j-1}\)</span> instead, for a slightly different result. However, it can be shown via Taylor series expansion that the <em>central difference</em> method provides a more accurate approximation than the other two [3]:</p>
+<p><span class="math notranslate nohighlight">\(f'(x_j)\approx \frac{f(x_{j+1})-f(x_{j-1})}{2h}\)</span> <span class="math notranslate nohighlight">\(\quad\)</span> (8c)</p>
+</div>
+<div class="section" id="linear-regression">
+<h3>3. Linear Regression<a class="headerlink" href="#linear-regression" title="Permalink to this headline">¶</a></h3>
+<p>If the experimental data is noisy or scattered, or if the steady-state value is unknown, it will be difficult to identify the 63.2% response point. Taking the derivative of the response is also prone to problems - numerical differentiation is highly sensitive to variations in data. A more rigorous way to determine the time constant is to perform a linear regression on the data. This is accomplished by rearranging Equation 5 as:</p>
+<p><span class="math notranslate nohighlight">\(1-\frac{y(t)}{Y}=e^{\frac{-t}{\tau}}\)</span> <span class="math notranslate nohighlight">\(\quad\)</span> (9)</p>
+<p>Taking the natural log of both sides results in an equation that is linear in time:</p>
+<p><span class="math notranslate nohighlight">\(\ln \left [ 1-\frac{y(t)}{Y} \right ] =-\frac{1}{\tau}t\)</span> <span class="math notranslate nohighlight">\(\quad\)</span> (10)</p>
+<p>Considering time as the independent variable and the entire left-hand side as the dependent variable, this is a linear relationship that can be used to determine the time constant via linear regression. After the transformation, the data will fall on a straight line (as shown in Figure 5). When the data is treated in this manner, the fitted line is constrained to pass through the origin (since there is only one fitting coefficient) and has a slope equal to the reciprocal of the time constant.</p>
+<p><img alt="Figure 5" src="../_images/figure5.jpg" /></p>
+<p><em>Figure 5: Semi-log plot of the step response</em></p>
+</div>
+</div>
+<div class="section" id="defining-the-electro-mechanical-system">
+<h2>Defining the Electro-mechanical System<a class="headerlink" href="#defining-the-electro-mechanical-system" title="Permalink to this headline">¶</a></h2>
+<p>An armature controlled DC motor is shown schematically in Figure 6. An input voltage, <span class="math notranslate nohighlight">\(e_i\)</span>, is provided by an external power supply. The motor possesses an internal resistance, <span class="math notranslate nohighlight">\(R\)</span>, and an inductance, <span class="math notranslate nohighlight">\(L\)</span>.  This inductance is a result of the electromagnetic effect created by the armature windings, and has a negligible effect on the time response in most situations. The shaft of the motor and driven components (a flywheel and tachometer in the present lab) have an inherent rotational inertia, <span class="math notranslate nohighlight">\(J\)</span>.  The system also experiences viscous damping, characterized by the coefficient <span class="math notranslate nohighlight">\(b\)</span>, due to internal and air damping as well as the resistance of the tachometer.</p>
+<p><img alt="Figure 6" src="../_images/figure6.png" /></p>
+<p><em>Figure 6: System schematic</em></p>
+<p>A mathematical model of this motor can be developed by considering the electrical and mechanical constituents of the system separately. The following equation describes the armature circuit:</p>
+<p><span class="math notranslate nohighlight">\(e_i = Ri+K_g\Omega\)</span> <span class="math notranslate nohighlight">\(\quad\)</span> (11)</p>
+<p>where <span class="math notranslate nohighlight">\(e_i\)</span> is the voltage applied to the armature, <span class="math notranslate nohighlight">\(R\)</span> is the resistance of the windings, <span class="math notranslate nohighlight">\(i\)</span> is the current, <span class="math notranslate nohighlight">\(K_g\)</span> is the <em>motor voltage constant</em> (V/(rad/s)), and <span class="math notranslate nohighlight">\(\Omega\)</span> is the angular velocity of the shaft. The last term in Equation 11 is commonly called the <em>back emf</em> developed within the motor (marked as <span class="math notranslate nohighlight">\(e_b\)</span> in Figure 6) - it is a reverse voltage proportional to the angular speed of the shaft, and is the reason a DC motor can be used as a generator or tachometer.</p>
+<p>The output torque <span class="math notranslate nohighlight">\(T\)</span> is proportional to the armature current:</p>
+<p><span class="math notranslate nohighlight">\(T=K_ti\)</span> <span class="math notranslate nohighlight">\(\quad\)</span> (12)</p>
+<p>where <span class="math notranslate nohighlight">\(K_t\)</span> is called the <em>motor torque constant</em> and is expressed in (N-m)/A. Equation 12 provides a connection between the mechanical response of the system and the electrical behavior of the motor. In this set-up, the output torque is used to overcome system inertia and frictional drag. If that drag is viscous in nature, the equilibrium equation of the rotor system is:</p>
+<p><span class="math notranslate nohighlight">\(T=J\frac{d\Omega}{dt}+b\Omega\)</span> <span class="math notranslate nohighlight">\(\quad\)</span> (13)</p>
+<p>where <span class="math notranslate nohighlight">\(J\)</span> is the inertia of the rotating parts (kg-m^2) and <span class="math notranslate nohighlight">\(b\)</span> is the rotational viscous damping coefficient (N-m/(rad/s)).</p>
+<p>The input to this system is the voltage potential <span class="math notranslate nohighlight">\(e_i\)</span> applied to the armature, and the response is the angular velocity <span class="math notranslate nohighlight">\(\Omega\)</span>. Equations 11-13 can be combined algebraically (eliminating <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(i\)</span>) to produce one differential equation which describes the combined electro-mechanical response of the system:</p>
+<p><span class="math notranslate nohighlight">\(\tau\frac{d\Omega}{dt}+\Omega=ke_i\)</span>  <span class="math notranslate nohighlight">\(\quad\)</span>  (14a)</p>
+<p>where the time constant is given by:</p>
+<p><span class="math notranslate nohighlight">\(\tau=\frac{J}{b+\frac{K_tK_g}{R}}\)</span> <span class="math notranslate nohighlight">\(\quad\)</span> (14b)</p>
+<p>and the steady-state gain is:</p>
+<p><span class="math notranslate nohighlight">\(k=\frac{1}{K_g+\frac{bR}{K_t}}\)</span> <span class="math notranslate nohighlight">\(\quad\)</span> (14c)</p>
+</div>
+<div class="section" id="determining-motor-and-system-parameters">
+<h2>Determining Motor and System parameters<a class="headerlink" href="#determining-motor-and-system-parameters" title="Permalink to this headline">¶</a></h2>
+<p>Equations 14a-c desribe the system behavior, but in order to use them it will be necessary to collect sufficient data to determine the system parameters (e.g., <span class="math notranslate nohighlight">\(K_t\)</span>, <span class="math notranslate nohighlight">\(b\)</span>, etc.). Three tests can be carried out to accomplish this:</p>
+<div class="section" id="blocked-rotor-test">
+<h3>1. Blocked Rotor Test<a class="headerlink" href="#blocked-rotor-test" title="Permalink to this headline">¶</a></h3>
+<p><strong>Finding <span class="math notranslate nohighlight">\(K_t\)</span></strong></p>
+<p><em>Note: this test has the potential to damage the motor. We will not be performing it. Instead, the result will be supplied to you in the Procedure section.</em></p>
+<p>If the armature is prevented from rotating and a voltage potential is applied, the output torque is still related to the armature current by Equation 12. The armature current can be varied by introducing additional resistors in series with the winding, and the corresponding motor torque can be measured by an appropriately placed force transducer. The motor torque constant <span class="math notranslate nohighlight">\(K_t\)</span> is obtained by plotting the output torque vs. current data. The slope is <span class="math notranslate nohighlight">\(K_t\)</span>.</p>
+</div>
+<div class="section" id="free-speed-test">
+<h3>2. Free Speed Test<a class="headerlink" href="#free-speed-test" title="Permalink to this headline">¶</a></h3>
+<p><strong>Finding <span class="math notranslate nohighlight">\(K_g\)</span> and <span class="math notranslate nohighlight">\(b\)</span></strong></p>
+<p>Recall that the steady-state gain constant is simply a ratio of output speed to input voltage:</p>
+<p><span class="math notranslate nohighlight">\(k=\frac{\Omega}{e_i}=\frac{1}{K_g+\frac{bR}{K_t}}\)</span> <span class="math notranslate nohighlight">\(\quad\)</span> (14c)</p>
+<p>The steady state speed <span class="math notranslate nohighlight">\(\Omega\)</span> in response to applied voltage can be measured with a tachometer. The internal resistance of the motor (<span class="math notranslate nohighlight">\(R\)</span>) and the applied voltage (<span class="math notranslate nohighlight">\(e_i\)</span>) are known (they can easily be measured with a multimeter). <span class="math notranslate nohighlight">\(K_t\)</span> has been determined by the blocked rotor test. Substituting these values into Equation 14c leaves one equation for two unknowns: <span class="math notranslate nohighlight">\(K_g\)</span> and <span class="math notranslate nohighlight">\(b\)</span>.</p>
+<p>Notice that the steady-state gain depends on the resistance of the circuitry involved. We can introduce a known resistor in series with our motor to obtain new values for <span class="math notranslate nohighlight">\(R\)</span> and <span class="math notranslate nohighlight">\(\Omega\)</span>. Substituting these new values into Equation 14c gives a second equation for the same two unknowns. Solving these two equations produces values for the voltage constant <span class="math notranslate nohighlight">\(K_g\)</span> and the viscous damping coefficient <span class="math notranslate nohighlight">\(b\)</span>.</p>
+</div>
+<div class="section" id="transient-test">
+<h3>3. Transient Test<a class="headerlink" href="#transient-test" title="Permalink to this headline">¶</a></h3>
+<p><strong>Finding <span class="math notranslate nohighlight">\(\tau\)</span> and <span class="math notranslate nohighlight">\(J\)</span></strong></p>
+<p>Recording the angular velocity of the motor over time after applying a step input (i.e., applying a voltage to turn on the motor) will produce a data series similar to the one shown in Figures 2 and 3. Each of the three methods mentioned previously will be used to determine the time constant <span class="math notranslate nohighlight">\(\tau\)</span> of the system. Once <span class="math notranslate nohighlight">\(\tau\)</span> is known, the only unknown variable in Equation 14b is the rotational inertia <span class="math notranslate nohighlight">\(J\)</span>, which can be found by simply rearranging 14b.</p>
+<ol class="simple">
+<li><p>Franklin, G.F., Powell, D.J., and Emami-Naeini, A. 2001. <em>Feedback Control of Dynamic Systems</em> (4th ed.). Prentice Hall PTR, USA.</p></li>
+<li><p>Lipták, B.G. 2005. <em>Instrument Engineers’ Handbook, Volume Two: Process Control and Optimization</em> (4th ed.). CRC Press, USA.</p></li>
+<li><p>Kong, Q., Siauw, T., Bayen, A. 2020. <em>Python Programming and Numerical Methods: A Guide for Scientists and Engineers</em> (1st ed.). Academic Press, USA</p></li>
+</ol>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./ME3263-Lab_06"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="README.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Lab 6 - DC Motors and the Step Response of First Order Systems</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="ME3263-Lab_06P.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lab 6 - Procedure</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Ryan C. Cooper, Martin Huber, Shubhangi Bansude<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

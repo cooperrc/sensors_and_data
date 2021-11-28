@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lab 2 - Static beam deflections with strain gauge &#8212; Introduction to Sensors and Data</title>
+    <title>Lab 6 - DC Motors and the Step Response of First Order Systems &#8212; Introduction to Sensors and Data</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -55,8 +55,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="ME 3263 - Laboratory #2" href="ME3263-Lab_02.html" />
-    <link rel="prev" title="ME 3263 - Laboratory #1" href="../ME3263-Lab_01/ME3263-Lab_01.html" />
+    <link rel="next" title="Lab 6 - Background and Resources" href="ME3263-Lab_06BR.html" />
+    <link rel="prev" title="Laboratory 5 - Procedure" href="../ME3263-Lab_05/ME3263-Lab_05P.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -130,18 +130,18 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ME3263-Lab_02/README.html">
    Lab 2 - Static beam deflections with strain gauge
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="ME3263-Lab_02.html">
+    <a class="reference internal" href="../ME3263-Lab_02/ME3263-Lab_02.html">
      ME 3263 - Laboratory #2
     </a>
    </li>
@@ -196,23 +196,23 @@
    Lab 5 - Mass Measurement Device with Cantilever beam
   </a>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../ME3263-Lab_06/README.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
    Lab 6 - DC Motors and the Step Response of First Order Systems
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../ME3263-Lab_06/ME3263-Lab_06BR.html">
+    <a class="reference internal" href="ME3263-Lab_06BR.html">
      Lab 6 - Background and Resources
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../ME3263-Lab_06/ME3263-Lab_06P.html">
+    <a class="reference internal" href="ME3263-Lab_06P.html">
      Lab 6 - Procedure
     </a>
    </li>
@@ -259,7 +259,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/ME3263-Lab_02/README.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/ME3263-Lab_06/README.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -279,7 +279,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/cooperrc/sensors_and_data/issues/new?title=Issue%20on%20page%20%2FME3263-Lab_02/README.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/cooperrc/sensors_and_data/issues/new?title=Issue%20on%20page%20%2FME3263-Lab_06/README.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -306,13 +306,18 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-a-strain-gauge">
-   What is a Strain Gauge?
+  <a class="reference internal nav-link" href="#first-order-systems">
+   First Order Systems
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#calibration-and-use">
-   Calibration and Use
+  <a class="reference internal nav-link" href="#dc-motors">
+   DC Motors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-response-time-constant-and-system-parameters">
+   Step Response, time constant, and system parameters
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -331,32 +336,42 @@
         
               <div>
                 
-  <div class="section" id="lab-2-static-beam-deflections-with-strain-gauge">
-<h1>Lab 2 - Static beam deflections with strain gauge<a class="headerlink" href="#lab-2-static-beam-deflections-with-strain-gauge" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="what-is-a-strain-gauge">
-<h2>What is a Strain Gauge?<a class="headerlink" href="#what-is-a-strain-gauge" title="Permalink to this headline">¶</a></h2>
-<p>A strain gauge consists of a looped wire that is embedded in a thin backing. Two
-copper coated tabs serve as solder points for the leads. See Figure 1a. The
-strain gauge is mounted to the structure, whose deformation is to be measured. As
-the structure deforms, the wire stretches (increasing its net length ) and its
-electrical resistance changes: <span class="math notranslate nohighlight">\(R=\rho L/A\)</span>, where <span class="math notranslate nohighlight">\(\rho\)</span> is the material
-resistivity, <span class="math notranslate nohighlight">\(L\)</span> is the total length of the wire, and <span class="math notranslate nohighlight">\(A\)</span> is the cross sectional
-area of the wire.  Note that as <span class="math notranslate nohighlight">\(L\)</span> increases, the cross sectional area changes
-as
-well due to the Poisson contraction; the resistivity also changes.</p>
-<p><img alt="Figure 1: a) A typical strain gauge. b) One common setup: the gauge ismounted to measure the x-direction strain on the top surface. It'sengaged in a quarter bridge configuration of the Wheatstone bridgecircuit." src="https://raw.githubusercontent.com/cooperrc/sensors_and_data/master/ME3263-Lab_02/figure_01.png" /></p>
-<p><em>Figure 1: a) A typical strain gauge. b) One common setup: the gauge is
-mounted to measure the x-direction strain on the top surface. It’s
-engaged in a quarter bridge configuration of the Wheatstone bridge
-circuit.</em></p>
+  <div class="section" id="lab-6-dc-motors-and-the-step-response-of-first-order-systems">
+<h1>Lab 6 - DC Motors and the Step Response of First Order Systems<a class="headerlink" href="#lab-6-dc-motors-and-the-step-response-of-first-order-systems" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="first-order-systems">
+<h2>First Order Systems<a class="headerlink" href="#first-order-systems" title="Permalink to this headline">¶</a></h2>
+<p>A first order system is a system whose dynamic response can be described by a first order differential equation. There are countless
+examples of such systems - RC circuits, interest accumulation, population models, emptying rates of fluid tanks - and all of them can be
+represented by an equation of the form:</p>
+<p><span class="math notranslate nohighlight">\(\tau\frac{dy}{dt}+y=kF(t)\)</span>      (1)</p>
+<p>where <span class="math notranslate nohighlight">\(\tau\)</span> is the <em>time constant</em> which describes the dynamic behavior of the system, <span class="math notranslate nohighlight">\(k\)</span> is the <em>steady-state gain</em> which describes
+the system’s steady-state behavior in relation to its input, and <span class="math notranslate nohighlight">\(F(t)\)</span> is the forcing function or input disturbance. For a given
+<span class="math notranslate nohighlight">\(F(t)\)</span>, knowledge of <span class="math notranslate nohighlight">\(\tau\)</span> and <span class="math notranslate nohighlight">\(k\)</span> will enable prediction of the system behavior.</p>
 </div>
-<div class="section" id="calibration-and-use">
-<h2>Calibration and Use<a class="headerlink" href="#calibration-and-use" title="Permalink to this headline">¶</a></h2>
-<p>By applying a known strain to the system, we can validate the calibration of our sensor. Once calibrated, it can be used to determine constitutive properties of our workpiece. In this case, we are interested in measuring Young’s modulus. We will take measurements relating applied moment and exhibited strain of a cantilever beam in order to use a least-squares linear regression to determine Young’s modulus.</p>
+<div class="section" id="dc-motors">
+<h2>DC Motors<a class="headerlink" href="#dc-motors" title="Permalink to this headline">¶</a></h2>
+<p>DC motors are devices which take in a continuous direct current and output rotary motion. Stationary permanent magnets (called stators)
+surround a coil of wire (called the armature) that is carried by the rotor (the rotating portion of the DC motor) (Figure 1). When a
+current flows through the armature, a magnetic field is induced. The presence of the magnetic field from the stators causes the rotor to
+turn in response to the magnetic field induced by the armature. To transfer current to the moving rotor, brushes make electrical contact
+with a piece of the rotor called the commutator. The commutator is wired to regularly flip the direction of the armature current to
+enable continuous motion.</p>
+<p><img alt="Figure 1" src="../_images/figure1.jpg" /></p>
+<p><em>Figure 1: Schematic of a DC motor</em></p>
+<p>The response of a DC motor to an applied voltage can be described by a first order system:</p>
+<p><span class="math notranslate nohighlight">\(\tau\frac{d\Omega}{dt}+\Omega=ke_i\)</span>    (2)</p>
+<p>where <span class="math notranslate nohighlight">\(\Omega\)</span> is the angular velocity (rad/s) and <span class="math notranslate nohighlight">\(e_i\)</span> is the voltage applied to the armature (V).</p>
+</div>
+<div class="section" id="step-response-time-constant-and-system-parameters">
+<h2>Step Response, time constant, and system parameters<a class="headerlink" href="#step-response-time-constant-and-system-parameters" title="Permalink to this headline">¶</a></h2>
+<p>In this lab, you will observe the response of a DC motor to a voltage step input (i.e., a sudden change in applied voltage from <span class="math notranslate nohighlight">\(0\)</span> to
+<span class="math notranslate nohighlight">\(e_i\)</span>). Using this response, you will be able to determine the motor’s time constant, as well as system characteristics such as
+rotational inertia and damping coefficient. Additionally, constants describing the characteristics of the motor will be calculated from
+your observations.</p>
 </div>
 <div class="section" id="deliverables">
 <h2>Deliverables<a class="headerlink" href="#deliverables" title="Permalink to this headline">¶</a></h2>
-<p>For this assignment, you and your lab partner will submit a <strong>joint report</strong> as a .pdf to your HuskyCT section within <strong>one week</strong> of your lab date. It will only be necessary for one of you to submit the report. Please clearly mark, either in the body as footnotes or in the appendix as a separate section, what each of you contributed to the overall report.</p>
+<p>For this assignment, you will have <strong>one week in the lab</strong>. You and your lab partner will submit a <strong>joint report</strong> as a .pdf to your HuskyCT section within <strong>one week</strong> of your final lab date. It will only be necessary for one of you to submit the report. Please clearly mark, either in the body as footnotes or in the appendix as a separate section, what each of you contributed to the overall report.</p>
 <p>You are limited to <strong>5 pages</strong> (not including the title page, references, or appendix) and <strong>4 figures</strong>. Additional data, figures, and information can be put in an appendix. The appendix will not be graded, but you may refer to it to explain data, methods, or other relevant information.</p>
 <div class="toctree-wrapper compound">
 </div>
@@ -376,7 +391,7 @@ circuit.</em></p>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./ME3263-Lab_02"
+            path: "./ME3263-Lab_06"
         },
         predefinedOutput: true
     }
@@ -388,17 +403,17 @@ circuit.</em></p>
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../ME3263-Lab_01/ME3263-Lab_01.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../ME3263-Lab_05/ME3263-Lab_05P.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">ME 3263 - Laboratory #1</p>
+            <p class="prev-next-title">Laboratory 5 - Procedure</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="ME3263-Lab_02.html" title="next page">
+    <a class='right-next' id="next-link" href="ME3263-Lab_06BR.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">ME 3263 - Laboratory #2</p>
+        <p class="prev-next-title">Lab 6 - Background and Resources</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
