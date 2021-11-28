@@ -1,19 +1,19 @@
 Traceback (most recent call last):
-  File "/opt/hostedtoolcache/Python/3.9.7/x64/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+  File "/opt/hostedtoolcache/Python/3.9.9/x64/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
     executenb(
-  File "/opt/hostedtoolcache/Python/3.9.7/x64/lib/python3.9/site-packages/nbclient/client.py", line 1117, in execute
+  File "/opt/hostedtoolcache/Python/3.9.9/x64/lib/python3.9/site-packages/nbclient/client.py", line 1093, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
-  File "/opt/hostedtoolcache/Python/3.9.7/x64/lib/python3.9/site-packages/nbclient/util.py", line 78, in wrapped
+  File "/opt/hostedtoolcache/Python/3.9.9/x64/lib/python3.9/site-packages/nbclient/util.py", line 84, in wrapped
     return just_run(coro(*args, **kwargs))
-  File "/opt/hostedtoolcache/Python/3.9.7/x64/lib/python3.9/site-packages/nbclient/util.py", line 57, in just_run
+  File "/opt/hostedtoolcache/Python/3.9.9/x64/lib/python3.9/site-packages/nbclient/util.py", line 62, in just_run
     return loop.run_until_complete(coro)
-  File "/opt/hostedtoolcache/Python/3.9.7/x64/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+  File "/opt/hostedtoolcache/Python/3.9.9/x64/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
     return future.result()
-  File "/opt/hostedtoolcache/Python/3.9.7/x64/lib/python3.9/site-packages/nbclient/client.py", line 558, in async_execute
+  File "/opt/hostedtoolcache/Python/3.9.9/x64/lib/python3.9/site-packages/nbclient/client.py", line 559, in async_execute
     await self.async_execute_cell(
-  File "/opt/hostedtoolcache/Python/3.9.7/x64/lib/python3.9/site-packages/nbclient/client.py", line 862, in async_execute_cell
+  File "/opt/hostedtoolcache/Python/3.9.9/x64/lib/python3.9/site-packages/nbclient/client.py", line 854, in async_execute_cell
     self._check_raise_for_error(cell, exec_reply)
-  File "/opt/hostedtoolcache/Python/3.9.7/x64/lib/python3.9/site-packages/nbclient/client.py", line 765, in _check_raise_for_error
+  File "/opt/hostedtoolcache/Python/3.9.9/x64/lib/python3.9/site-packages/nbclient/client.py", line 756, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
@@ -23,33 +23,33 @@ pi=np.pi
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mKeyError[0m                                  Traceback (most recent call last)
-[0;32m/opt/hostedtoolcache/Python/3.9.7/x64/lib/python3.9/site-packages/matplotlib/__init__.py[0m in [0;36m__setitem__[0;34m(self, key, val)[0m
-[1;32m    594[0m             [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 595[0;31m                 [0mcval[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mvalidate[0m[0;34m[[0m[0mkey[0m[0;34m][0m[0;34m([0m[0mval[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    596[0m             [0;32mexcept[0m [0mValueError[0m [0;32mas[0m [0mve[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m/opt/hostedtoolcache/Python/3.9.9/x64/lib/python3.9/site-packages/matplotlib/__init__.py[0m in [0;36m__setitem__[0;34m(self, key, val)[0m
+[1;32m    643[0m             [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 644[0;31m                 [0mcval[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mvalidate[0m[0;34m[[0m[0mkey[0m[0;34m][0m[0;34m([0m[0mval[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    645[0m             [0;32mexcept[0m [0mValueError[0m [0;32mas[0m [0mve[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 
 [0;31mKeyError[0m: 'text.latex.unicode'
 
 The above exception was the direct cause of the following exception:
 
 [0;31mKeyError[0m                                  Traceback (most recent call last)
-[0;32m/tmp/ipykernel_1970/1109053810.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_1938/1109053810.py[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0mpretty_plots[0m[0;34m.[0m[0msetdefaults[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m      2[0m [0mpi[0m[0;34m=[0m[0mnp[0m[0;34m.[0m[0mpi[0m[0;34m[0m[0;34m[0m[0m
 
-[0;32m~/work/sensors_and_data/sensors_and_data/ME3263-Lab_06/pretty_plots.py[0m in [0;36msetdefaults[0;34m()[0m
+[0;32m~/work/sensors_and_data/sensors_and_data/ME3263-Lab_06_Thermal/pretty_plots.py[0m in [0;36msetdefaults[0;34m()[0m
 [1;32m      4[0m   [0mplt[0m[0;34m.[0m[0mrcParams[0m[0;34m[[0m[0;34m'lines.linewidth'[0m[0;34m][0m [0;34m=[0m [0;36m3[0m[0;34m[0m[0;34m[0m[0m
 [1;32m      5[0m   [0mplt[0m[0;34m.[0m[0mrcParams[0m[0;34m[[0m[0;34m'text.usetex'[0m[0;34m][0m [0;34m=[0m [0;32mTrue[0m[0;34m[0m[0;34m[0m[0m
 [0;32m----> 6[0;31m   [0mplt[0m[0;34m.[0m[0mrcParams[0m[0;34m[[0m[0;34m'text.latex.unicode'[0m[0;34m][0m [0;34m=[0m [0;32mTrue[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m      7[0m   plt.rcParams['text.latex.preamble'] = [
 [1;32m      8[0m          [0;34mr'\usepackage{siunitx}'[0m[0;34m,[0m   [0;31m# I need upright \micro symbols, but you need...[0m[0;34m[0m[0;34m[0m[0m
 
-[0;32m/opt/hostedtoolcache/Python/3.9.7/x64/lib/python3.9/site-packages/matplotlib/__init__.py[0m in [0;36m__setitem__[0;34m(self, key, val)[0m
-[1;32m    598[0m             [0mdict[0m[0;34m.[0m[0m__setitem__[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mkey[0m[0;34m,[0m [0mcval[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    599[0m         [0;32mexcept[0m [0mKeyError[0m [0;32mas[0m [0merr[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 600[0;31m             raise KeyError(
-[0m[1;32m    601[0m                 [0;34mf"{key} is not a valid rc parameter (see rcParams.keys() for "[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    602[0m                 f"a list of valid parameters)") from err
+[0;32m/opt/hostedtoolcache/Python/3.9.9/x64/lib/python3.9/site-packages/matplotlib/__init__.py[0m in [0;36m__setitem__[0;34m(self, key, val)[0m
+[1;32m    647[0m             [0mdict[0m[0;34m.[0m[0m__setitem__[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mkey[0m[0;34m,[0m [0mcval[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    648[0m         [0;32mexcept[0m [0mKeyError[0m [0;32mas[0m [0merr[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 649[0;31m             raise KeyError(
+[0m[1;32m    650[0m                 [0;34mf"{key} is not a valid rc parameter (see rcParams.keys() for "[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    651[0m                 f"a list of valid parameters)") from err
 
 [0;31mKeyError[0m: 'text.latex.unicode is not a valid rc parameter (see rcParams.keys() for a list of valid parameters)'
 KeyError: 'text.latex.unicode is not a valid rc parameter (see rcParams.keys() for a list of valid parameters)'
