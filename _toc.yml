@@ -23,9 +23,10 @@
   sections:
     - file: ME3263-Lab_05/ME3263-Lab_05BR
     - file: ME3263-Lab_05/ME3263-Lab_05P
-#- file: ME3263-Lab_06/README
-#  sections:
-#    - file: ME3263-Lab_06/ME3263-Lab_06
+- file: ME3263-Lab_06/README
+  sections:
+    - file: ME3263-Lab_06/ME3263-Lab_06BR
+    - file: ME3263-Lab_06/ME3263-Lab_06P
 #  sections:
 #    - file: module_00/introduction
 #    - file: getting-started/01_interactions
