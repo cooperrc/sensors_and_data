@@ -15,7 +15,7 @@ $F(t)$, knowledge of $\tau$ and $k$ will enable prediction of the system behavio
 
 ## DC Motors
 
-DC motors are devices which take in a continuous direct current and output rotary motion. Stationary permanent magnets (called stators)
+DC motors are devices which take in a continuous direct current and output rotary motion. In a permanent magnet DC motor, stationary permanent magnets (called stators)
 surround a coil of wire (called the armature) that is carried by the rotor (the rotating portion of the DC motor) (Figure 1). When a 
 current flows through the armature, a magnetic field is induced. The presence of the magnetic field from the stators causes the rotor to 
 turn in response to the magnetic field induced by the armature. To transfer current to the moving rotor, brushes make electrical contact 
